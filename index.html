@@ -1,20 +1,404 @@
 <!doctype html>
-<html lang="en">
+<html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cv-luqman</title>
+    <title>Portofolio | Luqman - Software Engineering & Data Analysis</title>
   </head>
-  <body class="">
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden selection:bg-blue-200">
+
+    <nav class="fixed w-full bg-white/80 backdrop-blur-lg z-50 border-b border-slate-200 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <a href="#" class="text-3xl font-extrabold text-blue-600 tracking-tighter">L</a>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+          <a href="#about" class="hover:text-blue-600 transition-colors">Tentang Saya</a>
+          <a href="#focus" class="hover:text-blue-600 transition-colors">Fokus Area</a>
+          <a href="#portfolio" class="hover:text-blue-600 transition-colors">Portofolio</a>
+          <a href="#contact" class="hover:text-blue-600 transition-colors">Kontak</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="pt-40 pb-20  px-6 min-h-[95vh] flex items-center justify-center bg-white border-b border-slate-100 fade-in">
+      <div class="max-w-7xl w-full mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <div class="space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-sm font-bold tracking-wide border border-blue-100">
+            <span>🚀</span> Siap Belajar & Berkembang
+          </div>
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            Halo, Saya <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Luqman</span>
+          </h1>
+          <p class="text-lg md:text-xl text-slate-600 max-w-lg leading-relaxed">
+            Saya adalah seorang pelajar yang sedang fokus pada jurusan <strong class="text-slate-800">Software Engineering</strong> dan <strong class="text-slate-800">Design Grafis</strong>, membangun fondasi untuk masa depan yang logis dan indah.
+          </p>
+          <a href="#about" class="inline-block px-8 py-4 bg-slate-900 text-white rounded-full font-medium hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-1 mt-4">
+            Tentang Saya
+          </a>
+        </div>
+        
+        <div class="w-full max-w-md mx-auto lg:max-w-full p-8 bg-slate-50/50 rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/40 space-y-5">
+          <h3 class="font-bold text-sm text-slate-700 mb-6 uppercase tracking-widest text-center lg:text-left">Status & Pencapaian</h3>
+          
+          <div class="relative w-full bg-slate-200/80 rounded-2xl flex items-center py-4 px-2 border border-slate-300">
+            
+            <button id="slideKiri" class="absolute -left-4 z-10 w-9 h-9 bg-black text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md focus:outline-none">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+
+            <div id="sliderHero" class="flex gap-4 overflow-x-auto snap-x snap-mandatory w-full scroll-smooth hide-scrollbar px-6">
+              
+              <div class="snap-center shrink-0 w-56 bg-white border border-blue-100 p-4 rounded-xl flex items-center justify-between shadow-sm">
+                <div>
+                  <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">Backend Framework</p>
+                  <h3 class="font-black text-xl text-blue-600">NestJS</h3>
+                </div>
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-inner">
+                  <span class="font-bold text-xs">{}</span>
+                </div>
+              </div>
+
+              <div class="snap-center shrink-0 w-56 bg-white border border-blue-100 p-4 rounded-xl flex items-center justify-between shadow-sm">
+                <div>
+                  <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">Programming Lang.</p>
+                  <h3 class="font-black text-xl text-blue-600">TypeScript</h3>
+                </div>
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-inner">
+                  <span class="font-bold text-xs">TS</span>
+                </div>
+              </div>
+
+              <div class="snap-center shrink-0 w-56 bg-white border border-blue-100 p-4 rounded-xl flex items-center justify-between shadow-sm">
+                <div>
+                  <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">Frontend Library</p>
+                  <h3 class="font-black text-xl text-blue-600">React.js</h3>
+                </div>
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-inner">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+              </div>
+
+              <div class="snap-center shrink-0 w-56 bg-white border border-blue-100 p-4 rounded-xl flex items-center justify-between shadow-sm">
+                <div>
+                  <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">CSS Framework</p>
+                  <h3 class="font-black text-xl text-blue-600">Tailwind</h3>
+                </div>
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-inner">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+              </div>
+
+              <div class="snap-center shrink-0 w-56 bg-white border border-blue-100 p-4 rounded-xl flex items-center justify-between shadow-sm">
+                <div>
+                  <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">Data Analysis</p>
+                  <h3 class="font-black text-xl text-blue-600">Python</h3>
+                </div>
+                <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white shadow-inner">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                </div>
+              </div>
+
+            </div>
+
+            <button id="slideKanan" class="absolute -right-4 z-10 w-9 h-9 bg-black text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-md focus:outline-none">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+
+            <style>.hide-scrollbar::-webkit-scrollbar { display: none; } .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }</style>
+            <script>
+              document.getElementById('slideKiri').onclick = function() { document.getElementById('sliderHero').scrollLeft -= 240; };
+              document.getElementById('slideKanan').onclick = function() { document.getElementById('sliderHero').scrollLeft += 240; };
+            </script>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between hover:border-indigo-200 transition-colors group">
+            <div>
+              <p class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-1">Tingkat Pendidikan</p>
+              <h3 class="font-black text-3xl text-indigo-600 flex items-baseline gap-1 group-hover:scale-105 transition-transform origin-left">10 <span class="text-base font-bold">SMK</span></h3>
+            </div>
+            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-500 group-hover:bg-indigo-500 group-hover:text-white transition-colors text-lg">🎓</div>
+          </div>
+          
+          <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between hover:border-teal-200 transition-colors group">
+            <div>
+              <p class="text-slate-500 text-xs font-semibold uppercase tracking-wider mb-1">Pendidikan Saat Ini</p>
+              <h3 class="font-black text-xl text-slate-800">SMK Madinatul Qur'an</h3>
+            </div>
+            <div class="w-12 h-12 bg-teal-50 rounded-full flex items-center justify-center text-teal-500 group-hover:bg-teal-500 group-hover:text-white transition-colors text-lg">🏫</div>
+          </div>
+          
+        </div>
+    </section>
+    <section id="about" class="py-28 px-6 bg-white border-y border-slate-100 fade-in">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          
+          <div class="relative w-full h-[500px] rounded-[2rem] overflow-hidden group shadow-sm border border-slate-100">
+            <img src="image.jpeg" alt="Luqman Study" class="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          </div>
+          
+          <div class="flex flex-col justify-center">
+            
+            <div class="space-y-6 mb-10">
+              <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
+                Membangun <span class="italic font-light text-slate-500">Fondasi</span> <br>Masa Depan.
+              </h2>
+              
+              <p class="text-lg text-slate-600 leading-relaxed">
+                Sebagai santri di SMK Madinatul Qur'an dan Ma'had Tahfidz Al-Yusro, Bogor, saya belajar menyeimbangkan kedisiplinan teknologi dengan nilai-nilai kehidupan. Kombinasi unik ini membentuk etos kerja saya yang logis dan terstruktur.
+              </p>
+              
+              <p class="text-lg text-slate-600 leading-relaxed">
+                Menguasai bahasa Indonesia, Inggris, dan Arab memberikan saya perspektif luas, yang saya salurkan melalui minat pada <strong class="text-slate-900 font-semibold">Public Speaking</strong> dan <strong class="text-slate-900 font-semibold">Model United Nations (MUN)</strong>.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 pt-6 border-t border-slate-200">
+              
+              <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-300 transition-colors">
+                <h4 class="text-3xl font-black text-slate-800 mb-1">89%</h4>
+                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Menguasai Pelajaran</p>
+              </div>
+              
+              <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-300 transition-colors">
+                <h4 class="text-3xl font-black text-slate-800 mb-1">3</h4>
+                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Penguasaan Bahasa</p>
+              </div>
+              
+              <div class="col-span-2 p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-slate-300 transition-colors flex items-center justify-between">
+                <div>
+                  <h4 class="text-xl font-bold text-slate-800">SMK Madinatul Qur'an</h4>
+                  <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Pendidikan Saat Ini</p>
+                </div>
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm text-slate-600 border border-slate-100">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    ```
+
+
+    <section id="focus" class="py-28 px-6 fade-in bg-white border-y border-slate-100">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center text-slate-900">Area Fokus</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+          
+          <div class="bg-slate-50 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 group">
+            <div class="w-16 h-16 bg-blue-100 group-hover:bg-blue-600 transition-colors rounded-2xl flex items-center justify-center mb-8 text-blue-600 group-hover:text-white border border-blue-200 shadow-sm">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-slate-900">Software Engineering</h3>
+            <p class="text-slate-500 leading-relaxed">Mempelajari dan merancang arsitektur perangkat lunak untuk menghasilkan aplikasi yang logis, efisien, dan ramah pengguna.</p>
+          </div>
+          
+          <div class="bg-slate-50 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 group">
+            <div class="w-16 h-16 bg-indigo-100 group-hover:bg-indigo-600 transition-colors rounded-2xl flex items-center justify-center mb-8 text-indigo-600 group-hover:text-white border border-indigo-200 shadow-sm">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-slate-900">Design Grafis</h3>
+            <p class="text-slate-500 leading-relaxed">Mengeksplorasi ketertarikan dalam mengurai, menganalisis, dan memvisualisasikan data untuk menemukan insight yang berguna.</p>
+          </div>
+          
+          <div class="bg-slate-50 p-8 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 group">
+            <div class="w-16 h-16 bg-teal-100 group-hover:bg-teal-600 transition-colors rounded-2xl flex items-center justify-center mb-8 text-teal-600 group-hover:text-white border border-teal-200 shadow-sm">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-slate-900">Public Speaking</h3>
+            <p class="text-slate-500 leading-relaxed">Mengasah kemampuan berkomunikasi, bernegosiasi, dan menyampaikan ide secara persuasif dan terstruktur melalui MUN.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="py-28 px-6 fade-in bg-slate-50">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold mb-16 text-center text-slate-900">Portofolio</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12" id="portfolio-grid">
+          
+          <div class="bg-white p-6 rounded-[2rem] shadow-lg border border-slate-200 hover:shadow-2xl transition-all group overflow-hidden flex flex-col items-center">
+            <div class="w-full h-64 bg-slate-100 rounded-3xl overflow-hidden mb-8 border border-slate-200">
+              <img src="image1.png" alt="Software Engineering" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="w-full text-left">
+              <h3 class="text-2xl font-bold mb-3 text-slate-900">Figma Design</h3>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed">Eksplorasi desain landing page yang mengedepankan kemudahan navigasi, kontras warna yang nyaman, dan tata letak komponen yang presisi.</p>
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full border border-blue-200">Estetica</span>
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full border border-indigo-200">Contarsi font & color</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-6 rounded-[2rem] shadow-lg border border-slate-200 hover:shadow-2xl transition-all group overflow-hidden flex flex-col items-center">
+            <div class="w-full h-64 bg-slate-100 rounded-3xl overflow-hidden mb-8 border border-slate-200">
+              <img src="image2.png" alt="Data Analysis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="w-full text-left">
+              <h3 class="text-2xl font-bold mb-3 text-slate-900">Gantthers Website</h3>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed">Website ini berfokus pada pengembangan teknologi pada bidang barbershop seperti pemesanan online dan bertujuan untuk memudahan pengguna</p>
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-teal-100 text-teal-700 text-xs font-bold rounded-full border border-teal-200">Leader</span>
+                <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full border border-slate-200">Contact Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="extra-portfolio hidden bg-white p-6 rounded-[2rem] shadow-lg border border-slate-200 hover:shadow-2xl transition-all group overflow-hidden flex flex-col items-center">
+            <div class="w-full h-64 bg-slate-100 rounded-3xl overflow-hidden mb-8 border border-slate-200">
+              <img src="image3.png" alt="Backend Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="w-full text-left">
+              <h3 class="text-2xl font-bold mb-3 text-slate-900">Design Website E-Commerce</h3>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed">Membangun keindahan design dan juga kenyamanan pengguna</p>
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-red-100 text-red-700 text-xs font-bold rounded-full border border-red-200">UI / UX</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full border border-blue-200">Contrasi warna</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="extra-portfolio hidden bg-white p-6 rounded-[2rem] shadow-lg border border-slate-200 hover:shadow-2xl transition-all group overflow-hidden flex flex-col items-center">
+            <div class="w-full h-64 bg-slate-100 rounded-3xl overflow-hidden mb-8 border border-slate-200">
+              <img src="image4.png" alt="Data Visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="w-full text-left">
+              <h3 class="text-2xl font-bold mb-3 text-slate-900">Furniture Website</h3>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed">Memudahkan sebuah lembaga dalam menjual dan juga memudahkan pengguna dalam membeli furniture </p>
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 text-xs font-bold rounded-full border border-yellow-200">Set Up CSS</span>
+                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-bold rounded-full border border-orange-200">JS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="extra-portfolio hidden bg-white p-6 rounded-[2rem] shadow-lg border border-slate-200 hover:shadow-2xl transition-all group overflow-hidden flex flex-col items-center">
+            <div class="w-full h-64 bg-slate-100 rounded-3xl overflow-hidden mb-8 border border-slate-200">
+              <img src="image5.png" alt="Web Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="w-full text-left">
+              <h3 class="text-2xl font-bold mb-3 text-slate-900">Website Admin</h3>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed">Desain antarmuka web responsif dengan styling utilitas yang cepat dan efisien untuk para staf sekolah.</p>
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-cyan-100 text-cyan-700 text-xs font-bold rounded-full border border-cyan-200">Tailwind CSS</span>
+                <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs font-bold rounded-full border border-slate-200">HTML</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="extra-portfolio hidden bg-white p-6 rounded-[2rem] shadow-lg border border-slate-200 hover:shadow-2xl transition-all group overflow-hidden flex flex-col items-center">
+            <div class="w-full h-64 bg-slate-100 rounded-3xl overflow-hidden mb-8 border border-slate-200">
+              <img src="image6.png" alt="UI UX" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="w-full text-left">
+              <h3 class="text-2xl font-bold mb-3 text-slate-900">Design Canva</h3>
+              <p class="text-slate-500 text-sm mb-6 leading-relaxed">Merancang Sebuah design yang sederhana namun menarik</p>
+              <div class="flex space-x-2">
+                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full border border-purple-200">Canva</span>
+                <span class="px-3 py-1 bg-pink-100 text-pink-700 text-xs font-bold rounded-full border border-pink-200">UI/UX</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-16 flex justify-center">
+          <button id="btn-load-more" class="px-8 py-4 bg-slate-900 text-white rounded-full font-medium hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-500/30 hover:-translate-y-1 focus:outline-none">
+            Lihat Lainnya
+          </button>
+        </div>
+
+      </div>
+    </section>
 
     
 
-    
-    <!-- <div id="app"></div> -->
+    <section id="contact" class="py-28 px-6 fade-in bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-[1fr,1.2fr] gap-16 items-center">
+          
+          <div class="space-y-8">
+            <div>
+              <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-sm font-bold tracking-wide border border-blue-100 mb-6">
+                <span>💬</span> Hubungi Saya
+              </div>
+              <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">Mari Berkolaborasi.</h2>
+              <p class="text-lg text-slate-600 leading-relaxed max-w-md">
+                Saya selalu terbuka untuk berdiskusi tentang ide baru, proyek, atau peluang belajar. Jangan ragu untuk menyapa melalui form di samping atau kontak langsung di bawah ini.
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center border border-blue-100 shadow-sm">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Email</p>
+                  <a href="mailto:emailkamu@gmail.com" class="text-base font-semibold text-slate-800 hover:text-blue-600 transition-colors">emailkamu@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center border border-indigo-100 shadow-sm">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Lokasi</p>
+                  <p class="text-base font-semibold text-slate-800">Bekasi, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form id="whatsapp-form" class="p-8 md:p-10 bg-slate-50 rounded-[2.5rem] border border-slate-200 shadow-xl shadow-slate-200/40">
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              
+              <div class="space-y-2">
+                <label for="name" class="block text-sm font-semibold text-slate-700">Nama Lengkap</label>
+                <input type="text" id="name" required class="w-full px-5 py-4 bg-white rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all placeholder:text-slate-400 outline-none shadow-sm" placeholder="Cth: John Doe">
+              </div>
+              
+              <div class="space-y-2">
+                <label for="email" class="block text-sm font-semibold text-slate-700">Alamat Email</label>
+                <input type="email" id="email" required class="w-full px-5 py-4 bg-white rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all placeholder:text-slate-400 outline-none shadow-sm" placeholder="john@example.com">
+              </div>
+
+            </div>
+            
+            <div class="space-y-2 mb-8">
+              <label for="message" class="block text-sm font-semibold text-slate-700">Pesan atau Ide Proyek</label>
+              <textarea id="message" rows="5" required class="w-full px-5 py-4 bg-white rounded-2xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all placeholder:text-slate-400 outline-none resize-none shadow-sm" placeholder="Tuliskan detail pesan Anda di sini..."></textarea>
+            </div>
+            
+            <button type="submit" class="w-full py-4 bg-green-600 text-white rounded-2xl font-bold hover:bg-green-700 transition-all shadow-lg hover:shadow-green-500/30 hover:-translate-y-1 flex items-center justify-center gap-3">
+              Kirim via WhatsApp
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+    ```
+
+    <footer class="bg-white py-12 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center text-center md:text-left">
+        <a href="#" class="text-4xl font-extrabold text-blue-600 tracking-tighter">L</a>
+        <p class="text-slate-500 font-medium text-sm md:text-right">&copy; <span id="year"></span> Luqman.</p>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
-    
   </body>
 </html>
-
-
