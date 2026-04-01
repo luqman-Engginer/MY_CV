@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Ubah tulisan di tombol
-      btnLoadMore.innerText = isExpanded ? 'Sembunyikan' : 'Lihat Lainnya';
+      btnLoadMore.innerText = isExpanded ? 'Hide' : 'See More';
     });
   }
 
