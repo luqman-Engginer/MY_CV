@@ -112,3 +112,29 @@ document.addEventListener('DOMContentLoaded', () => {
       waForm.reset();
     });
   }
+
+  // 1. Inisialisasi Animasi Scroll (AOS)
+// Memastikan halaman di-load dulu sebelum menjalankan animasi
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      once: true, // Animasi cuma jalan sekali waktu scroll turun
+      offset: 50, // Mulai animasi kalau jarak elemen ke bawah layar sisa 50px
+    });
+  }
+
+  // 2. Logika Tombol Slider Hero
+  const slider = document.getElementById('sliderHero');
+  const btnKiri = document.getElementById('slideKiri');
+  const btnKanan = document.getElementById('slideKanan');
+
+  if (btnKiri && btnKanan && slider) {
+    btnKiri.addEventListener('click', () => {
+      slider.scrollBy({ left: -250, behavior: 'smooth' });
+    });
+
+    btnKanan.addEventListener('click', () => {
+      slider.scrollBy({ left: 250, behavior: 'smooth' });
+    });
+  }
+});
