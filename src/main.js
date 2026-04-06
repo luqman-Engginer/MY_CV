@@ -1,9 +1,35 @@
 import './style.css'
 
-// 1. Mengatur tahun dinamis di footer
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      // Buka/tutup menu dropdown
+      mobileMenu.classList.toggle('hidden');
+      
+      // Ganti ikon burger jadi X, atau sebaliknya
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Otomatis tutup menu kalau salah satu link diklik
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+  }
+
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 2. Logika Animasi Scroll (Intersection Observer)
+
 const observerOptions = {
   root: null,
   rootMargin: '0px',
@@ -24,7 +50,7 @@ const observer = new IntersectionObserver((entries, observer) => {
   });
 }, observerOptions);
 
-// Menerapkan state awal ke semua elemen yang memiliki class 'fade-in'
+
 document.querySelectorAll('.fade-in').forEach(element => {
   // Setup CSS transisi awal menggunakan class Tailwind via JS
   element.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-[1000ms]', 'ease-out');
@@ -33,9 +59,7 @@ document.querySelectorAll('.fade-in').forEach(element => {
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  // ========================================================
-  // 1. FITUR TOMBOL "LIHAT LAINNYA" (PORTOFOLIO)
-  // ========================================================
+
   const btnLoadMore = document.getElementById('btn-load-more');
   const extraPortfolios = document.querySelectorAll('.extra-portfolio');
   let isExpanded = false;
@@ -55,14 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Ubah tulisan di tombol
+
       btnLoadMore.innerText = isExpanded ? 'Hide' : 'See More';
     });
   }
 
-  // ========================================================
-  // 2. FITUR SLIDER KOTAK KEAHLIAN (HALAMAN HERO ATAS)
-  // ========================================================
+
   const sliderHero = document.getElementById('sliderHero');
   const slideKiri = document.getElementById('slideKiri');
   const slideKanan = document.getElementById('slideKanan');
@@ -78,9 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-// ========================================================
-  // 3. FITUR KIRIM FORM KE WHATSAPP
-  // ========================================================
   const waForm = document.getElementById('whatsapp-form');
 
   if (waForm) {
@@ -113,8 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 1. Inisialisasi Animasi Scroll (AOS)
-// Memastikan halaman di-load dulu sebelum menjalankan animasi
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof AOS !== 'undefined') {
     AOS.init({
@@ -123,7 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Logika Tombol Slider Hero
   const slider = document.getElementById('sliderHero');
   const btnKiri = document.getElementById('slideKiri');
   const btnKanan = document.getElementById('slideKanan');
