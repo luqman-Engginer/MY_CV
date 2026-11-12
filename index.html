@@ -5,27 +5,38 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050811" />
   <title>Luqman | Software Engineering & Graphic Design</title>
   <meta name="description" content="Portfolio Luqman — SMK student passionate about Software Engineering, Graphic Design, and Public Speaking. Open for internship and job opportunities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-white text-slate-900 font-sans antialiased overflow-x-hidden">
+<body class="bg-[#050811] text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-cyan-500/30 selection:text-white">
 
-  <nav class="fixed w-full z-50 transition-all duration-500 bg-white/80 backdrop-blur-lg">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="relative text-2xl font-extrabold gradient-text tracking-tighter hover:scale-110 transition-transform">
-        L
+  <!-- Floating Glassmorphism Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-3 md:py-4 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto px-5 sm:px-7 py-3 rounded-2xl md:rounded-full bg-[#0a0f1d]/80 backdrop-blur-xl border border-cyan-500/20 shadow-[0_8px_32px_rgba(0,0,0,0.6)] flex items-center justify-between transition-all duration-300 hover:border-cyan-500/40 hover:shadow-[0_0_25px_rgba(0,240,255,0.12)]">
+      
+      <a href="#" class="relative flex items-center gap-2.5 group">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 flex items-center justify-center text-white font-black text-lg tracking-tighter shadow-[0_0_15px_rgba(0,240,255,0.4)] group-hover:shadow-[0_0_25px_rgba(0,240,255,0.7)] group-hover:scale-105 transition-all">
+          L
+        </span>
+        <span class="hidden sm:inline-block font-extrabold tracking-wider text-sm text-slate-200">
+          LUQMAN<span class="text-cyan-400">.</span>
+        </span>
       </a>
 
-      <div class="hidden md:flex items-center gap-1">
-        <a href="#about" class="px-4 py-2 text-sm font-medium text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all">About</a>
-        <a href="#skills" class="px-4 py-2 text-sm font-medium text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all">Skills</a>
-        <a href="#portfolio" class="px-4 py-2 text-sm font-medium text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-all">Portfolio</a>
-        <a href="#contact" class="px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full hover:shadow-lg hover:shadow-blue-500/30 transition-all">Hire Me</a>
+      <div class="hidden md:flex items-center gap-1.5">
+        <a href="#about" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-cyan-950/40 rounded-full transition-all">About</a>
+        <a href="#skills" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-cyan-950/40 rounded-full transition-all">Skills</a>
+        <a href="#portfolio" class="px-4 py-2 text-sm font-medium text-slate-300 hover:text-cyan-300 hover:bg-cyan-950/40 rounded-full transition-all">Portfolio</a>
+        <a href="#contact" class="ml-2 px-5 py-2 text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-[0_0_15px_rgba(0,240,255,0.35)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] hover:scale-105 transition-all">Hire Me</a>
       </div>
 
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-slate-600 hover:text-blue-600 transition-colors p-2" aria-label="Menu">
+      <button id="mobile-menu-btn" class="md:hidden flex items-center text-slate-300 hover:text-cyan-400 transition-colors p-2 rounded-xl hover:bg-slate-800/50" aria-label="Menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -33,170 +44,207 @@
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white/95 backdrop-blur-lg shadow-xl">
-      <div class="flex flex-col px-6 py-5 gap-2">
-        <a href="#about" class="mobile-link px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all">About</a>
-        <a href="#skills" class="mobile-link px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all">Skills</a>
-        <a href="#portfolio" class="mobile-link px-4 py-3 rounded-xl text-sm font-medium text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all">Portfolio</a>
-        <a href="#contact" class="mobile-link px-4 py-3 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 text-center transition-all">Hire Me</a>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden max-w-6xl mx-auto mt-2 rounded-2xl bg-[#0a0f1d]/95 backdrop-blur-2xl border border-cyan-500/20 shadow-2xl p-4">
+      <div class="flex flex-col gap-2">
+        <a href="#about" class="mobile-link px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-cyan-950/40 hover:text-cyan-400 transition-all">About</a>
+        <a href="#skills" class="mobile-link px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-cyan-950/40 hover:text-cyan-400 transition-all">Skills</a>
+        <a href="#portfolio" class="mobile-link px-4 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-cyan-950/40 hover:text-cyan-400 transition-all">Portfolio</a>
+        <a href="#contact" class="mobile-link px-4 py-3 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 text-center shadow-[0_0_15px_rgba(0,240,255,0.35)] transition-all">Hire Me</a>
       </div>
     </div>
   </nav>
 
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050811] pt-28 pb-20">
+    <!-- Futuristic Ambient Lighting & Cyber Grid Background -->
     <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-      <div class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-40 left-1/3 w-[500px] h-[500px] bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
-      <div class="absolute top-1/3 left-1/4 w-4 h-4 bg-blue-400 rounded-full animate-float"></div>
-      <div class="absolute top-1/4 right-1/4 w-3 h-3 bg-indigo-400 rounded-full animate-float" style="animation-delay: 1s;"></div>
-      <div class="absolute bottom-1/3 right-1/3 w-5 h-5 bg-purple-400 rounded-full animate-float" style="animation-delay: 2s;"></div>
+      <div class="absolute inset-0 cyber-grid opacity-30"></div>
+      <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-cyan-600/15 rounded-full filter blur-[120px] animate-blob"></div>
+      <div class="absolute -top-20 -right-40 w-[550px] h-[550px] bg-blue-600/15 rounded-full filter blur-[120px] animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-40 left-1/3 w-[600px] h-[600px] bg-indigo-600/15 rounded-full filter blur-[120px] animate-blob animation-delay-4000"></div>
+      
+      <!-- Subtle Floating Star/Particles -->
+      <div class="absolute top-1/4 left-1/5 w-2 h-2 bg-cyan-400 rounded-full animate-float shadow-[0_0_10px_#00f0ff]"></div>
+      <div class="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-float shadow-[0_0_10px_#38bdf8]" style="animation-delay: 1.5s;"></div>
+      <div class="absolute bottom-1/4 right-1/3 w-2 h-2 bg-indigo-400 rounded-full animate-float" style="animation-delay: 3s;"></div>
     </div>
 
-    <div class="max-w-7xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
 
       <div class="space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start" data-aos="fade-right" data-aos-duration="1000">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 text-xs font-bold tracking-wide border border-blue-100 shadow-sm animate-float">
-          <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-cyan-950/40 text-cyan-300 text-xs font-semibold tracking-wide border border-cyan-500/30 shadow-[0_0_20px_rgba(0,240,255,0.15)] animate-float">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-400"></span>
+          </span>
           Open for Internship & Job Opportunities
         </div>
 
         <div>
-          <p class="text-sm md:text-base font-medium text-slate-500 mb-2 tracking-wide">Hi there, I'm</p>
-          <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-slate-900 leading-[1.05]">
+          <p class="text-sm md:text-base font-semibold tracking-widest text-cyan-400 uppercase mb-2">Hi there, I'm</p>
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white leading-[1.05]">
             Luqman
           </h1>
           <div class="h-10 md:h-12 mt-2 flex items-center justify-center lg:justify-start">
             <span class="text-lg md:text-xl font-medium text-slate-400">I'm a </span>
-            <span id="typed-text" class="text-lg md:text-xl font-bold gradient-text ml-1.5"></span>
-            <span class="inline-block w-0.5 h-6 md:h-7 bg-blue-500 ml-1 animate-pulse" style="animation: blink 0.7s step-end infinite;"></span>
+            <span id="typed-text" class="text-lg md:text-xl font-bold gradient-text ml-2"></span>
+            <span class="inline-block w-0.5 h-6 md:h-7 bg-cyan-400 ml-1 shadow-[0_0_8px_#00f0ff] animate-pulse"></span>
           </div>
         </div>
 
-        <p class="text-base md:text-lg text-slate-500 max-w-lg leading-relaxed">
-          A passionate <strong class="text-slate-800">SMK Madinatul Qur'an</strong> student mastering 
-          <strong class="text-slate-800">Software Engineering</strong>, <strong class="text-slate-800">Graphic Design</strong>, 
-          and <strong class="text-slate-800">Public Speaking</strong>. Building the future with code, creativity, and character.
+        <p class="text-base md:text-lg text-slate-300 max-w-lg leading-relaxed">
+          A passionate <strong class="text-white font-bold">SMK Madinatul Qur'an</strong> student mastering 
+          <strong class="text-cyan-300 font-bold">Software Engineering</strong>, <strong class="text-cyan-300 font-bold">Graphic Design</strong>, 
+          and <strong class="text-cyan-300 font-bold">Public Speaking</strong>. Building the future with code, creativity, and character.
         </p>
 
-        <div class="flex flex-wrap items-center gap-4">
-          <a href="#portfolio" class="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300">
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+          <a href="#portfolio" class="px-8 py-3.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white rounded-full font-semibold shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.7)] hover:-translate-y-0.5 transition-all duration-300">
             View My Work
           </a>
-          <a href="#contact" class="px-8 py-3.5 border-2 border-slate-200 text-slate-600 rounded-full font-semibold hover:border-blue-500 hover:text-blue-600 hover:-translate-y-0.5 transition-all duration-300">
+          <a href="#contact" class="px-8 py-3.5 border border-slate-700 hover:border-cyan-400 bg-slate-900/60 text-slate-200 hover:text-white rounded-full font-semibold hover:shadow-[0_0_20px_rgba(0,240,255,0.2)] hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-md">
             Contact Me
           </a>
         </div>
 
         <div class="flex items-center gap-4 pt-2">
           <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer"
-            class="w-11 h-11 bg-slate-100 hover:bg-blue-600 text-slate-500 hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 group border border-slate-200 hover:border-blue-600">
+            class="w-11 h-11 bg-slate-900/80 hover:bg-cyan-500 text-slate-400 hover:text-slate-950 rounded-xl flex items-center justify-center transition-all duration-300 border border-slate-800 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,240,255,0.5)] group" aria-label="GitHub">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           </a>
           <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer"
-            class="w-11 h-11 bg-slate-100 hover:bg-green-500 text-slate-500 hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 border border-slate-200 hover:border-green-500">
+            class="w-11 h-11 bg-slate-900/80 hover:bg-emerald-500 text-slate-400 hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 border border-slate-800 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(16,185,129,0.5)] group" aria-label="WhatsApp">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </a>
           <a href="https://www.instagram.com/maherr_0610/" target="_blank" rel="noopener noreferrer"
-            class="w-11 h-11 bg-slate-100 hover:bg-pink-600 text-slate-500 hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 border border-slate-200 hover:border-pink-600">
+            class="w-11 h-11 bg-slate-900/80 hover:bg-pink-600 text-slate-400 hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 border border-slate-800 hover:border-pink-500 hover:shadow-[0_0_20px_rgba(236,72,153,0.5)] group" aria-label="Instagram">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
         </div>
       </div>
 
+      <!-- Holographic Hero Portrait -->
       <div class="relative flex items-center justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
         <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
-          <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-[2.5rem] rotate-6 opacity-10 animate-float"></div>
-          <div class="absolute inset-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-[2rem] -rotate-3 opacity-20 animate-float" style="animation-delay: 1s;"></div>
-          <div class="absolute inset-8 bg-white rounded-[1.5rem] shadow-2xl border border-slate-100 overflow-hidden">
-            <img src="/image.jpeg" alt="Luqman" class="w-full h-full object-cover">
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-5">
-              <span class="text-white text-sm font-semibold">Luqman • SMK Student</span>
+          
+          <!-- Outer Cyan Geometric Glow -->
+          <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-[2.5rem] rotate-6 filter blur-xl animate-pulse-glow"></div>
+          <div class="absolute inset-4 bg-gradient-to-br from-cyan-400 to-indigo-600 rounded-[2rem] -rotate-3 opacity-25 animate-float" style="animation-delay: 1s;"></div>
+          
+          <!-- Main Portrait Container -->
+          <div class="absolute inset-8 bg-[#0c1326] rounded-[1.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-cyan-500/30 overflow-hidden group">
+            <img src="/image.jpeg" alt="Luqman" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050811]/90 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-5 flex items-center justify-between">
+              <span class="text-white text-sm font-semibold tracking-wide flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"></span>
+                Luqman • SMK Student
+              </span>
             </div>
           </div>
 
-          <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl border border-slate-100 p-4 animate-float" style="animation-delay: 2s;">
+          <!-- Futuristic Floating Status Pill -->
+          <div class="absolute -bottom-4 -right-4 bg-[#0a0f1d]/90 backdrop-blur-xl rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.8)] border border-cyan-500/30 p-4 animate-float" style="animation-delay: 2s;">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-emerald-500 flex items-center justify-center shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+                <svg class="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
               </div>
               <div>
-                <p class="text-xs text-slate-400 font-medium">Open to Work</p>
-                <p class="text-sm font-bold text-slate-800">Internship / Job</p>
+                <p class="text-[10px] text-cyan-400 font-bold uppercase tracking-wider">Open to Work</p>
+                <p class="text-sm font-bold text-white">Internship / Job</p>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="relative py-28 px-6 bg-slate-50 overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.03),transparent_50%)] pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative">
+  <!-- About Section -->
+  <section id="about" class="relative py-28 px-6 bg-[#070b16] overflow-hidden">
+    <!-- Ambient Backdrop -->
+    <div class="absolute inset-0 cyber-dots opacity-20 pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-40 w-96 h-96 bg-cyan-600/10 rounded-full filter blur-[100px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-0 w-96 h-96 bg-blue-600/10 rounded-full filter blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Header -->
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="text-xs font-bold text-blue-600 uppercase tracking-[0.2em]">About Me</span>
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-3 mb-4">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
+          About Me
+        </span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-4 tracking-tight">
           Crafting Digital <span class="gradient-text">Experiences</span>
         </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mx-auto"></div>
+        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- Portrait & Stats -->
         <div class="relative" data-aos="zoom-in-right" data-aos-duration="1000">
-          <div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-            <img src="/image.jpeg" alt="Luqman" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
+          <div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-cyan-500/25 group">
+            <img src="/image.jpeg" alt="Luqman" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#070b16] via-transparent to-transparent"></div>
           </div>
-          <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl border border-slate-100 p-5 flex items-center gap-4 animate-float">
+
+          <!-- Floating Mastery Pill -->
+          <div class="absolute -bottom-6 -right-4 sm:-right-6 bg-[#0c1326]/90 backdrop-blur-xl rounded-2xl shadow-[0_15px_35px_rgba(0,0,0,0.8)] border border-cyan-500/30 p-5 flex items-center gap-5 animate-float">
             <div class="text-center">
               <div class="text-3xl font-black gradient-text counter" data-target="89">0</div>
-              <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">Mastery</p>
+              <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mt-1">Mastery</p>
             </div>
-            <div class="w-px h-10 bg-slate-200"></div>
+            <div class="w-px h-10 bg-slate-800"></div>
             <div class="text-center">
-              <div class="text-3xl font-black gradient-text" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); -webkit-background-clip: text; background-clip: text; color: transparent;">3</div>
+              <div class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">3</div>
               <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">Languages</p>
             </div>
           </div>
         </div>
 
+        <!-- Bio Content & Bento Grid -->
         <div class="space-y-6" data-aos="fade-left" data-aos-duration="1000">
           <div class="space-y-5">
-            <p class="text-lg text-slate-600 leading-relaxed">
-              I'm <strong class="text-slate-900">Luqman</strong>, a 11th-grade student at 
-              <strong class="text-slate-900">SMK Madinatul Qur'an</strong> and 
-              <strong class="text-slate-900">Ma'had Tahfidz Al-Yusro</strong> in Bogor. 
+            <p class="text-lg text-slate-300 leading-relaxed">
+              I'm <strong class="text-white font-bold">Luqman</strong>, a 11th-grade student at 
+              <strong class="text-white font-bold">SMK Madinatul Qur'an</strong> and 
+              <strong class="text-white font-bold">Ma'had Tahfidz Al-Yusro</strong> in Bogor. 
               I believe technology and strong character go hand in hand.
             </p>
-            <p class="text-lg text-slate-600 leading-relaxed">
-              I speak <strong class="text-slate-900">Indonesian</strong>, <strong class="text-slate-900">English</strong>, and 
-              <strong class="text-slate-900">Arabic</strong> — allowing me to connect with diverse people and ideas. 
-              My passions include <strong class="text-slate-900 border-b-2 border-indigo-200">Public Speaking</strong> and 
-              <strong class="text-slate-900 border-b-2 border-blue-200">MUN</strong>, where I sharpen my communication and leadership.
+            <p class="text-lg text-slate-300 leading-relaxed">
+              I speak <strong class="text-white font-bold">Indonesian</strong>, <strong class="text-white font-bold">English</strong>, and 
+              <strong class="text-white font-bold">Arabic</strong> — allowing me to connect with diverse people and ideas. 
+              My passions include <strong class="text-cyan-300 border-b border-cyan-500/40 pb-0.5">Public Speaking</strong> and 
+              <strong class="text-cyan-300 border-b border-cyan-500/40 pb-0.5">MUN</strong>, where I sharpen my communication and leadership.
             </p>
           </div>
 
+          <!-- Info Bento Cards -->
           <div class="grid grid-cols-2 gap-4 pt-4">
-            <div class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">School</div>
-              <div class="font-bold text-slate-800">SMK Madinatul Qur'an</div>
+            <div class="p-5 bg-[#0c1326]/70 backdrop-blur-md rounded-2xl border border-cyan-500/15 shadow-sm hover:border-cyan-400/40 hover:shadow-[0_0_20px_rgba(0,240,255,0.12)] hover:-translate-y-1 transition-all duration-300">
+              <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">School</div>
+              <div class="font-bold text-white text-sm sm:text-base">SMK Madinatul Qur'an</div>
             </div>
-            <div class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">Location</div>
-              <div class="font-bold text-slate-800">Bekasi, Indonesia</div>
+            <div class="p-5 bg-[#0c1326]/70 backdrop-blur-md rounded-2xl border border-cyan-500/15 shadow-sm hover:border-cyan-400/40 hover:shadow-[0_0_20px_rgba(0,240,255,0.12)] hover:-translate-y-1 transition-all duration-300">
+              <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Location</div>
+              <div class="font-bold text-white text-sm sm:text-base">Bekasi, Indonesia</div>
             </div>
-            <div class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">Grade</div>
-              <div class="font-bold text-slate-800">11 (Eleven) SMK</div>
+            <div class="p-5 bg-[#0c1326]/70 backdrop-blur-md rounded-2xl border border-cyan-500/15 shadow-sm hover:border-cyan-400/40 hover:shadow-[0_0_20px_rgba(0,240,255,0.12)] hover:-translate-y-1 transition-all duration-300">
+              <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Grade</div>
+              <div class="font-bold text-white text-sm sm:text-base">11 (Eleven) SMK</div>
             </div>
-            <div class="p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-              <div class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">Email</div>
-              <div class="font-bold text-slate-800 truncate">luqmanmunggi@gmail.com</div>
+            <div class="p-5 bg-[#0c1326]/70 backdrop-blur-md rounded-2xl border border-cyan-500/15 shadow-sm hover:border-cyan-400/40 hover:shadow-[0_0_20px_rgba(0,240,255,0.12)] hover:-translate-y-1 transition-all duration-300">
+              <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">Email</div>
+              <div class="font-bold text-white text-sm sm:text-base truncate">luqmanmunggi@gmail.com</div>
             </div>
           </div>
 
-          <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all duration-300 mt-2">
+          <a href="#contact" class="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white rounded-full font-semibold shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] hover:-translate-y-0.5 transition-all duration-300 mt-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
             Download CV
           </a>
@@ -205,104 +253,111 @@
     </div>
   </section>
 
-  <section id="skills" class="relative py-28 px-6 bg-white overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(139,92,246,0.03),transparent_50%)] pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative">
+  <!-- Skills Section -->
+  <section id="skills" class="relative py-28 px-6 bg-[#050811] overflow-hidden">
+    <div class="absolute inset-0 cyber-grid opacity-20 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Header -->
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="text-xs font-bold text-blue-600 uppercase tracking-[0.2em]">My Skills</span>
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-3 mb-4">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
+          My Skills
+        </span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-4 tracking-tight">
           What I <span class="gradient-text">Bring</span> to the Table
         </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mx-auto"></div>
+        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12">
+      <div class="grid lg:grid-cols-2 gap-10">
 
-        <div class="space-y-8">
-          <h3 class="text-lg font-bold text-slate-800 flex items-center gap-3">
-            <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-sm">&#60;/&#62;</span>
+        <!-- Software Engineering Card -->
+        <div class="p-8 rounded-3xl bg-[#0c1326]/70 backdrop-blur-xl border border-cyan-500/20 shadow-xl hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(0,240,255,0.12)] transition-all" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold text-white flex items-center gap-3 mb-8">
+            <span class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 text-white rounded-xl flex items-center justify-center text-sm font-mono shadow-[0_0_15px_rgba(0,240,255,0.35)]">&#60;/&#62;</span>
             Software Engineering
           </h3>
-          <div class="space-y-5">
+          <div class="space-y-6">
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700">GOLANG</span>
-                <span class="text-xs font-bold text-blue-600">75%</span>
+                <span class="text-sm font-semibold text-slate-200">GOLANG</span>
+                <span class="text-xs font-bold text-cyan-400">75%</span>
               </div>
-              <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-1000 ease-out" data-width="75" style="width: 0%"></div>
+              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#00f0ff]" data-width="75" style="width: 0%"></div>
               </div>
             </div>
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700">TypeScript</span>
-                <span class="text-xs font-bold text-blue-600">70%</span>
+                <span class="text-sm font-semibold text-slate-200">TypeScript</span>
+                <span class="text-xs font-bold text-cyan-400">70%</span>
               </div>
-              <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-1000 ease-out" data-width="70" style="width: 0%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700">Java Script</span>
-                <span class="text-xs font-bold text-blue-600">65%</span>
-              </div>
-              <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                <div class="skill-bar-fill h-full bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full transition-all duration-1000 ease-out" data-width="65" style="width: 0%"></div>
+              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#38bdf8]" data-width="70" style="width: 0%"></div>
               </div>
             </div>
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700">Tailwind CSS</span>
-                <span class="text-xs font-bold text-blue-600">85%</span>
+                <span class="text-sm font-semibold text-slate-200">Java Script</span>
+                <span class="text-xs font-bold text-cyan-400">65%</span>
               </div>
-              <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full transition-all duration-1000 ease-out" data-width="85" style="width: 0%"></div>
+              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-500 to-teal-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#00f0ff]" data-width="65" style="width: 0%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-semibold text-slate-200">Tailwind CSS</span>
+                <span class="text-xs font-bold text-cyan-400">85%</span>
+              </div>
+              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#00f0ff]" data-width="85" style="width: 0%"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="space-y-8">
-          <h3 class="text-lg font-bold text-slate-800 flex items-center gap-3">
-            <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">🎨</span>
+        <!-- Design & Other Card -->
+        <div class="p-8 rounded-3xl bg-[#0c1326]/70 backdrop-blur-xl border border-cyan-500/20 shadow-xl hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(0,240,255,0.12)] transition-all" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold text-white flex items-center gap-3 mb-8">
+            <span class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-xl flex items-center justify-center text-sm shadow-[0_0_15px_rgba(99,102,241,0.35)]">🎨</span>
             Design & Other
           </h3>
-          <div class="space-y-5">
+          <div class="space-y-6">
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700">Figma / UI Design</span>
-                <span class="text-xs font-bold text-indigo-600">80%</span>
+                <span class="text-sm font-semibold text-slate-200">Figma / UI Design</span>
+                <span class="text-xs font-bold text-indigo-400">80%</span>
               </div>
-              <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                <div class="skill-bar-fill h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000 ease-out" data-width="80" style="width: 0%"></div>
+              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="skill-bar-fill h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#818cf8]" data-width="80" style="width: 0%"></div>
               </div>
             </div>
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700">Canva / Graphic Design</span>
-                <span class="text-xs font-bold text-indigo-600">85%</span>
+                <span class="text-sm font-semibold text-slate-200">Canva / Graphic Design</span>
+                <span class="text-xs font-bold text-purple-400">85%</span>
               </div>
-              <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                <div class="skill-bar-fill h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ease-out" data-width="85" style="width: 0%"></div>
-              </div>
-            </div>
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700">Public Speaking</span>
-                <span class="text-xs font-bold text-indigo-600">75%</span>
-              </div>
-              <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                <div class="skill-bar-fill h-full bg-gradient-to-r from-teal-500 to-green-500 rounded-full transition-all duration-1000 ease-out" data-width="75" style="width: 0%"></div>
+              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="skill-bar-fill h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#c084fc]" data-width="85" style="width: 0%"></div>
               </div>
             </div>
             <div>
               <div class="flex justify-between mb-2">
-                <span class="text-sm font-semibold text-slate-700">HTML / CSS</span>
-                <span class="text-xs font-bold text-indigo-600">90%</span>
+                <span class="text-sm font-semibold text-slate-200">Public Speaking</span>
+                <span class="text-xs font-bold text-teal-400">75%</span>
               </div>
-              <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                <div class="skill-bar-fill h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full transition-all duration-1000 ease-out" data-width="90" style="width: 0%"></div>
+              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="skill-bar-fill h-full bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#2dd4bf]" data-width="75" style="width: 0%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-sm font-semibold text-slate-200">HTML / CSS</span>
+                <span class="text-xs font-bold text-cyan-400">90%</span>
+              </div>
+              <div class="w-full h-2.5 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+                <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#00f0ff]" data-width="90" style="width: 0%"></div>
               </div>
             </div>
           </div>
@@ -312,307 +367,350 @@
     </div>
   </section>
 
-  <section id="focus" class="relative py-28 px-6 bg-slate-50 overflow-hidden">
-    <div class="max-w-7xl mx-auto relative">
+  <!-- Focus Area Section -->
+  <section id="focus" class="relative py-28 px-6 bg-[#070b16] overflow-hidden">
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Header -->
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="text-xs font-bold text-blue-600 uppercase tracking-[0.2em]">Focus Area</span>
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-3 mb-4">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
+          Focus Area
+        </span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-4 tracking-tight">
           Where I <span class="gradient-text">Excel</span>
         </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mx-auto"></div>
+        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="group relative bg-white p-8 rounded-3xl border border-slate-200 hover:border-blue-200 card-hover hover:shadow-2xl"
+        
+        <!-- Focus 1 -->
+        <div class="group relative bg-[#0c1326]/75 backdrop-blur-xl p-8 rounded-3xl border border-cyan-500/15 hover:border-cyan-400/50 card-hover shadow-xl hover:shadow-[0_0_35px_rgba(0,240,255,0.18)]"
           data-aos="fade-up" data-aos-delay="100">
-          <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-          <div class="relative">
-            <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-[0_0_20px_rgba(0,240,255,0.35)] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">Software Engineering</h3>
-            <p class="text-slate-500 leading-relaxed text-sm">Designing and building software architecture that is logical, efficient, and user-friendly.</p>
+            <h3 class="text-xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors">Software Engineering</h3>
+            <p class="text-slate-400 leading-relaxed text-sm">Designing and building software architecture that is logical, efficient, and user-friendly.</p>
           </div>
         </div>
 
-        <div class="group relative bg-white p-8 rounded-3xl border border-slate-200 hover:border-indigo-200 card-hover hover:shadow-2xl"
+        <!-- Focus 2 -->
+        <div class="group relative bg-[#0c1326]/75 backdrop-blur-xl p-8 rounded-3xl border border-cyan-500/15 hover:border-indigo-400/50 card-hover shadow-xl hover:shadow-[0_0_35px_rgba(99,102,241,0.18)]"
           data-aos="fade-up" data-aos-delay="200">
-          <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-          <div class="relative">
-            <div class="w-14 h-14 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg shadow-indigo-500/20 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-slate-900 group-hover:text-indigo-600 transition-colors">Graphic Design</h3>
-            <p class="text-slate-500 leading-relaxed text-sm">Creating visually consistent brand identities with attention to color, typography, and layout.</p>
+            <h3 class="text-xl font-bold mb-3 text-white group-hover:text-indigo-300 transition-colors">Graphic Design</h3>
+            <p class="text-slate-400 leading-relaxed text-sm">Creating visually consistent brand identities with attention to color, typography, and layout.</p>
           </div>
         </div>
 
-        <div class="group relative bg-white p-8 rounded-3xl border border-slate-200 hover:border-teal-200 card-hover hover:shadow-2xl"
+        <!-- Focus 3 -->
+        <div class="group relative bg-[#0c1326]/75 backdrop-blur-xl p-8 rounded-3xl border border-cyan-500/15 hover:border-teal-400/50 card-hover shadow-xl hover:shadow-[0_0_35px_rgba(45,212,191,0.18)]"
           data-aos="fade-up" data-aos-delay="300">
-          <div class="absolute inset-0 bg-gradient-to-br from-teal-50/50 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-          <div class="relative">
-            <div class="w-14 h-14 bg-gradient-to-br from-teal-400 to-teal-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-lg shadow-teal-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-[0_0_20px_rgba(45,212,191,0.35)] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
               <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-slate-900 group-hover:text-teal-600 transition-colors">Public Speaking</h3>
-            <p class="text-slate-500 leading-relaxed text-sm">Communicating ideas persuasively and structuring arguments effectively through MUN experience.</p>
+            <h3 class="text-xl font-bold mb-3 text-white group-hover:text-teal-300 transition-colors">Public Speaking</h3>
+            <p class="text-slate-400 leading-relaxed text-sm">Communicating ideas persuasively and structuring arguments effectively through MUN experience.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="portfolio" class="relative py-28 px-6 bg-white overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.03),transparent_50%)] pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative">
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="relative py-28 px-6 bg-[#050811] overflow-hidden">
+    <div class="absolute inset-0 cyber-dots opacity-20 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Header -->
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="text-xs font-bold text-blue-600 uppercase tracking-[0.2em]">Portfolio</span>
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-3 mb-4">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
+          Portfolio
+        </span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-4 tracking-tight">
           My Recent <span class="gradient-text">Projects</span>
         </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mx-auto"></div>
+        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
       </div>
 
+      <!-- Filter Buttons -->
       <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up">
-        <button class="filter-btn active px-5 py-2 text-sm font-semibold rounded-full border border-slate-200 text-slate-600 hover:border-blue-500 transition-all" data-filter="all">All</button>
-        <button class="filter-btn px-5 py-2 text-sm font-semibold rounded-full border border-slate-200 text-slate-600 hover:border-blue-500 transition-all" data-filter="web">Web App</button>
-        <button class="filter-btn px-5 py-2 text-sm font-semibold rounded-full border border-slate-200 text-slate-600 hover:border-blue-500 transition-all" data-filter="design">UI/UX Design</button>
+        <button class="filter-btn active px-6 py-2.5 text-sm font-semibold rounded-full border border-cyan-500/30 text-slate-300 hover:text-white hover:border-cyan-400 transition-all bg-[#0c1326]/60 backdrop-blur-md" data-filter="all">All</button>
+        <button class="filter-btn px-6 py-2.5 text-sm font-semibold rounded-full border border-cyan-500/30 text-slate-300 hover:text-white hover:border-cyan-400 transition-all bg-[#0c1326]/60 backdrop-blur-md" data-filter="web">Web App</button>
+        <button class="filter-btn px-6 py-2.5 text-sm font-semibold rounded-full border border-cyan-500/30 text-slate-300 hover:text-white hover:border-cyan-400 transition-all bg-[#0c1326]/60 backdrop-blur-md" data-filter="design">UI/UX Design</button>
       </div>
 
+      <!-- Project Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
 
-        <div class="portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden group hover:shadow-2xl card-hover" data-category="design" data-aos="zoom-in-up" data-aos-delay="100">
+        <!-- Project 1 -->
+        <div class="portfolio-item bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 overflow-hidden group hover:border-cyan-400/50 shadow-xl hover:shadow-[0_0_35px_rgba(0,240,255,0.18)] card-hover" data-category="design" data-aos="zoom-in-up" data-aos-delay="100">
           <div class="relative h-56 overflow-hidden">
             <img src="/image1.png" alt="Figma Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
-              <span class="px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-slate-800">UI Design</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1326] via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 flex items-end p-5">
+              <span class="px-3 py-1 bg-cyan-950/80 backdrop-blur border border-cyan-500/40 rounded-full text-xs font-bold text-cyan-300 shadow-[0_0_10px_rgba(0,240,255,0.3)]">UI Design</span>
             </div>
           </div>
-          <div class="p-5">
+          <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
-              <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-              <h3 class="text-lg font-bold text-slate-900">Figma Design</h3>
+              <span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"></span>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Figma Design</h3>
             </div>
-            <p class="text-slate-500 text-sm mb-4">Landing page with intuitive navigation, comfortable contrast, and precise layout.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-semibold rounded-full border border-blue-100">Esthetics</span>
-              <span class="px-2.5 py-1 bg-indigo-50 text-indigo-700 text-[10px] font-semibold rounded-full border border-indigo-100">Color</span>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">Landing page with intuitive navigation, comfortable contrast, and precise layout.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-cyan-950/50 text-cyan-300 text-[10px] font-semibold rounded-full border border-cyan-500/30">Esthetics</span>
+              <span class="px-3 py-1 bg-indigo-950/50 text-indigo-300 text-[10px] font-semibold rounded-full border border-indigo-500/30">Color</span>
             </div>
           </div>
         </div>
 
-        <div class="portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden group hover:shadow-2xl card-hover" data-category="web" data-aos="zoom-in-up" data-aos-delay="200">
+        <!-- Project 2 -->
+        <div class="portfolio-item bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 overflow-hidden group hover:border-cyan-400/50 shadow-xl hover:shadow-[0_0_35px_rgba(0,240,255,0.18)] card-hover" data-category="web" data-aos="zoom-in-up" data-aos-delay="200">
           <div class="relative h-56 overflow-hidden">
             <img src="/image2.png" alt="Gantthers Website" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
-              <span class="px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-slate-800">Web App</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1326] via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 flex items-end p-5">
+              <span class="px-3 py-1 bg-cyan-950/80 backdrop-blur border border-cyan-500/40 rounded-full text-xs font-bold text-cyan-300 shadow-[0_0_10px_rgba(0,240,255,0.3)]">Web App</span>
             </div>
           </div>
-          <div class="p-5">
+          <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
-              <span class="w-2 h-2 rounded-full bg-teal-500"></span>
-              <h3 class="text-lg font-bold text-slate-900">Gantthers Website</h3>
+              <span class="w-2 h-2 rounded-full bg-teal-400 shadow-[0_0_8px_#2dd4bf]"></span>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Gantthers Website</h3>
             </div>
-            <p class="text-slate-500 text-sm mb-4">Barbershop platform with online ordering and modern user experience.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 bg-teal-50 text-teal-700 text-[10px] font-semibold rounded-full border border-teal-100">Leader</span>
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-[10px] font-semibold rounded-full border border-slate-100">Contact</span>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">Barbershop platform with online ordering and modern user experience.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-teal-950/50 text-teal-300 text-[10px] font-semibold rounded-full border border-teal-500/30">Leader</span>
+              <span class="px-3 py-1 bg-slate-900 text-slate-300 text-[10px] font-semibold rounded-full border border-slate-700">Contact</span>
             </div>
           </div>
         </div>
 
-        <div class="portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden group hover:shadow-2xl card-hover" data-category="design" data-aos="zoom-in-up" data-aos-delay="300">
+        <!-- Project 3 -->
+        <div class="portfolio-item bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 overflow-hidden group hover:border-cyan-400/50 shadow-xl hover:shadow-[0_0_35px_rgba(0,240,255,0.18)] card-hover" data-category="design" data-aos="zoom-in-up" data-aos-delay="300">
           <div class="relative h-56 overflow-hidden">
             <img src="/image3.png" alt="E-Commerce Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
-              <span class="px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-slate-800">UI Design</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1326] via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 flex items-end p-5">
+              <span class="px-3 py-1 bg-cyan-950/80 backdrop-blur border border-cyan-500/40 rounded-full text-xs font-bold text-cyan-300 shadow-[0_0_10px_rgba(0,240,255,0.3)]">UI Design</span>
             </div>
           </div>
-          <div class="p-5">
+          <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
-              <span class="w-2 h-2 rounded-full bg-red-500"></span>
-              <h3 class="text-lg font-bold text-slate-900">E-Commerce Design</h3>
+              <span class="w-2 h-2 rounded-full bg-rose-500 shadow-[0_0_8px_#f43f5e]"></span>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">E-Commerce Design</h3>
             </div>
-            <p class="text-slate-500 text-sm mb-4">Beautiful e-commerce interface focused on user comfort and seamless shopping.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 bg-red-50 text-red-700 text-[10px] font-semibold rounded-full border border-red-100">UI/UX</span>
-              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-semibold rounded-full border border-blue-100">Contrast</span>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">Beautiful e-commerce interface focused on user comfort and seamless shopping.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-rose-950/50 text-rose-300 text-[10px] font-semibold rounded-full border border-rose-500/30">UI/UX</span>
+              <span class="px-3 py-1 bg-blue-950/50 text-blue-300 text-[10px] font-semibold rounded-full border border-blue-500/30">Contrast</span>
             </div>
           </div>
         </div>
 
-        <div class="extra-portfolio portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden group hover:shadow-2xl card-hover" data-category="web" data-aos="zoom-in-up" data-aos-delay="100">
+        <!-- Project 4 (Extra) -->
+        <div class="extra-portfolio portfolio-item bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 overflow-hidden group hover:border-cyan-400/50 shadow-xl hover:shadow-[0_0_35px_rgba(0,240,255,0.18)] card-hover" data-category="web" data-aos="zoom-in-up" data-aos-delay="100">
           <div class="relative h-56 overflow-hidden">
             <img src="/image4.png" alt="Furniture Website" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
-              <span class="px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-slate-800">Web App</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1326] via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 flex items-end p-5">
+              <span class="px-3 py-1 bg-cyan-950/80 backdrop-blur border border-cyan-500/40 rounded-full text-xs font-bold text-cyan-300 shadow-[0_0_10px_rgba(0,240,255,0.3)]">Web App</span>
             </div>
           </div>
-          <div class="p-5">
+          <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
-              <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
-              <h3 class="text-lg font-bold text-slate-900">Furniture Website</h3>
+              <span class="w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_#fbbf24]"></span>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Furniture Website</h3>
             </div>
-            <p class="text-slate-500 text-sm mb-4">Streamlining furniture sales with an easy-to-use purchasing platform.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 bg-yellow-50 text-yellow-700 text-[10px] font-semibold rounded-full border border-yellow-100">CSS</span>
-              <span class="px-2.5 py-1 bg-orange-50 text-orange-700 text-[10px] font-semibold rounded-full border border-orange-100">JS</span>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">Streamlining furniture sales with an easy-to-use purchasing platform.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-amber-950/50 text-amber-300 text-[10px] font-semibold rounded-full border border-amber-500/30">CSS</span>
+              <span class="px-3 py-1 bg-orange-950/50 text-orange-300 text-[10px] font-semibold rounded-full border border-orange-500/30">JS</span>
             </div>
           </div>
         </div>
 
-        <div class="extra-portfolio portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden group hover:shadow-2xl card-hover" data-category="web" data-aos="zoom-in-up" data-aos-delay="200">
+        <!-- Project 5 (Extra) -->
+        <div class="extra-portfolio portfolio-item bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 overflow-hidden group hover:border-cyan-400/50 shadow-xl hover:shadow-[0_0_35px_rgba(0,240,255,0.18)] card-hover" data-category="web" data-aos="zoom-in-up" data-aos-delay="200">
           <div class="relative h-56 overflow-hidden">
             <img src="/image5.png" alt="Admin Website" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
-              <span class="px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-slate-800">Admin</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1326] via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 flex items-end p-5">
+              <span class="px-3 py-1 bg-cyan-950/80 backdrop-blur border border-cyan-500/40 rounded-full text-xs font-bold text-cyan-300 shadow-[0_0_10px_rgba(0,240,255,0.3)]">Admin</span>
             </div>
           </div>
-          <div class="p-5">
+          <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
-              <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
-              <h3 class="text-lg font-bold text-slate-900">Admin Website</h3>
+              <span class="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"></span>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Admin Website</h3>
             </div>
-            <p class="text-slate-500 text-sm mb-4">Responsive admin dashboard for efficient school staff management.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 bg-cyan-50 text-cyan-700 text-[10px] font-semibold rounded-full border border-cyan-100">Tailwind</span>
-              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-[10px] font-semibold rounded-full border border-slate-100">HTML</span>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">Responsive admin dashboard for efficient school staff management.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-cyan-950/50 text-cyan-300 text-[10px] font-semibold rounded-full border border-cyan-500/30">Tailwind</span>
+              <span class="px-3 py-1 bg-slate-900 text-slate-300 text-[10px] font-semibold rounded-full border border-slate-700">HTML</span>
             </div>
           </div>
         </div>
 
-        <div class="extra-portfolio portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden group hover:shadow-2xl card-hover" data-category="design" data-aos="zoom-in-up" data-aos-delay="300">
+        <!-- Project 6 (Extra) -->
+        <div class="extra-portfolio portfolio-item bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 overflow-hidden group hover:border-cyan-400/50 shadow-xl hover:shadow-[0_0_35px_rgba(0,240,255,0.18)] card-hover" data-category="design" data-aos="zoom-in-up" data-aos-delay="300">
           <div class="relative h-56 overflow-hidden">
             <img src="/image6.png" alt="Canva Design" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
-              <span class="px-3 py-1 bg-white/90 backdrop-blur rounded-full text-xs font-bold text-slate-800">Design</span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1326] via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500 flex items-end p-5">
+              <span class="px-3 py-1 bg-cyan-950/80 backdrop-blur border border-cyan-500/40 rounded-full text-xs font-bold text-cyan-300 shadow-[0_0_10px_rgba(0,240,255,0.3)]">Design</span>
             </div>
           </div>
-          <div class="p-5">
+          <div class="p-6">
             <div class="flex items-center gap-2 mb-2">
-              <span class="w-2 h-2 rounded-full bg-purple-500"></span>
-              <h3 class="text-lg font-bold text-slate-900">Canva Design</h3>
+              <span class="w-2 h-2 rounded-full bg-purple-400 shadow-[0_0_8px_#c084fc]"></span>
+              <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Canva Design</h3>
             </div>
-            <p class="text-slate-500 text-sm mb-4">Simple yet attractive graphic designs created with Canva for various needs.</p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 bg-purple-50 text-purple-700 text-[10px] font-semibold rounded-full border border-purple-100">Canva</span>
-              <span class="px-2.5 py-1 bg-pink-50 text-pink-700 text-[10px] font-semibold rounded-full border border-pink-100">UI/UX</span>
+            <p class="text-slate-400 text-sm mb-4 leading-relaxed">Simple yet attractive graphic designs created with Canva for various needs.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-purple-950/50 text-purple-300 text-[10px] font-semibold rounded-full border border-purple-500/30">Canva</span>
+              <span class="px-3 py-1 bg-pink-950/50 text-pink-300 text-[10px] font-semibold rounded-full border border-pink-500/30">UI/UX</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <div class="mt-12 flex justify-center" data-aos="fade-up">
+      <!-- Load More Button -->
+      <div class="mt-14 flex justify-center" data-aos="fade-up">
         <button id="btn-load-more"
-          class="px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 transition-all duration-300 focus:outline-none flex items-center gap-2 group">
+          class="px-8 py-3.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white rounded-full font-semibold shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] hover:-translate-y-0.5 transition-all duration-300 focus:outline-none flex items-center gap-2 group">
           See More Projects
           <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
         </button>
       </div>
+
     </div>
   </section>
 
-  <section id="contact" class="relative py-28 px-6 bg-slate-50 overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.04),transparent_50%)] pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative">
+  <!-- Contact Section -->
+  <section id="contact" class="relative py-28 px-6 bg-[#070b16] overflow-hidden">
+    <!-- Ambient Radial Glow -->
+    <div class="absolute inset-0 cyber-dots opacity-20 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-cyan-600/10 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      
+      <!-- Section Header -->
       <div class="text-center mb-16" data-aos="fade-up">
-        <span class="text-xs font-bold text-blue-600 uppercase tracking-[0.2em]">Contact</span>
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-3 mb-4">
+        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
+          Contact
+        </span>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-4 tracking-tight">
           Let's <span class="gradient-text">Collaborate</span>
         </h2>
-        <p class="text-lg text-slate-500 max-w-xl mx-auto">I'm actively seeking internship and job opportunities. Let's build something amazing together!</p>
-        <div class="w-20 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full mx-auto mt-6"></div>
+        <p class="text-lg text-slate-300 max-w-xl mx-auto">I'm actively seeking internship and job opportunities. Let's build something amazing together!</p>
+        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto mt-6 shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
       </div>
 
       <div class="grid lg:grid-cols-[1fr,1.2fr] gap-16 items-start">
+        
+        <!-- Contact Information Column -->
         <div class="space-y-8" data-aos="fade-right" data-aos-duration="1000">
-          <div class="space-y-6">
-            <div class="flex items-center gap-5 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 group">
-              <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 text-white rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20 shrink-0 group-hover:scale-110 transition-transform">
+          <div class="space-y-5">
+            
+            <!-- Email -->
+            <div class="flex items-center gap-5 p-5 bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 shadow-lg hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(0,240,255,0.15)] transition-all duration-300 group">
+              <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-600 text-white rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(0,240,255,0.35)] shrink-0 group-hover:scale-110 transition-transform">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               </div>
-              <div>
-                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Email</p>
-                <a href="mailto:luqmanmunggi@gmail.com" class="text-base font-semibold text-slate-800 hover:text-blue-600 transition-colors">luqmanmunggi@gmail.com</a>
+              <div class="overflow-hidden">
+                <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-widest">Email</p>
+                <a href="mailto:luqmanmunggi@gmail.com" class="text-base font-semibold text-white hover:text-cyan-300 transition-colors truncate block">luqmanmunggi@gmail.com</a>
               </div>
             </div>
 
-            <div class="flex items-center gap-5 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-indigo-200 transition-all duration-300 group">
-              <div class="w-14 h-14 bg-gradient-to-br from-indigo-400 to-indigo-600 text-white rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/20 shrink-0 group-hover:scale-110 transition-transform">
+            <!-- Location -->
+            <div class="flex items-center gap-5 p-5 bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 shadow-lg hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(0,240,255,0.15)] transition-all duration-300 group">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(59,130,246,0.35)] shrink-0 group-hover:scale-110 transition-transform">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               </div>
               <div>
-                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Location</p>
-                <p class="text-base font-semibold text-slate-800">Bekasi, Indonesia</p>
+                <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-widest">Location</p>
+                <p class="text-base font-semibold text-white">Bekasi, Indonesia</p>
               </div>
             </div>
 
-            <div class="flex items-center gap-5 p-5 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-green-200 transition-all duration-300 group">
-              <div class="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-500 text-white rounded-xl flex items-center justify-center shadow-lg shadow-green-500/20 shrink-0 group-hover:scale-110 transition-transform">
+            <!-- WhatsApp -->
+            <div class="flex items-center gap-5 p-5 bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 shadow-lg hover:border-emerald-400/50 hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-all duration-300 group">
+              <div class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-teal-600 text-slate-950 rounded-xl flex items-center justify-center shadow-[0_0_15px_rgba(16,185,129,0.35)] shrink-0 group-hover:scale-110 transition-transform">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
               </div>
               <div>
-                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">WhatsApp</p>
-                <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="text-base font-semibold text-slate-800 hover:text-green-600 transition-colors">+62 813-1716-1076</a>
+                <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-widest">WhatsApp</p>
+                <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="text-base font-semibold text-white hover:text-emerald-400 transition-colors">+62 813-1716-1076</a>
               </div>
             </div>
+
           </div>
 
-          <div class="p-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl text-white shadow-xl">
+          <!-- Open for Opportunities Banner -->
+          <div class="p-6 bg-gradient-to-br from-cyan-950/60 via-[#0c1326] to-indigo-950/60 rounded-3xl text-white border border-cyan-500/30 shadow-xl relative overflow-hidden">
             <div class="flex items-center gap-3 mb-3">
               <span class="text-2xl">💼</span>
-              <h4 class="font-bold text-lg">Open for Opportunities</h4>
+              <h4 class="font-bold text-lg text-white">Open for Opportunities</h4>
             </div>
-            <p class="text-white/80 text-sm leading-relaxed">I'm currently looking for <strong class="text-white">PKL (internship)</strong> and <strong class="text-white">entry-level job</strong> opportunities in software engineering and design. Let's connect!</p>
+            <p class="text-slate-300 text-sm leading-relaxed">I'm currently looking for <strong class="text-cyan-300">PKL (internship)</strong> and <strong class="text-cyan-300">entry-level job</strong> opportunities in software engineering and design. Let's connect!</p>
           </div>
         </div>
 
+        <!-- WhatsApp Form Column -->
         <form id="whatsapp-form"
-          class="p-8 md:p-10 bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/50 relative overflow-hidden"
+          class="p-8 md:p-10 bg-[#0c1326]/90 backdrop-blur-2xl rounded-3xl border border-cyan-500/20 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden"
           data-aos="fade-left" data-aos-duration="1000">
-          <div class="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 pointer-events-none"></div>
+          <div class="absolute -top-20 -right-20 w-64 h-64 bg-cyan-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
 
-          <h3 class="text-2xl font-bold text-slate-900 mb-2 relative z-10">Send Me a Message</h3>
-          <p class="text-slate-500 text-sm mb-8 relative z-10">I'll respond via WhatsApp as soon as possible!</p>
+          <h3 class="text-2xl font-bold text-white mb-2 relative z-10">Send Me a Message</h3>
+          <p class="text-slate-400 text-sm mb-8 relative z-10">I'll respond via WhatsApp as soon as possible!</p>
 
           <div class="grid md:grid-cols-2 gap-5 mb-5 relative z-10">
-            <div class="space-y-1.5">
-              <label for="name" class="block text-sm font-semibold text-slate-700">Full Name <span class="text-red-400">*</span></label>
+            <div class="space-y-2">
+              <label for="name" class="block text-sm font-semibold text-slate-300">Full Name <span class="text-cyan-400">*</span></label>
               <input type="text" id="name" required
-                class="w-full px-5 py-3.5 bg-slate-50 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all placeholder:text-slate-400 outline-none"
+                class="w-full px-5 py-3.5 bg-[#070b16]/80 rounded-xl border border-slate-800 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all placeholder:text-slate-500 outline-none"
                 placeholder="John Doe">
             </div>
-            <div class="space-y-1.5">
-              <label for="email" class="block text-sm font-semibold text-slate-700">Email <span class="text-red-400">*</span></label>
+            <div class="space-y-2">
+              <label for="email" class="block text-sm font-semibold text-slate-300">Email <span class="text-cyan-400">*</span></label>
               <input type="email" id="email" required
-                class="w-full px-5 py-3.5 bg-slate-50 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all placeholder:text-slate-400 outline-none"
+                class="w-full px-5 py-3.5 bg-[#070b16]/80 rounded-xl border border-slate-800 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all placeholder:text-slate-500 outline-none"
                 placeholder="john@gmail.com">
             </div>
           </div>
 
-          <div class="space-y-1.5 mb-6 relative z-10">
-            <label for="message" class="block text-sm font-semibold text-slate-700">Message <span class="text-red-400">*</span></label>
+          <div class="space-y-2 mb-6 relative z-10">
+            <label for="message" class="block text-sm font-semibold text-slate-300">Message <span class="text-cyan-400">*</span></label>
             <textarea id="message" rows="4" required
-              class="w-full px-5 py-3.5 bg-slate-50 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all placeholder:text-slate-400 outline-none resize-none"
+              class="w-full px-5 py-3.5 bg-[#070b16]/80 rounded-xl border border-slate-800 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all placeholder:text-slate-500 outline-none resize-none"
               placeholder="Hi Luqman! I'd like to discuss an opportunity for..."></textarea>
           </div>
 
           <button type="submit"
-            class="w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 flex items-center justify-center gap-3 relative z-10 group">
+            class="w-full py-4 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 relative z-10 group">
             Send via WhatsApp
             <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
             </svg>
           </button>
         </form>
+
       </div>
     </div>
   </section>
 
-  <footer class="relative bg-slate-900 pt-16 pb-8 px-6 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative">
+  <!-- Futuristic Footer -->
+  <footer class="relative bg-[#03050c] pt-16 pb-8 px-6 border-t border-cyan-500/15 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-cyan-950/10 pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
         <div class="md:col-span-1">
           <a href="#" class="text-3xl font-extrabold gradient-text tracking-tighter">L</a>
@@ -621,10 +719,10 @@
         <div>
           <h4 class="text-slate-200 font-semibold text-sm uppercase tracking-widest mb-5">Quick Links</h4>
           <div class="flex flex-col gap-3">
-            <a href="#about" class="text-slate-400 hover:text-white text-sm transition-colors hover:translate-x-1 inline-flex">About</a>
-            <a href="#skills" class="text-slate-400 hover:text-white text-sm transition-colors hover:translate-x-1 inline-flex">Skills</a>
-            <a href="#portfolio" class="text-slate-400 hover:text-white text-sm transition-colors hover:translate-x-1 inline-flex">Portfolio</a>
-            <a href="#contact" class="text-slate-400 hover:text-white text-sm transition-colors hover:translate-x-1 inline-flex">Contact</a>
+            <a href="#about" class="text-slate-400 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 inline-flex">About</a>
+            <a href="#skills" class="text-slate-400 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 inline-flex">Skills</a>
+            <a href="#portfolio" class="text-slate-400 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 inline-flex">Portfolio</a>
+            <a href="#contact" class="text-slate-400 hover:text-cyan-400 text-sm transition-colors hover:translate-x-1 inline-flex">Contact</a>
           </div>
         </div>
         <div>
@@ -640,29 +738,30 @@
           <h4 class="text-slate-200 font-semibold text-sm uppercase tracking-widest mb-5">Connect</h4>
           <div class="flex gap-3">
             <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer"
-              class="w-10 h-10 bg-slate-800 hover:bg-blue-600 text-slate-400 hover:text-white rounded-xl flex items-center justify-center border border-slate-700 hover:border-blue-500 transition-all">
+              class="w-10 h-10 bg-slate-900 hover:bg-cyan-500 text-slate-400 hover:text-slate-950 rounded-xl flex items-center justify-center border border-slate-800 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(0,240,255,0.4)] transition-all" aria-label="GitHub">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
             <a href="mailto:luqmanmunggi@gmail.com"
-              class="w-10 h-10 bg-slate-800 hover:bg-red-500 text-slate-400 hover:text-white rounded-xl flex items-center justify-center border border-slate-700 hover:border-red-500 transition-all">
+              class="w-10 h-10 bg-slate-900 hover:bg-rose-500 text-slate-400 hover:text-white rounded-xl flex items-center justify-center border border-slate-800 hover:border-rose-400 hover:shadow-[0_0_15px_rgba(244,63,94,0.4)] transition-all" aria-label="Email">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </a>
             <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer"
-              class="w-10 h-10 bg-slate-800 hover:bg-green-500 text-slate-400 hover:text-white rounded-xl flex items-center justify-center border border-slate-700 hover:border-green-500 transition-all">
+              class="w-10 h-10 bg-slate-900 hover:bg-emerald-500 text-slate-400 hover:text-white rounded-xl flex items-center justify-center border border-slate-800 hover:border-emerald-400 hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] transition-all" aria-label="WhatsApp">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             </a>
           </div>
         </div>
       </div>
-      <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-slate-500 text-sm">&copy; <span id="year">2026</span> Luqman. Crafted with passion.</p>
-        <p class="text-slate-600 text-xs">Open for internships & job opportunities</p>
+      <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-slate-400 text-sm">&copy; <span id="year">2026</span> Luqman. Crafted with passion.</p>
+        <p class="text-slate-400 text-xs">Open for internships & job opportunities</p>
       </div>
     </div>
   </footer>
 
+  <!-- Futuristic Back to Top Button -->
   <button id="back-to-top"
-    class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl shadow-xl hover:shadow-blue-500/50 transition-all duration-500 flex items-center justify-center z-50 opacity-0 invisible translate-y-4"
+    class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.7)] transition-all duration-500 flex items-center justify-center z-50 opacity-0 invisible translate-y-4 hover:-translate-y-1"
     aria-label="Back to top">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7" />
