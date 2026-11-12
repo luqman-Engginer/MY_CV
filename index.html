@@ -1,816 +1,587 @@
 <!doctype html>
-<html lang="id" class="scroll-smooth">
+<html lang="id">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#060913" />
+  <meta name="theme-color" content="#070a11" />
   <title>Luqman | Software Engineering &amp; Graphic Design</title>
-  <meta name="description" content="Portfolio Luqman — 11th Grade Software Engineering student at SMK Madinatul Qur'an. Specializing in Golang backend, modern web development, UI/UX design, and public speaking. Open for internship and job opportunities." />
+  <meta name="description" content="Portfolio Luqman â€” 11th Grade Software Engineering student at SMK Madinatul Qur'an. Specializing in Golang backend, modern web development, UI/UX design, and public speaking. Open for internship and job opportunities." />
   <meta name="keywords" content="Luqman, Software Engineer, Frontend Developer, Backend Golang, UI UX Designer, SMK Madinatul Qur'an, Portfolio, Web Developer Bekasi" />
   <meta name="author" content="Luqman" />
   <link rel="canonical" href="https://www.luqman-cv.my.id/" />
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.luqman-cv.my.id/" />
   <meta property="og:title" content="Luqman | Software Engineering &amp; Graphic Design" />
-  <meta property="og:description" content="Portfolio Luqman — 11th Grade Software Engineering student at SMK Madinatul Qur'an. Open for internship and job opportunities." />
+  <meta property="og:description" content="Portfolio Luqman â€” 11th Grade Software Engineering student at SMK Madinatul Qur'an. Open for internship and job opportunities." />
   <meta property="og:image" content="https://www.luqman-cv.my.id/image.jpeg" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.luqman-cv.my.id/" />
   <meta name="twitter:title" content="Luqman | Software Engineering &amp; Graphic Design" />
-  <meta name="twitter:description" content="Portfolio Luqman — 11th Grade Software Engineering student at SMK Madinatul Qur'an. Open for internship and job opportunities." />
+  <meta name="twitter:description" content="Portfolio Luqman â€” 11th Grade Software Engineering student at SMK Madinatul Qur'an. Open for internship and job opportunities." />
   <meta name="twitter:image" content="https://www.luqman-cv.my.id/image.jpeg" />
-  
-  <!-- Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Animation Library -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="bg-[#060913] text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-cyan-500/30 selection:text-white">
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <!-- Floating Capsule Navbar -->
-  <header id="main-header" class="fixed top-4 sm:top-5 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 pointer-events-none transition-all duration-300">
-    <div id="capsule-nav" class="pointer-events-auto flex items-center justify-between gap-3 md:gap-8 px-4 sm:px-6 py-2 rounded-full bg-[#090e1e]/80 backdrop-blur-2xl border border-cyan-500/25 shadow-[0_10px_35px_rgba(0,0,0,0.7),0_0_20px_rgba(0,240,255,0.08)] transition-all duration-300 w-full max-w-5xl hover:border-cyan-400/45">
-      
-      <!-- Brand Logo -->
-      <a href="#hero" class="flex items-center gap-2.5 group" aria-label="Luqman Portfolio Home">
-        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-600 flex items-center justify-center text-white font-black text-sm sm:text-base shadow-[0_0_15px_rgba(0,240,255,0.4)] group-hover:scale-105 group-hover:shadow-[0_0_22px_rgba(0,240,255,0.7)] transition-all">
-          L
-        </div>
-        <span class="font-extrabold tracking-wider text-sm sm:text-base text-white group-hover:text-cyan-300 transition-colors">
-          LUQMAN<span class="text-cyan-400">.</span>
-        </span>
+  <header id="main-header" class="site-header">
+    <div id="capsule-nav" class="nav-shell">
+      <a href="#hero" class="brand" aria-label="Luqman portfolio home">
+        <span class="brand__mark">L</span>
+        <span>LUQMAN<span class="brand__dot">.</span></span>
       </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="hidden md:flex items-center gap-1 bg-[#060913]/60 rounded-full px-2 py-1 border border-white/5">
-        <a href="#about" class="px-3.5 py-1.5 text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all">About</a>
-        <a href="#skills" class="px-3.5 py-1.5 text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Skills</a>
-        <a href="#focus" class="px-3.5 py-1.5 text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Focus</a>
-        <a href="#portfolio" class="px-3.5 py-1.5 text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Portfolio</a>
-        <a href="#contact" class="px-3.5 py-1.5 text-xs lg:text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Contact</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#focus" class="nav-link">Focus</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Desktop Action CTA -->
-      <div class="hidden md:flex items-center">
-        <a href="#contact" class="px-5 py-2 text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 rounded-full shadow-[0_0_15px_rgba(0,240,255,0.35)] hover:shadow-[0_0_25px_rgba(0,240,255,0.65)] hover:scale-105 active:scale-95 transition-all">
-          Hire Me
-        </a>
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn--primary btn--sm nav-cta">Let's talk</a>
+        <button id="mobile-menu-btn" type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
-
-      <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-btn" class="md:hidden flex items-center text-slate-200 hover:text-cyan-400 transition-colors p-2 rounded-full hover:bg-white/5 focus:outline-none" aria-label="Toggle Menu">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
     </div>
 
-    <!-- Mobile Dropdown Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden pointer-events-auto absolute top-16 left-4 right-4 max-w-sm mx-auto rounded-3xl bg-[#090e1e]/95 backdrop-blur-2xl border border-cyan-500/25 shadow-2xl p-4 transition-all">
-      <div class="flex flex-col gap-1.5">
-        <a href="#about" class="mobile-link px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-300 hover:bg-cyan-950/40 hover:text-cyan-400 transition-all">About</a>
-        <a href="#skills" class="mobile-link px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-300 hover:bg-cyan-950/40 hover:text-cyan-400 transition-all">Skills</a>
-        <a href="#focus" class="mobile-link px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-300 hover:bg-cyan-950/40 hover:text-cyan-400 transition-all">Focus</a>
-        <a href="#portfolio" class="mobile-link px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-300 hover:bg-cyan-950/40 hover:text-cyan-400 transition-all">Portfolio</a>
-        <a href="#contact" class="mobile-link px-4 py-2.5 rounded-2xl text-sm font-medium text-slate-300 hover:bg-cyan-950/40 hover:text-cyan-400 transition-all">Contact</a>
-        <a href="#contact" class="mobile-link mt-2 px-4 py-2.5 rounded-full text-sm font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 text-center shadow-[0_0_15px_rgba(0,240,255,0.35)] transition-all">Hire Me</a>
-      </div>
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#focus" class="mobile-link">Focus</a>
+      <a href="#portfolio" class="mobile-link">Portfolio</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#contact" class="mobile-link mobile-link--cta">Let's talk</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#060913] pt-28 pb-16 md:py-24">
-    <!-- Ambient Cyber Glows -->
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute inset-0 cyber-grid opacity-25"></div>
-      <div class="absolute -top-32 -left-32 w-[600px] h-[600px] bg-cyan-500/10 rounded-full filter blur-[140px] animate-blob"></div>
-      <div class="absolute -top-20 -right-20 w-[550px] h-[550px] bg-blue-600/12 rounded-full filter blur-[140px] animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-32 left-1/3 w-[600px] h-[600px] bg-indigo-600/10 rounded-full filter blur-[150px] animate-blob animation-delay-4000"></div>
-    </div>
+  <main id="main-content">
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy" data-aos="fade-up" data-aos-duration="900">
+            <div class="hero__status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Open for internship &amp; job opportunities</span>
+            </div>
 
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10 w-full">
+            <p class="hero__eyebrow">Software engineering &amp; design</p>
+            <h1 class="hero__title">Luqman<span>.</span></h1>
 
-      <!-- Left Column: Content -->
-      <div class="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-6" data-aos="fade-right" data-aos-duration="900">
-        
-        <!-- Status Badge -->
-        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 text-xs sm:text-sm font-semibold tracking-wide shadow-[0_0_20px_rgba(0,240,255,0.12)] backdrop-blur-md">
-          <span class="relative flex h-2.5 w-2.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400 shadow-[0_0_8px_#10b981]"></span>
-          </span>
-          <span>Open for Internship &amp; Job Opportunities</span>
+            <div class="hero__role">
+              <span>I'm a</span>
+              <span id="typed-text" class="typed-text"></span>
+              <span class="typed-caret" aria-hidden="true"></span>
+            </div>
+
+            <p class="hero__bio">
+              An 11th-grade student at <strong>SMK Madinatul Qur'an</strong>, focused on
+              <strong>software engineering</strong>, <strong>graphic design</strong>, and
+              <strong>public speaking</strong>. I build practical digital products with
+              <span class="text-accent">clean code and thoughtful design</span>.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#portfolio" class="btn btn--primary">
+                <span>View my work</span>
+                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn--ghost">Contact me</a>
+            </div>
+
+            <div class="hero__socials">
+              <span class="hero__socials-label">Connect</span>
+              <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/maherr_0610/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram">
+                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__visual" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+            <figure class="portrait">
+              <img src="/image.jpeg" alt="Luqman, software engineering and graphic design student" width="400" height="500" loading="eager" fetchpriority="high" decoding="async">
+              <figcaption class="portrait__footer">
+                <div>
+                  <span class="portrait__name">Luqman</span>
+                  <span class="portrait__meta">Software engineering student</span>
+                </div>
+                <span class="portrait__badge">Open to work</span>
+              </figcaption>
+            </figure>
+            <p class="portrait-note">Based in Bekasi, Indonesia</p>
+          </div>
         </div>
 
-        <!-- Headline & Dynamic Title -->
-        <div class="space-y-2">
-          <p class="text-xs sm:text-sm font-bold tracking-[0.2em] text-cyan-400 uppercase">
-            Hi there, I'm
+        <div class="hero__stats" data-aos="fade-up" data-aos-delay="200">
+          <div class="hero-stat">
+            <span class="hero-stat__value">11th Grade</span>
+            <span class="hero-stat__label">SMK Madinatul Qur'an</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat__value">3 Languages</span>
+            <span class="hero-stat__label">Indonesian, English, Arabic</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat__value">6 Projects</span>
+            <span class="hero-stat__label">Web apps &amp; product design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section--alt">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">About me</span>
+          <h2 class="section-title">Crafting digital <span class="text-accent">experiences.</span></h2>
+          <p class="section-lead">
+            I combine engineering logic with visual design to build products that are clear,
+            useful, and dependable.
           </p>
-          <h1 class="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black tracking-tight text-white leading-tight drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]">
-            Luqman
-          </h1>
-          <div class="h-9 sm:h-10 flex items-center justify-center lg:justify-start gap-2 pt-1">
-            <span class="text-base sm:text-lg md:text-xl font-medium text-slate-400">I'm a</span>
-            <span id="typed-text" class="text-base sm:text-lg md:text-xl font-bold gradient-text"></span>
-            <span class="inline-block w-0.5 h-6 bg-cyan-400 shadow-[0_0_8px_#00f0ff] animate-pulse"></span>
+        </div>
+
+        <div class="about-grid">
+          <div class="panel story" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <span class="eyebrow">Vision &amp; background</span>
+              <h3>Technology driven by character and purpose.</h3>
+              <p>
+                I'm <strong>Luqman</strong>, an 11th-grade student at
+                <strong>SMK Madinatul Qur'an</strong> and
+                <strong>Ma'had Tahfidz Al-Yusro</strong> in Bogor. I believe software is most
+                impactful when technical rigor is paired with strong ethical values and
+                empathetic design.
+              </p>
+              <p>
+                Through coursework and extracurricular activities, I bridge engineering logic
+                and human connection, building intuitive digital solutions that solve practical
+                problems.
+              </p>
+            </div>
+            <div class="story__footer">
+              <span class="story__note">Available for PKL &amp; internships</span>
+              <a href="#contact" class="btn btn--ghost btn--sm">Start a conversation</a>
+            </div>
           </div>
-        </div>
 
-        <!-- Bio Paragraph -->
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl font-normal">
-          A passionate <strong class="text-white font-bold">SMK Madinatul Qur'an</strong> student mastering 
-          <strong class="text-cyan-300 font-bold">Software Engineering</strong>, <strong class="text-cyan-300 font-bold">Graphic Design</strong>, 
-          and <strong class="text-cyan-300 font-bold">Public Speaking</strong>. Building the future with code, creativity, and character.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-1">
-          <a href="#portfolio" class="px-7 py-3 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white rounded-full font-bold shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:shadow-[0_0_28px_rgba(0,240,255,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 flex items-center gap-2 group text-sm">
-            <span>View My Work</span>
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </a>
-          <a href="#contact" class="px-7 py-3 border border-slate-700 hover:border-cyan-400 bg-slate-900/70 text-slate-200 hover:text-white rounded-full font-bold hover:shadow-[0_0_20px_rgba(0,240,255,0.2)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 backdrop-blur-md text-sm">
-            Contact Me
-          </a>
-        </div>
-
-        <!-- Social Media Icons Row -->
-        <div class="flex items-center gap-3 pt-2">
-          <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer"
-            class="w-10 h-10 bg-slate-900/80 hover:bg-cyan-500 text-slate-300 hover:text-slate-950 rounded-xl flex items-center justify-center transition-all duration-300 border border-slate-800 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:-translate-y-0.5 group" aria-label="GitHub">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-          <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer"
-            class="w-10 h-10 bg-slate-900/80 hover:bg-emerald-500 text-slate-300 hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 border border-slate-800 hover:border-emerald-400 hover:shadow-[0_0_15px_rgba(16,185,129,0.4)] hover:-translate-y-0.5 group" aria-label="WhatsApp">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/maherr_0610/" target="_blank" rel="noopener noreferrer"
-            class="w-10 h-10 bg-slate-900/80 hover:bg-pink-600 text-slate-300 hover:text-white rounded-xl flex items-center justify-center transition-all duration-300 border border-slate-800 hover:border-pink-500 hover:shadow-[0_0_15px_rgba(236,72,153,0.4)] hover:-translate-y-0.5 group" aria-label="Instagram">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right Column: Framed Portrait -->
-      <div class="lg:col-span-5 flex justify-center lg:justify-end relative" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
-        <div class="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[400px] aspect-[4/5] flex items-center justify-center">
-          
-          <!-- Outer Ambient Glow -->
-          <div class="absolute -inset-3 bg-gradient-to-tr from-cyan-500/30 via-blue-600/25 to-indigo-600/20 rounded-[2.5rem] filter blur-2xl opacity-75 animate-pulse-glow"></div>
-          
-          <!-- Decorative Frame -->
-          <div class="relative w-full h-full rounded-[2.2rem] p-[2px] bg-gradient-to-b from-cyan-400/80 via-blue-500/50 to-indigo-600/60 shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_25px_rgba(0,240,255,0.2)] group overflow-hidden">
-            
-            <div class="w-full h-full rounded-[2.1rem] bg-[#0c1326] overflow-hidden relative">
-              <img src="/image.jpeg" alt="Luqman - Software Engineering & Graphic Design" width="400" height="500" loading="eager" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-[78%_35%] filter brightness-[1.03] contrast-[1.02] group-hover:scale-105 transition-transform duration-700">
-              
-              <!-- Vignette Gradient -->
-              <div class="absolute inset-0 bg-gradient-to-t from-[#060a17]/95 via-[#060a17]/15 to-transparent"></div>
-              
-              <!-- Bottom Photo Status Bar -->
-              <div class="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-[#0a0f1d]/85 backdrop-blur-md border border-cyan-500/20 flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_#00f0ff]"></span>
-                  <span class="text-xs sm:text-sm font-bold text-white tracking-wide">Luqman</span>
+          <div class="about-side">
+            <div class="panel panel--compact" data-aos="fade-up" data-aos-delay="150">
+              <div class="panel-head">
+                <span class="panel-label">Communication</span>
+                <span class="panel-badge">3 languages</span>
+              </div>
+              <div class="language-list">
+                <div class="language-row">
+                  <strong>Indonesian</strong>
+                  <span>Native</span>
                 </div>
-                <span class="text-[11px] font-semibold text-cyan-300 tracking-wider uppercase">SMK Student</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Floating Status Badge (Bottom-Left) -->
-          <div class="hidden sm:flex absolute -bottom-4 -left-4 bg-[#0a101f]/95 backdrop-blur-xl rounded-2xl shadow-[0_12px_30px_rgba(0,0,0,0.8),0_0_20px_rgba(0,240,255,0.2)] border border-cyan-400/35 p-3.5 animate-float z-20">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-[0_0_12px_rgba(0,240,255,0.4)]">
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <div>
-                <div class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                  <p class="text-[10px] text-cyan-300 font-bold uppercase tracking-wider">Open for Work</p>
+                <div class="language-row">
+                  <strong>English</strong>
+                  <span>Professional &amp; MUN debates</span>
                 </div>
-                <p class="text-xs sm:text-sm font-extrabold text-white tracking-tight">Internship / Job</p>
+                <div class="language-row">
+                  <strong>Arabic</strong>
+                  <span>Ma'had Tahfidz studies</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel--compact" data-aos="fade-up" data-aos-delay="200">
+              <div class="panel-head">
+                <span class="panel-label">At a glance</span>
+                <span class="panel-badge">Quick facts</span>
+              </div>
+              <div class="fact-grid">
+                <div class="fact">
+                  <span class="fact__label">School</span>
+                  <span class="fact__value">SMK Madinatul Qur'an</span>
+                </div>
+                <div class="fact">
+                  <span class="fact__label">Location</span>
+                  <span class="fact__value">Bekasi, Indonesia</span>
+                </div>
+                <div class="fact">
+                  <span class="fact__label">Grade</span>
+                  <span class="fact__value">11 (Eleven) SMK</span>
+                </div>
+                <div class="fact">
+                  <span class="fact__label">Email</span>
+                  <span class="fact__value">luqmanmunggi@gmail.com</span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Floating Tag Accent (Top-Right) -->
-          <div class="hidden sm:flex absolute -top-3 -right-3 bg-[#0a101f]/95 backdrop-blur-xl rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.8),0_0_18px_rgba(59,130,246,0.2)] border border-blue-400/35 px-3.5 py-2 animate-float-reverse z-20">
-            <div class="flex items-center gap-2">
-              <span class="text-sm">⚡</span>
-              <div>
-                <p class="text-[9px] text-slate-400 font-bold uppercase tracking-wider">Focus</p>
-                <p class="text-[11px] font-bold text-white">Software &amp; Design</p>
-              </div>
+        <div class="about-bottom">
+          <div class="panel leadership" data-aos="fade-up" data-aos-delay="250">
+            <span class="icon-tile" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" /></svg>
+            </span>
+            <div>
+              <h4>Public speaking &amp; MUN leadership</h4>
+              <p>
+                Model United Nations and competitive speech sharpen my ability to think on my
+                feet, structure technical ideas persuasively, and communicate with empathy.
+              </p>
             </div>
           </div>
 
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Quick Highlights Strip -->
-    <div class="max-w-5xl mx-auto px-5 sm:px-6 mt-14 relative z-10 w-full" data-aos="fade-up" data-aos-delay="200">
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 p-4 rounded-2xl bg-[#0a0f20]/60 backdrop-blur-xl border border-white/5 shadow-lg">
-        <div class="text-center p-2.5 rounded-xl bg-white/[0.02]">
-          <div class="text-lg sm:text-xl font-black text-white">11th Grade</div>
-          <div class="text-[11px] text-cyan-400 font-medium">SMK Madinatul Qur'an</div>
-        </div>
-        <div class="text-center p-2.5 rounded-xl bg-white/[0.02]">
-          <div class="text-lg sm:text-xl font-black text-cyan-300">3 Languages</div>
-          <div class="text-[11px] text-slate-400 font-medium">Indonesian • English • Arabic</div>
-        </div>
-        <div class="col-span-2 sm:col-span-1 text-center p-2.5 rounded-xl bg-white/[0.02]">
-          <div class="text-lg sm:text-xl font-black text-indigo-300">6+ Projects</div>
-          <div class="text-[11px] text-slate-400 font-medium">Web Apps &amp; UI/UX</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="relative py-24 sm:py-28 px-5 sm:px-6 bg-[#070b16] overflow-hidden">
-    <!-- Ambient Backdrop -->
-    <div class="absolute inset-0 cyber-dots opacity-20 pointer-events-none"></div>
-    <div class="absolute top-1/2 -left-40 w-96 h-96 bg-cyan-600/10 rounded-full filter blur-[110px] pointer-events-none"></div>
-    <div class="absolute bottom-10 right-0 w-96 h-96 bg-blue-600/10 rounded-full filter blur-[110px] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto relative z-10">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-14" data-aos="fade-up">
-        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
-          About Me
-        </span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-3 mb-3 tracking-tight">
-          Crafting Digital <span class="gradient-text">Experiences</span>
-        </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
-      </div>
-
-      <!-- Bento Grid Architecture -->
-      <div class="grid lg:grid-cols-12 gap-6 items-stretch">
-        
-        <!-- Bento 1: Story & Vision (Span 7) -->
-        <div class="lg:col-span-7 p-7 sm:p-9 rounded-3xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/15 shadow-xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-          <div class="space-y-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-300 text-xs font-semibold">
-              <span>🎯</span>
-              <span>Vision &amp; Background</span>
+          <div class="panel metrics" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <span class="metric__value counter" data-target="89">0</span>
+              <span class="metric__label">Mastery index</span>
             </div>
-            <h3 class="text-2xl font-bold text-white tracking-tight">
-              Technology Driven by Character &amp; Purpose
-            </h3>
-            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-              I'm <strong class="text-white font-bold">Luqman</strong>, an 11th-grade student at 
-              <strong class="text-white font-bold">SMK Madinatul Qur'an</strong> and 
-              <strong class="text-white font-bold">Ma'had Tahfidz Al-Yusro</strong> in Bogor. 
-              I believe software development is most impactful when technical rigor is coupled with strong ethical values and empathetic design.
+            <div class="metrics__divider" aria-hidden="true"></div>
+            <div>
+              <span class="metric__value">3</span>
+              <span class="metric__label">Languages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head section-head--center" data-aos="fade-up">
+          <span class="eyebrow">My skills</span>
+          <h2 class="section-title">What I <span class="text-accent">bring</span> to the table.</h2>
+          <p class="section-lead">
+            A practical mix of engineering fundamentals, interface design, and communication.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="panel skill-card" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <div class="skill-card__head">
+                <div class="skill-card__title">
+                  <span class="icon-tile" aria-hidden="true">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                  </span>
+                  <h3>Software Engineering</h3>
+                </div>
+                <span class="skill-card__badge">Backend &amp; web</span>
+              </div>
+
+              <div class="skill-rows">
+                <div>
+                  <div class="skill-meta"><span>Golang</span><span>75%</span></div>
+                  <div class="skill-track"><div class="skill-bar-fill" data-width="75" style="width: 0%"></div></div>
+                </div>
+                <div>
+                  <div class="skill-meta"><span>TypeScript</span><span>70%</span></div>
+                  <div class="skill-track"><div class="skill-bar-fill" data-width="70" style="width: 0%"></div></div>
+                </div>
+                <div>
+                  <div class="skill-meta"><span>JavaScript</span><span>65%</span></div>
+                  <div class="skill-track"><div class="skill-bar-fill skill-bar-fill--teal" data-width="65" style="width: 0%"></div></div>
+                </div>
+                <div>
+                  <div class="skill-meta"><span>Tailwind CSS</span><span>85%</span></div>
+                  <div class="skill-track"><div class="skill-bar-fill" data-width="85" style="width: 0%"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chip-row">
+              <span class="chip">Clean code</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">Git / GitHub</span>
+              <span class="chip">Responsive systems</span>
+            </div>
+          </article>
+
+          <article class="panel skill-card" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <div class="skill-card__head">
+                <div class="skill-card__title">
+                  <span class="icon-tile" aria-hidden="true">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
+                  </span>
+                  <h3>Design &amp; Other</h3>
+                </div>
+                <span class="skill-card__badge">UI/UX &amp; soft skills</span>
+              </div>
+
+              <div class="skill-rows">
+                <div>
+                  <div class="skill-meta"><span>Figma / UI design</span><span>80%</span></div>
+                  <div class="skill-track"><div class="skill-bar-fill skill-bar-fill--violet" data-width="80" style="width: 0%"></div></div>
+                </div>
+                <div>
+                  <div class="skill-meta"><span>Canva / Graphic design</span><span>85%</span></div>
+                  <div class="skill-track"><div class="skill-bar-fill skill-bar-fill--violet" data-width="85" style="width: 0%"></div></div>
+                </div>
+                <div>
+                  <div class="skill-meta"><span>Public speaking</span><span>75%</span></div>
+                  <div class="skill-track"><div class="skill-bar-fill skill-bar-fill--teal" data-width="75" style="width: 0%"></div></div>
+                </div>
+                <div>
+                  <div class="skill-meta"><span>HTML / CSS</span><span>90%</span></div>
+                  <div class="skill-track"><div class="skill-bar-fill" data-width="90" style="width: 0%"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chip-row">
+              <span class="chip">Wireframing</span>
+              <span class="chip">Prototyping</span>
+              <span class="chip">Debate &amp; MUN</span>
+              <span class="chip">User flow</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" class="section section--alt">
+      <div class="container">
+        <div class="section-head section-head--center" data-aos="fade-up">
+          <span class="eyebrow">Focus areas</span>
+          <h2 class="section-title">Where I <span class="text-accent">excel.</span></h2>
+          <p class="section-lead">
+            Three disciplines that shape how I approach products, people, and problems.
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          <article class="focus-card" data-aos="fade-up" data-aos-delay="100">
+            <span class="focus-card__number">01</span>
+            <span class="icon-tile" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+            </span>
+            <h3>Software Engineering</h3>
+            <p>
+              Designing and building software architecture that is logical, efficient, and
+              user-friendly.
             </p>
-            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-              Through my coursework and extracurricular activities, I actively bridge the gap between engineering logic and human connection—building intuitive digital solutions that solve practical problems.
+          </article>
+
+          <article class="focus-card" data-aos="fade-up" data-aos-delay="200">
+            <span class="focus-card__number">02</span>
+            <span class="icon-tile" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
+            </span>
+            <h3>Graphic Design</h3>
+            <p>
+              Creating visually consistent identities with attention to color, typography, and
+              layout.
             </p>
-          </div>
+          </article>
 
-          <!-- Bottom Action -->
-          <div class="pt-6 mt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4">
-            <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white rounded-full font-semibold shadow-[0_0_18px_rgba(0,240,255,0.3)] hover:shadow-[0_0_28px_rgba(0,240,255,0.55)] hover:-translate-y-0.5 transition-all text-xs sm:text-sm">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-              Download CV / Resume
-            </a>
-            <span class="text-xs text-slate-400">Available for PKL &amp; Internships</span>
-          </div>
-        </div>
-
-        <!-- Bento 2: Fast Matrix & Multilingual (Span 5) -->
-        <div class="lg:col-span-5 flex flex-col gap-6">
-          
-          <!-- Languages Card -->
-          <div class="p-6 rounded-3xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/15 shadow-xl" data-aos="fade-up" data-aos-delay="200">
-            <div class="flex items-center justify-between mb-4">
-              <div class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Communication</div>
-              <span class="text-xs px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/30 font-semibold">3 Languages</span>
-            </div>
-            <div class="space-y-3">
-              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                <span class="text-sm font-bold text-white">Indonesian</span>
-                <span class="text-xs text-cyan-300 font-medium">Native Language</span>
-              </div>
-              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                <span class="text-sm font-bold text-white">English</span>
-                <span class="text-xs text-blue-300 font-medium">Professional &amp; MUN Debates</span>
-              </div>
-              <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/60 border border-slate-800">
-                <span class="text-sm font-bold text-white">Arabic</span>
-                <span class="text-xs text-teal-300 font-medium">Ma'had Tahfidz Studies</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Stats & School Card -->
-          <div class="grid grid-cols-2 gap-3.5">
-            <div class="p-4 rounded-2xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/15 shadow-sm hover:border-cyan-400/40 transition-all">
-              <div class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mb-1">School</div>
-              <div class="font-bold text-white text-xs sm:text-sm">SMK Madinatul Qur'an</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/15 shadow-sm hover:border-cyan-400/40 transition-all">
-              <div class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Location</div>
-              <div class="font-bold text-white text-xs sm:text-sm">Bekasi, Indonesia</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/15 shadow-sm hover:border-cyan-400/40 transition-all">
-              <div class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Grade</div>
-              <div class="font-bold text-white text-xs sm:text-sm">11 (Eleven) SMK</div>
-            </div>
-            <div class="p-4 rounded-2xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/15 shadow-sm hover:border-cyan-400/40 transition-all">
-              <div class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mb-1">Email</div>
-              <div class="font-bold text-white text-xs sm:text-sm truncate">luqmanmunggi@gmail.com</div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- Bento Row 2: Leadership & Metric Counters -->
-      <div class="grid md:grid-cols-12 gap-6 mt-6">
-        
-        <!-- MUN & Public Speaking Card (Span 8) -->
-        <div class="md:col-span-8 p-6 sm:p-7 rounded-3xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/15 shadow-xl flex items-center gap-5" data-aos="fade-up" data-aos-delay="250">
-          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white shrink-0 shadow-[0_0_15px_rgba(99,102,241,0.35)]">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
-          </div>
-          <div>
-            <h4 class="text-base sm:text-lg font-bold text-white mb-1">Public Speaking &amp; MUN Leadership</h4>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Passionate about Model United Nations and competitive speech. These experiences hone my ability to think on my feet, structure technical ideas persuasively, and communicate empathetically.
+          <article class="focus-card" data-aos="fade-up" data-aos-delay="300">
+            <span class="focus-card__number">03</span>
+            <span class="icon-tile" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" /></svg>
+            </span>
+            <h3>Public Speaking</h3>
+            <p>
+              Communicating ideas persuasively and structuring arguments effectively through MUN
+              experience.
             </p>
-          </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-head section-head--center" data-aos="fade-up">
+          <span class="eyebrow">Portfolio</span>
+          <h2 class="section-title">Selected <span class="text-accent">projects.</span></h2>
+          <p class="section-lead">
+            Real work across fullstack web apps, backend APIs, and school operations tools.
+          </p>
         </div>
 
-        <!-- Mastery Counter Card (Span 4) -->
-        <div class="md:col-span-4 p-6 sm:p-7 rounded-3xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/15 shadow-xl flex items-center justify-around text-center" data-aos="fade-up" data-aos-delay="300">
-          <div>
-            <div class="text-3xl sm:text-4xl font-black gradient-text counter" data-target="89">0</div>
-            <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-wider mt-1">Mastery Index</p>
-          </div>
-          <div class="w-px h-12 bg-slate-800"></div>
-          <div>
-            <div class="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">3</div>
-            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">Languages</p>
-          </div>
-        </div>
+        <div id="portfolio-filters" class="project-filters" data-aos="fade-up"></div>
 
-      </div>
+        <div class="project-grid" id="portfolio-grid"></div>
 
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="relative py-24 sm:py-28 px-5 sm:px-6 bg-[#060913] overflow-hidden">
-    <div class="absolute inset-0 cyber-grid opacity-20 pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative z-10">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-14" data-aos="fade-up">
-        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
-          My Skills
-        </span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-3 mb-3 tracking-tight">
-          What I <span class="gradient-text">Bring</span> to the Table
-        </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-8 items-stretch">
-
-        <!-- Software Engineering Card -->
-        <div class="p-7 sm:p-8 rounded-3xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/20 shadow-xl hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(0,240,255,0.12)] transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-          <div>
-            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
-              <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-3">
-                <span class="w-9 h-9 bg-gradient-to-br from-cyan-400 to-blue-600 text-white rounded-xl flex items-center justify-center text-xs font-mono shadow-[0_0_12px_rgba(0,240,255,0.3)]">&#60;/&#62;</span>
-                Software Engineering
-              </h3>
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/30">Backend &amp; Web</span>
-            </div>
-
-            <div class="space-y-6">
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold text-slate-200">GOLANG</span>
-                  <span class="text-xs font-bold text-cyan-400">75%</span>
-                </div>
-                <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                  <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#00f0ff]" data-width="75" style="width: 0%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold text-slate-200">TypeScript</span>
-                  <span class="text-xs font-bold text-cyan-400">70%</span>
-                </div>
-                <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                  <div class="skill-bar-fill h-full bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#38bdf8]" data-width="70" style="width: 0%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold text-slate-200">JavaScript</span>
-                  <span class="text-xs font-bold text-cyan-400">65%</span>
-                </div>
-                <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                  <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-500 to-teal-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#00f0ff]" data-width="65" style="width: 0%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold text-slate-200">Tailwind CSS</span>
-                  <span class="text-xs font-bold text-cyan-400">85%</span>
-                </div>
-                <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                  <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#00f0ff]" data-width="85" style="width: 0%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tech Chips -->
-          <div class="flex flex-wrap gap-2 pt-6 mt-6 border-t border-slate-800/80">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-300">Clean Code</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-300">REST APIs</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-300">Git / GitHub</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-300">Responsive Systems</span>
-          </div>
-        </div>
-
-        <!-- Design & Leadership Card -->
-        <div class="p-7 sm:p-8 rounded-3xl bg-[#0c1326]/75 backdrop-blur-xl border border-cyan-500/20 shadow-xl hover:border-cyan-500/40 hover:shadow-[0_0_30px_rgba(0,240,255,0.12)] transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-          <div>
-            <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
-              <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-3">
-                <span class="w-9 h-9 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-xl flex items-center justify-center text-xs shadow-[0_0_12px_rgba(99,102,241,0.3)]">🎨</span>
-                Design &amp; Other
-              </h3>
-              <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-950 text-indigo-300 border border-indigo-500/30">UI/UX &amp; Soft Skills</span>
-            </div>
-
-            <div class="space-y-6">
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold text-slate-200">Figma / UI Design</span>
-                  <span class="text-xs font-bold text-indigo-400">80%</span>
-                </div>
-                <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                  <div class="skill-bar-fill h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#818cf8]" data-width="80" style="width: 0%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold text-slate-200">Canva / Graphic Design</span>
-                  <span class="text-xs font-bold text-purple-400">85%</span>
-                </div>
-                <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                  <div class="skill-bar-fill h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#c084fc]" data-width="85" style="width: 0%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold text-slate-200">Public Speaking</span>
-                  <span class="text-xs font-bold text-teal-400">75%</span>
-                </div>
-                <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                  <div class="skill-bar-fill h-full bg-gradient-to-r from-teal-400 to-cyan-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#2dd4bf]" data-width="75" style="width: 0%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between mb-2">
-                  <span class="text-sm font-semibold text-slate-200">HTML / CSS</span>
-                  <span class="text-xs font-bold text-cyan-400">90%</span>
-                </div>
-                <div class="w-full h-2 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                  <div class="skill-bar-fill h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_#00f0ff]" data-width="90" style="width: 0%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tech Chips -->
-          <div class="flex flex-wrap gap-2 pt-6 mt-6 border-t border-slate-800/80">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-300">Wireframing</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-300">Prototyping</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-300">Debate &amp; MUN</span>
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-[11px] font-medium text-slate-300">User Flow</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Focus Area Section -->
-  <section id="focus" class="relative py-24 sm:py-28 px-5 sm:px-6 bg-[#070b16] overflow-hidden">
-    <div class="max-w-7xl mx-auto relative z-10">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-14" data-aos="fade-up">
-        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
-          Focus Area
-        </span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-3 mb-3 tracking-tight">
-          Where I <span class="gradient-text">Excel</span>
-        </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
-        
-        <!-- Focus 1 -->
-        <div class="group relative bg-[#0c1326]/75 backdrop-blur-xl p-7 sm:p-8 rounded-3xl border border-cyan-500/15 hover:border-cyan-400/50 card-hover shadow-xl hover:shadow-[0_0_35px_rgba(0,240,255,0.18)]"
-          data-aos="fade-up" data-aos-delay="100">
-          <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-          <div class="relative z-10">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-[0_0_20px_rgba(0,240,255,0.35)] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-              <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-            </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors">Software Engineering</h3>
-            <p class="text-slate-400 leading-relaxed text-sm">Designing and building software architecture that is logical, efficient, and user-friendly.</p>
-          </div>
-        </div>
-
-        <!-- Focus 2 -->
-        <div class="group relative bg-[#0c1326]/75 backdrop-blur-xl p-7 sm:p-8 rounded-3xl border border-cyan-500/15 hover:border-indigo-400/50 card-hover shadow-xl hover:shadow-[0_0_35px_rgba(99,102,241,0.18)]"
-          data-aos="fade-up" data-aos-delay="200">
-          <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-          <div class="relative z-10">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-[0_0_20px_rgba(99,102,241,0.35)] group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500">
-              <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-            </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-3 text-white group-hover:text-indigo-300 transition-colors">Graphic Design</h3>
-            <p class="text-slate-400 leading-relaxed text-sm">Creating visually consistent brand identities with attention to color, typography, and layout.</p>
-          </div>
-        </div>
-
-        <!-- Focus 3 -->
-        <div class="group relative bg-[#0c1326]/75 backdrop-blur-xl p-7 sm:p-8 rounded-3xl border border-cyan-500/15 hover:border-teal-400/50 card-hover shadow-xl hover:shadow-[0_0_35px_rgba(45,212,191,0.18)]"
-          data-aos="fade-up" data-aos-delay="300">
-          <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-          <div class="relative z-10">
-            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 text-white shadow-[0_0_20px_rgba(45,212,191,0.35)] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-              <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
-            </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-3 text-white group-hover:text-teal-300 transition-colors">Public Speaking</h3>
-            <p class="text-slate-400 leading-relaxed text-sm">Communicating ideas persuasively and structuring arguments effectively through MUN experience.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="relative py-24 sm:py-28 px-5 sm:px-6 bg-[#060913] overflow-hidden">
-    <div class="absolute inset-0 cyber-dots opacity-20 pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative z-10">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-12" data-aos="fade-up">
-        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
-          Portfolio
-        </span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-3 mb-3 tracking-tight">
-          My Recent <span class="gradient-text">Projects</span>
-        </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
-      </div>
-
-      <!-- Dynamic Filter Buttons Container -->
-      <div id="portfolio-filters" class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12" data-aos="fade-up">
-        <!-- Rendered dynamically from src/data/projects.js -->
-      </div>
-
-      <!-- Dynamic Project Grid Container -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="portfolio-grid">
-        <!-- Rendered dynamically from src/data/projects.js -->
-      </div>
-
-      <!-- Load More Button -->
-      <div id="load-more-wrapper" class="mt-12 flex justify-center" data-aos="fade-up">
-        <button id="btn-load-more"
-          class="px-8 py-3 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white rounded-full font-semibold shadow-[0_0_18px_rgba(0,240,255,0.3)] hover:shadow-[0_0_28px_rgba(0,240,255,0.55)] hover:-translate-y-0.5 transition-all duration-300 focus:outline-none flex items-center gap-2 group text-sm">
-          <span>See More Projects</span>
-          <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
-        </button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="relative py-24 sm:py-28 px-5 sm:px-6 bg-[#070b16] overflow-hidden">
-    <!-- Ambient Radial Glow -->
-    <div class="absolute inset-0 cyber-dots opacity-20 pointer-events-none"></div>
-    <div class="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-cyan-600/10 rounded-full filter blur-[120px] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto relative z-10">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-14" data-aos="fade-up">
-        <span class="inline-block px-3.5 py-1 rounded-full bg-cyan-950/50 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">
-          Contact
-        </span>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-3 mb-3 tracking-tight">
-          Let's <span class="gradient-text">Collaborate</span>
-        </h2>
-        <p class="text-base sm:text-lg text-slate-300 max-w-xl mx-auto">I'm actively seeking internship and job opportunities. Let's build something amazing together!</p>
-        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full mx-auto mt-5 shadow-[0_0_12px_rgba(0,240,255,0.6)]"></div>
-      </div>
-
-      <div class="grid lg:grid-cols-[1fr,1.2fr] gap-10 lg:gap-14 items-start">
-        
-        <!-- Contact Info Column -->
-        <div class="space-y-6" data-aos="fade-right" data-aos-duration="900">
-          <div class="space-y-4">
-            
-            <!-- Email -->
-            <div class="flex items-center gap-4 sm:gap-5 p-4 sm:p-5 bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 shadow-lg hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(0,240,255,0.15)] transition-all duration-300 group">
-              <div class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-600 text-white rounded-xl flex items-center justify-center shadow-[0_0_12px_rgba(0,240,255,0.3)] shrink-0 group-hover:scale-105 transition-transform">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              </div>
-              <div class="overflow-hidden">
-                <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-widest">Email</p>
-                <a href="mailto:luqmanmunggi@gmail.com" class="text-sm sm:text-base font-semibold text-white hover:text-cyan-300 transition-colors truncate block">luqmanmunggi@gmail.com</a>
-              </div>
-            </div>
-
-            <!-- Location -->
-            <div class="flex items-center gap-4 sm:gap-5 p-4 sm:p-5 bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 shadow-lg hover:border-cyan-400/50 hover:shadow-[0_0_25px_rgba(0,240,255,0.15)] transition-all duration-300 group">
-              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-xl flex items-center justify-center shadow-[0_0_12px_rgba(59,130,246,0.3)] shrink-0 group-hover:scale-105 transition-transform">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              </div>
-              <div>
-                <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-widest">Location</p>
-                <p class="text-sm sm:text-base font-semibold text-white">Bekasi, Indonesia</p>
-              </div>
-            </div>
-
-            <!-- WhatsApp -->
-            <div class="flex items-center gap-4 sm:gap-5 p-4 sm:p-5 bg-[#0c1326]/80 backdrop-blur-xl rounded-2xl border border-cyan-500/15 shadow-lg hover:border-emerald-400/50 hover:shadow-[0_0_25px_rgba(16,185,129,0.15)] transition-all duration-300 group">
-              <div class="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-600 text-slate-950 rounded-xl flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.3)] shrink-0 group-hover:scale-105 transition-transform">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              </div>
-              <div>
-                <p class="text-[10px] font-bold text-cyan-400 uppercase tracking-widest">WhatsApp</p>
-                <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-white hover:text-emerald-400 transition-colors">+62 813-1716-1076</a>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Opportunities Banner -->
-          <div class="p-6 bg-gradient-to-br from-cyan-950/60 via-[#0c1326] to-indigo-950/60 rounded-3xl text-white border border-cyan-500/30 shadow-xl relative overflow-hidden">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="text-xl">💼</span>
-              <h4 class="font-bold text-base sm:text-lg text-white">Open for Opportunities</h4>
-            </div>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">I'm currently looking for <strong class="text-cyan-300">PKL (internship)</strong> and <strong class="text-cyan-300">entry-level job</strong> opportunities in software engineering and design. Let's connect!</p>
-          </div>
-        </div>
-
-        <!-- WhatsApp Form -->
-        <form id="whatsapp-form"
-          class="p-7 sm:p-9 bg-[#0c1326]/90 backdrop-blur-2xl rounded-3xl border border-cyan-500/20 shadow-[0_0_50px_rgba(0,0,0,0.8)] relative overflow-hidden"
-          data-aos="fade-left" data-aos-duration="900">
-          <div class="absolute -top-20 -right-20 w-64 h-64 bg-cyan-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
-
-          <h3 class="text-xl sm:text-2xl font-bold text-white mb-1.5 relative z-10">Send Me a Message</h3>
-          <p class="text-slate-400 text-xs sm:text-sm mb-6 sm:mb-8 relative z-10">I'll respond via WhatsApp as soon as possible!</p>
-
-          <div class="grid md:grid-cols-2 gap-4 sm:gap-5 mb-4 sm:mb-5 relative z-10">
-            <div class="space-y-1.5">
-              <label for="name" class="block text-xs font-semibold text-slate-300">Full Name <span class="text-cyan-400">*</span></label>
-              <input type="text" id="name" required
-                class="w-full px-4 py-3 bg-[#070b16]/80 rounded-xl border border-slate-800 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all placeholder:text-slate-500 outline-none text-sm"
-                placeholder="John Doe">
-            </div>
-            <div class="space-y-1.5">
-              <label for="email" class="block text-xs font-semibold text-slate-300">Email <span class="text-cyan-400">*</span></label>
-              <input type="email" id="email" required
-                class="w-full px-4 py-3 bg-[#070b16]/80 rounded-xl border border-slate-800 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all placeholder:text-slate-500 outline-none text-sm"
-                placeholder="john@gmail.com">
-            </div>
-          </div>
-
-          <div class="space-y-1.5 mb-6 relative z-10">
-            <label for="message" class="block text-xs font-semibold text-slate-300">Message <span class="text-cyan-400">*</span></label>
-            <textarea id="message" rows="4" required
-              class="w-full px-4 py-3 bg-[#070b16]/80 rounded-xl border border-slate-800 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition-all placeholder:text-slate-500 outline-none resize-none text-sm"
-              placeholder="Hi Luqman! I'd like to discuss an opportunity for..."></textarea>
-          </div>
-
-          <button type="submit"
-            class="w-full py-3.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 text-white rounded-xl font-semibold shadow-[0_0_20px_rgba(0,240,255,0.35)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2.5 relative z-10 group text-sm">
-            <span>Send via WhatsApp</span>
-            <svg class="w-4 h-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        <div id="load-more-wrapper" class="load-more" data-aos="fade-up">
+          <button id="btn-load-more" type="button" class="btn btn--ghost">
+            <span>See more projects</span>
+            <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-        </form>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Futuristic Footer -->
-  <footer class="relative bg-[#03050c] pt-14 pb-8 px-5 sm:px-6 border-t border-cyan-500/15 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-cyan-950/10 pointer-events-none"></div>
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="grid md:grid-cols-4 gap-8 mb-10">
-        <div class="md:col-span-1">
-          <a href="#" class="text-2xl font-extrabold gradient-text tracking-tight">LUQMAN.</a>
-          <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed max-w-xs">SMK Student passionate about software engineering, graphic design, and public speaking. Open for internship and work opportunities.</p>
-        </div>
-        <div>
-          <h4 class="text-slate-200 font-semibold text-xs uppercase tracking-widest mb-4">Quick Links</h4>
-          <div class="flex flex-col gap-2.5">
-            <a href="#about" class="text-slate-400 hover:text-cyan-400 text-xs sm:text-sm transition-colors hover:translate-x-1 inline-flex">About</a>
-            <a href="#skills" class="text-slate-400 hover:text-cyan-400 text-xs sm:text-sm transition-colors hover:translate-x-1 inline-flex">Skills</a>
-            <a href="#focus" class="text-slate-400 hover:text-cyan-400 text-xs sm:text-sm transition-colors hover:translate-x-1 inline-flex">Focus</a>
-            <a href="#portfolio" class="text-slate-400 hover:text-cyan-400 text-xs sm:text-sm transition-colors hover:translate-x-1 inline-flex">Portfolio</a>
-            <a href="#contact" class="text-slate-400 hover:text-cyan-400 text-xs sm:text-sm transition-colors hover:translate-x-1 inline-flex">Contact</a>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-slate-200 font-semibold text-xs uppercase tracking-widest mb-4">Core Focus</h4>
-          <div class="flex flex-col gap-2.5">
-            <span class="text-slate-400 text-xs sm:text-sm">Software Engineering</span>
-            <span class="text-slate-400 text-xs sm:text-sm">UI/UX Design</span>
-            <span class="text-slate-400 text-xs sm:text-sm">Graphic Design</span>
-            <span class="text-slate-400 text-xs sm:text-sm">Public Speaking &amp; MUN</span>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-slate-200 font-semibold text-xs uppercase tracking-widest mb-4">Connect</h4>
-          <div class="flex gap-2.5">
-            <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer"
-              class="w-9 h-9 bg-slate-900 hover:bg-cyan-500 text-slate-400 hover:text-slate-950 rounded-xl flex items-center justify-center border border-slate-800 hover:border-cyan-400 hover:shadow-[0_0_12px_rgba(0,240,255,0.4)] transition-all" aria-label="GitHub">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="mailto:luqmanmunggi@gmail.com"
-              class="w-9 h-9 bg-slate-900 hover:bg-rose-500 text-slate-400 hover:text-white rounded-xl flex items-center justify-center border border-slate-800 hover:border-rose-400 hover:shadow-[0_0_12px_rgba(244,63,94,0.4)] transition-all" aria-label="Email">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </a>
-            <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer"
-              class="w-9 h-9 bg-slate-900 hover:bg-emerald-500 text-slate-400 hover:text-white rounded-xl flex items-center justify-center border border-slate-800 hover:border-emerald-400 hover:shadow-[0_0_12px_rgba(16,185,129,0.4)] transition-all" aria-label="WhatsApp">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            </a>
-          </div>
         </div>
       </div>
-      <div class="border-t border-slate-900 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
-        <p class="text-slate-400 text-xs sm:text-sm">&copy; <span id="year">2026</span> Luqman. Crafted with passion.</p>
-        <p class="text-slate-400 text-xs">Open for internships &amp; job opportunities</p>
+    </section>
+
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy" data-aos="fade-up" data-aos-duration="900">
+            <span class="eyebrow">Contact</span>
+            <h2 class="section-title">Let's build something <span class="text-accent">useful.</span></h2>
+            <p class="section-lead">
+              I'm actively seeking internship and entry-level opportunities. Tell me what you're
+              working on and let's find a way to contribute.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                </span>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:luqmanmunggi@gmail.com" class="contact-value">luqmanmunggi@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                </span>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Bekasi, Indonesia</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+                </span>
+                <div>
+                  <span class="contact-label">WhatsApp</span>
+                  <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="contact-value">+62 813-1716-1076</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="availability">
+              <h4>Open for opportunities</h4>
+              <p>
+                Currently looking for PKL (internship) and entry-level roles in software
+                engineering and design. Let's connect.
+              </p>
+            </div>
+          </div>
+
+          <form id="whatsapp-form" class="panel contact-form" data-aos="fade-up" data-aos-duration="900">
+            <h3>Send me a message</h3>
+            <p>I'll respond via WhatsApp as soon as possible.</p>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full name <span>*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" required placeholder="John Doe">
+              </div>
+              <div class="field">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="john@gmail.com">
+              </div>
+              <div class="field field--full">
+                <label for="message">Message <span>*</span></label>
+                <textarea id="message" name="message" rows="5" required placeholder="Hi Luqman, I'd like to discuss an opportunity for..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit">
+              <span>Send via WhatsApp</span>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </button>
+            <p class="form-note">This opens WhatsApp with your message prefilled.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#hero" class="footer-brand">
+            <span class="brand__mark">L</span>
+            <span>LUQMAN.</span>
+          </a>
+          <p class="footer-desc">
+            Software engineering student focused on practical web products, clean interfaces,
+            and clear communication. Open for internship and work opportunities.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick links</h4>
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#focus">Focus</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Core focus</h4>
+          <div class="footer-links">
+            <span>Software Engineering</span>
+            <span>UI/UX Design</span>
+            <span>Graphic Design</span>
+            <span>Public Speaking &amp; MUN</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <div class="footer-socials">
+            <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
+              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="mailto:luqmanmunggi@gmail.com" class="icon-link" aria-label="Email">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            </a>
+            <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp">
+              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Luqman. All rights reserved.</p>
+        <p>Open for internships &amp; job opportunities</p>
       </div>
     </div>
   </footer>
 
-  <!-- Futuristic Back to Top Button -->
-  <button id="back-to-top"
-    class="fixed bottom-6 right-6 w-11 h-11 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl shadow-[0_0_18px_rgba(0,240,255,0.35)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all duration-300 flex items-center justify-center z-50 opacity-0 invisible translate-y-4 hover:-translate-y-1 focus:outline-none"
-    aria-label="Back to top">
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7" />
+  <button id="back-to-top" type="button" class="back-to-top" aria-label="Back to top">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
     </svg>
   </button>
 
-  <!-- Project Detail Modal -->
-  <div id="project-detail-modal" class="fixed inset-0 z-50 hidden bg-[#060913]/90 backdrop-blur-2xl overflow-y-auto p-4 sm:p-6 lg:p-10 transition-all duration-300" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
-    <div class="min-h-full flex items-center justify-center py-6">
-      <div id="modal-container" class="relative w-full max-w-4xl bg-[#0a1020] border border-cyan-500/25 rounded-3xl shadow-[0_25px_80px_rgba(0,0,0,0.9),0_0_40px_rgba(0,240,255,0.12)] overflow-hidden">
-        <!-- Content will be injected dynamically via JavaScript -->
-      </div>
-    </div>
+  <div id="project-detail-modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div id="modal-container"></div>
   </div>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="module" src="/src/main.js"></script>
 </body>

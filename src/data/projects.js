@@ -1,166 +1,174 @@
 /**
  * Data Proyek Portofolio Luqman
  * Struktur data terpisah untuk memudahkan penambahan atau perubahan proyek.
- * 
+ *
  * CATATAN PENGISIAN URL:
  * - githubUrl: Isi dengan URL repository GitHub asli (misal: 'https://github.com/luqman-Engginer/nama-repo')
  * - liveDemoUrl: Isi dengan URL live website atau Figma prototype jika tersedia
  * - Jika belum tersedia, biarkan string kosong ('') dan tombol otomatis ditandai "Tandai untuk diisi nanti".
+ *
+ * CATATAN GAMBAR:
+ * - Cover memakai GitHub social preview dari repository asli di public/projects/.
  */
 
 export const projectCategories = [
   { id: 'all', label: 'All' },
   { id: 'web', label: 'Web Development' },
-  { id: 'uiux', label: 'UI/UX Design' },
-  { id: 'graphic', label: 'Graphic Design' },
   { id: 'backend', label: 'Backend' },
   { id: 'fullstack', label: 'Fullstack' }
 ];
 
 export const projects = [
   {
-    id: 'gantthers-website',
-    title: 'Gantthers Website',
-    category: 'web',
-    categoryLabel: 'Web Development',
+    id: 'foodloop-id',
+    title: 'FoodLoop ID',
+    category: 'fullstack',
+    categoryLabel: 'Fullstack',
     badgeColor: 'teal',
-    description: 'Barbershop platform with online ordering and modern user experience.',
-    image: '/image2.png',
-    technologies: ['JavaScript', 'Tailwind CSS', 'HTML5', 'Responsive Design'],
+    description: 'Food surplus platform for reducing waste and measuring supply chain impact.',
+    image: '/projects/foodloop-id.png',
+    technologies: ['Python', 'Flask', 'MySQL', 'HTMX', 'Tailwind CSS'],
     featured: true,
-    githubUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh 'https://github.com/luqman-Engginer/gantthers-barbershop'
-    liveDemoUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh 'https://gantthers-barbershop.vercel.app'
-    overview: 'Platform website modern untuk barbershop "Gantthers" yang mempermudah pelanggan dalam melihat katalog layanan, memilih kapster, serta melakukan reservasi atau pemesanan jadwal potong rambut secara online.',
-    purpose: 'Mengotomasi proses booking barbershop konvensional dan meningkatkan kenyamanan pelanggan dengan antarmuka digital yang cepat, responsif, dan mudah diakses melalui perangkat smartphone maupun desktop.',
+    githubUrl: 'https://github.com/luqman-Engginer/Project_ketahanan_pangan',
+    liveDemoUrl: '',
+    overview: 'Platform web untuk mencatat pasokan pangan, memantau masa simpan, dan mengubah data surplus menjadi laporan dampak. Dikembangkan untuk lomba Web Development Soedirman Technoporia 2026 dengan tema Ketahanan Pangan.',
+    purpose: 'Mengurangi surplus pangan yang terbuang melalui pencatatan stok, alur review admin, dan laporan dampak yang bisa diukur.',
     features: [
-      'Sistem booking & reservasi jadwal potong rambut online.',
-      'Katalog layanan dan daftar harga lengkap dengan estimasi durasi waktu.',
-      'Profil kapster barbershop serta jam operasional yang jelas.',
-      'Integrasi tombol kontak langsung ke WhatsApp admin untuk konfirmasi instan.',
-      'Desain antarmuka responsif dan ramah perangkat mobile (mobile-first layout).'
+      'Pencatatan pasokan, stok dengan saran FEFO, dan waste log per supplier.',
+      'Antrian review admin untuk menyetujui atau menolak pasokan beserta catatan.',
+      'Dashboard KPI, tren bulanan, kartu insight, dan audit log aktivitas.',
+      'Ekspor laporan PDF, XLSX, dan CSV serta endpoint dampak publik.',
+      'Notifikasi real-time via SSE dan pengamanan Argon2, CSRF, rate limit, serta CSP.'
     ],
-    role: 'Frontend Developer & UI Implementer. Mengembangkan antarmuka web, merancang tata letak responsif menggunakan Tailwind CSS, dan membangun alur interaksi pengguna yang mudah dipahami.',
-    challenge: 'Menjaga alur booking tetap ringkas dan tidak membebani pengguna saat memesan jadwal dari layar smartphone yang sempit.',
-    solution: 'Merancang hierarki form satu kolom dengan validasi masukan instan serta tombol Call-to-Action (CTA) yang mencolok dan terhubung langsung ke WhatsApp.'
+    role: 'Full-stack Developer. Membangun backend Flask, alur supplier/admin, antarmuka Jinja2 dan HTMX, perhitungan dampak, serta laporan ekspor.',
+    challenge: 'Menjaga data antar-supplier tetap terisolasi dan perhitungan dampak hanya memakai pasokan yang sudah disetujui.',
+    solution: 'Query supplier difilter dari sesi, KPI dihitung dari data approved, dan logika ekspor dipisahkan ke service layer agar konsisten.'
   },
   {
-    id: 'figma-design',
-    title: 'Figma Design',
-    category: 'uiux',
-    categoryLabel: 'UI/UX Design',
-    badgeColor: 'cyan',
-    description: 'Landing page with intuitive navigation, comfortable contrast, and precise layout.',
-    image: '/image1.png',
-    technologies: ['Figma', 'UI/UX Design', 'Wireframing', 'Color Theory'],
+    id: 'schoolhub',
+    title: 'SchoolHub',
+    category: 'fullstack',
+    categoryLabel: 'Fullstack',
+    badgeColor: 'indigo',
+    description: 'Integrated school platform with public CMS and multi-role dashboards.',
+    image: '/projects/schoolhub.png',
+    technologies: ['Node.js', 'Express', 'MySQL', 'React', 'Tailwind CSS'],
     featured: true,
-    githubUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh link repository / design assets
-    liveDemoUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh link Figma Prototype / Preview
-    overview: 'Konsep desain antarmuka landing page beresolusi tinggi yang dirancang menggunakan Figma, memadukan estetika visual futuristik dengan kontras warna gelap yang nyaman di mata serta tata letak presisi.',
-    purpose: 'Menciptakan representasi visual interaktif yang memiliki daya tarik konversi tinggi sebelum produk masuk ke tahap implementasi pengkodean frontend.',
+    githubUrl: 'https://github.com/luqman-Engginer/School_systemss',
+    liveDemoUrl: '',
+    overview: 'Platform sekolah terpadu untuk SMA Cendekia Muda Jakarta yang menggabungkan website publik, CMS, dan dashboard untuk admin, guru, murid, serta wali.',
+    purpose: 'Menyatukan informasi akademik, kehadiran, tugas, komunikasi, dan konten sekolah dalam satu sistem multi-role.',
     features: [
-      'Tata letak berbasis grid 12-kolom yang seimbang dan konsisten.',
-      'Palet warna dark-mode yang telah diuji rasio kontrasnya untuk kenyamanan membaca.',
-      'Komponen UI yang dapat digunakan kembali (reusable component library) seperti button, cards, dan badges.',
-      'Alur wireframing dari sketsa kasar hingga prototipe interaktif high-fidelity.'
+      'Website publik dengan berita, agenda, galeri, prestasi, guru-staf, FAQ, dan PPDB.',
+      'Dashboard admin untuk akademik, pengguna, relasi wali, laporan, branding, dan CMS.',
+      'Ruang guru untuk materi, tugas, penilaian, kehadiran, disiplin, dan diskusi.',
+      'Ruang murid untuk materi, tugas, kuis, progres, jadwal, dan aspirasi.',
+      'Portal wali untuk memantau akademik, kehadiran, disiplin, dan pertemuan.'
     ],
-    role: 'UI/UX Designer. Melakukan riset layout, menyusun sketsa wireframe, menentukan palet warna dan tipografi, serta merangkai prototipe interaktif di Figma.',
-    challenge: 'Memastikan elemen visual bertema neon dan gelap tetap mempertahankan tingkat keterbacaan (readability) yang tinggi tanpa membuat mata lelah.',
-    solution: 'Menerapkan standar kontras WCAG, memperluas ruang kosong (whitespace), dan memfokuskan aksen warna terang hanya pada elemen kunci dan navigasi utama.'
+    role: 'Full-stack Developer. Membangun API Express dan MySQL, antarmuka React per role, skema data, seed demo, serta alur deployment.',
+    challenge: 'Menjaga konsistensi data akademik dan hak akses lima peran saat frontend statis dipisahkan dari backend.',
+    solution: 'Route dipisah per role, otorisasi dicek di server dengan JWT, dan health check serta backup database disiapkan untuk operasional.'
   },
   {
-    id: 'ecommerce-design',
-    title: 'E-Commerce Design',
-    category: 'uiux',
-    categoryLabel: 'UI/UX Design',
-    badgeColor: 'rose',
-    description: 'Beautiful e-commerce interface focused on user comfort and seamless shopping.',
-    image: '/image3.png',
-    technologies: ['Figma', 'UI/UX Design', 'E-Commerce UI', 'Design Systems'],
-    featured: true,
-    githubUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh link repository / design assets
-    liveDemoUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh link Figma Prototype / Preview
-    overview: 'Rancangan desain antarmuka platform e-commerce yang menitikberatkan pada kenyamanan pengguna saat berbelanja digital, mulai dari penemuan katalog barang hingga tahap penyelesaian transaksi.',
-    purpose: 'Mengoptimalkan alur transaksi digital (*user journey*) agar pembeli dapat menemukan produk yang diinginkan dengan cepat serta menyelesaikan proses checkout tanpa kendala.',
-    features: [
-      'Tampilan katalog produk berbentuk kartu grid yang bersih dan informatif.',
-      'Fitur filter kategori dan kolom pencarian yang mudah dijangkau.',
-      'Halaman detail produk dengan galeri visual foto, pilihan varian, dan deskripsi.',
-      'Alur keranjang belanja (cart) dan checkout yang ringkas untuk mengurangi cart abandonment.'
-    ],
-    role: 'UI/UX Designer. Mengembangkan alur pengalaman pengguna (UX flow), menyusun sistem desain antarmuka e-commerce, dan membuat prototipe navigasi checkout.',
-    challenge: 'Menyusun banyak informasi produk (harga, diskon, rating, stok, varian) dalam ruang kartu produk yang terbatas agar tetap terlihat bersih dan tidak padat.',
-    solution: 'Menerapkan hierarki visual yang ketat: harga dan gambar menjadi titik fokus utama, sedangkan informasi sekunder diletakkan dengan bobot teks yang lebih lembut.'
-  },
-  {
-    id: 'furniture-website',
-    title: 'Furniture Website',
-    category: 'web',
-    categoryLabel: 'Web Development',
+    id: 'pencatatan-keuangan',
+    title: 'Pencatatan Keuangan',
+    category: 'fullstack',
+    categoryLabel: 'Fullstack',
     badgeColor: 'amber',
-    description: 'Streamlining furniture sales with an easy-to-use purchasing platform.',
-    image: '/image4.png',
-    technologies: ['JavaScript', 'CSS3', 'HTML5', 'Web App'],
-    featured: false,
-    githubUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh 'https://github.com/luqman-Engginer/furniture-shop'
-    liveDemoUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh link live website furniture
-    overview: 'Website katalog dan etalase digital untuk produk furnitur interior rumah modern, dirancang dengan gaya visual yang bersih untuk menonjolkan kualitas dan estetika furnitur.',
-    purpose: 'Menyediakan platform web yang memudahkan calon pembeli menelusuri koleksi furnitur, mempelajari spesifikasi material dan dimensi, serta menghubungi pihak penjual.',
+    description: 'Financial recording app with balance dashboard, transactions, categories, and admin controls.',
+    image: '/projects/pencatatan-keuangan.png',
+    technologies: ['Laravel', 'PHP', 'MySQL', 'Blade', 'Tailwind CSS'],
+    featured: true,
+    githubUrl: 'https://github.com/luqman-Engginer/project_keuangan_with_ng_Ageng',
+    liveDemoUrl: '',
+    overview: 'Aplikasi web untuk mencatat pemasukan dan pengeluaran, mengelola kategori, serta memantau saldo dan riwayat transaksi.',
+    purpose: 'Menyediakan pencatatan keuangan yang aman dan terisolasi per pengguna, dengan kontrol admin untuk status akun.',
     features: [
-      'Katalog furnitur interaktif berdasarkan kategori ruangan (Living Room, Bedroom, Office).',
-      'Area pratinjau produk dengan visual besar dan informasi material yang terstruktur.',
-      'Tata letak responsif yang nyaman dibuka di layar komputer, tablet, maupun ponsel pintar.',
-      'Interaksi filter dan navigasi berbasis vanilla JavaScript tanpa dependensi berlebih.'
+      'Dashboard total pemasukan, pengeluaran, saldo, dan transaksi terbaru.',
+      'CRUD transaksi dengan filter jenis dan kategori.',
+      'Validasi saldo tidak negatif serta proteksi kepemilikan data dari manipulasi ID.',
+      'Kategori bawaan dan kategori kustom yang hanya terlihat oleh pemiliknya.',
+      'Panel admin untuk mencari, mengaktifkan, menonaktifkan, dan menghapus pengguna.',
+      '32 automated test untuk alur autentikasi, transaksi, isolasi data, dan admin.'
     ],
-    role: 'Frontend Developer. Membangun struktur markup HTML5 semantik, menulis stylesheet CSS3 yang rapi, dan mengimplementasikan interaktivitas filter kategori menggunakan JavaScript.',
-    challenge: 'Menampilkan aset visual produk furnitur berukuran besar agar tetap tajam namun halaman tetap dapat dibuka dengan cepat.',
-    solution: 'Mengoptimalkan pemuatan gambar dengan lazy loading dan struktur kontainer gambar yang menjaga rasio aspek gambar tetap proporsional.'
+    role: 'Full-stack Developer. Membangun autentikasi, CRUD transaksi dan kategori, perhitungan saldo, panel admin, serta test suite.',
+    challenge: 'Mencegah manipulasi ID dan transaksi yang membuat saldo negatif tanpa mengunci alur pencatatan pengguna.',
+    solution: 'Kepemilikan data dicek di server, saldo dihitung langsung dari database, dan pengeluaran yang melebihi saldo ditolak.'
   },
   {
-    id: 'admin-website',
-    title: 'Admin Website',
+    id: 'api-perpustakaan',
+    title: 'API Perpustakaan',
+    category: 'backend',
+    categoryLabel: 'Backend',
+    badgeColor: 'blue',
+    description: 'Library management API with a React dashboard for book collections and stock.',
+    image: '/projects/api-perpustakaan.png',
+    technologies: ['Laravel', 'PHP', 'MySQL', 'React', 'Vite'],
+    featured: false,
+    githubUrl: 'https://github.com/luqman-Engginer/api_with_bglabib',
+    liveDemoUrl: '',
+    overview: 'Proyek terpisah berisi REST API Laravel untuk data buku dan kategori, serta dashboard React untuk mengelola koleksi perpustakaan.',
+    purpose: 'Menyediakan fondasi backend perpustakaan dan antarmuka admin untuk melihat, mencari, dan menambah koleksi buku.',
+    features: [
+      'REST API Laravel untuk daftar, detail, dan tambah buku.',
+      'CRUD kategori melalui endpoint API.',
+      'Dashboard React dengan statistik judul, stok, kategori, dan pencarian buku.',
+      'Form tambah buku dengan validasi input dan notifikasi hasil request.',
+      'Struktur repo dipisah antara backend perpus_api dan frontend frontend-perpus.'
+    ],
+    role: 'Full-stack Developer. Membangun REST API Laravel untuk buku dan kategori serta dashboard React yang mengonsumsi API.',
+    challenge: 'Menyatukan kontrak data antara backend Laravel dan frontend React saat bentuk respons API masih berkembang.',
+    solution: 'Frontend menormalkan beberapa kemungkinan bentuk respons dan memusatkan request dalam satu helper agar perubahan API mudah diikuti.'
+  },
+  {
+    id: 'portal-ppdb',
+    title: 'Portal PPDB',
+    category: 'web',
+    categoryLabel: 'Web Development',
+    badgeColor: 'purple',
+    description: 'Student admission portal with role-based access, registration, and separate dashboards.',
+    image: '/projects/portal-ppdb.png',
+    technologies: ['Laravel', 'PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+    featured: false,
+    githubUrl: 'https://github.com/luqman-Engginer/website_profile',
+    liveDemoUrl: '',
+    overview: 'Aplikasi web untuk mengelola pendaftaran peserta didik baru, dengan registrasi calon siswa dan panel administrator yang dipisahkan.',
+    purpose: 'Mengelola alur PPDB secara terpusat dan membatasi akses administrator agar tidak bisa dibuat melalui registrasi publik.',
+    features: [
+      'Registrasi akun calon siswa dengan validasi domain email @gmail.com.',
+      'Login dengan pilihan role User atau Administrator yang divalidasi ke database.',
+      'Dashboard terpisah untuk calon siswa dan administrator.',
+      'Middleware admin untuk melindungi seluruh URL panel administrator.',
+      'Akun administrator dibuat melalui seeder, bukan registrasi publik.'
+    ],
+    role: 'Full-stack Developer. Membangun alur registrasi dan login, middleware RBAC, dashboard user/admin, serta skema database.',
+    challenge: 'Mencegah pendaftaran admin ilegal dan memastikan pilihan role saat login tidak bisa dipakai untuk menaikkan hak akses.',
+    solution: 'Registrasi publik hanya membuat akun user, admin dibuat lewat seeder, dan role diverifikasi ulang di server melalui middleware.'
+  },
+  {
+    id: 'admin-lab-booking',
+    title: 'Admin Lab Booking',
     category: 'web',
     categoryLabel: 'Web Development',
     badgeColor: 'cyan',
-    description: 'Responsive admin dashboard for efficient school staff management.',
-    image: '/image5.png',
-    technologies: ['Tailwind CSS', 'HTML5', 'JavaScript', 'Admin Dashboard'],
+    description: 'Lab administration dashboard for laptop permits, equipment loans, and overdue monitoring.',
+    image: '/projects/admin-lab-booking.png',
+    technologies: ['HTML5', 'JavaScript', 'Tailwind CSS', 'localStorage'],
     featured: false,
-    githubUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh 'https://github.com/luqman-Engginer/admin-dashboard'
-    liveDemoUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh link live dashboard
-    overview: 'Aplikasi dashboard administrasi web responsif yang dirancang untuk membantu pengelolaan data staf, guru, dan aktivitas operasional di lingkungan sekolah secara terstruktur.',
-    purpose: 'Mendigitalisasi pencatatan data staf sekolah yang sebelumnya berbasis spreadsheet manual menjadi sistem terpusat yang mudah dipantau dan dikelola.',
+    githubUrl: 'https://github.com/luqman-Engginer/My-project-Admin',
+    liveDemoUrl: '',
+    overview: 'Dashboard admin untuk mencatat izin peminjaman laptop, peminjaman alat, laporan kunci lemari, dan pelanggaran keterlambatan di laboratorium sekolah.',
+    purpose: 'Membantu admin lab mencatat peminjaman dan memantau barang yang melewati deadline dari satu dashboard.',
     features: [
-      'Ringkasan metrik statistik operasional (total staf, kehadiran, dan aktivitas harian).',
-      'Tabel manajemen data staf dengan filter pencarian dan label status.',
-      'Sidebar navigasi responsif yang dapat dibuka-tutup pada tampilan layar kecil.',
-      'Desain antarmuka bersih berbasis utility classes Tailwind CSS untuk performa optimal.'
+      'Login gate dengan whitelist email admin dan guru.',
+      'Pencatatan izin laptop dengan autocomplete siswa, kelas, dan nomor laptop.',
+      'Pencatatan peminjaman alat untuk guru atau staf dengan deadline.',
+      'Laporan kunci lemari berupa checklist dan unggah foto bukti.',
+      'Daftar pelanggaran otomatis untuk peminjaman yang melewati deadline.',
+      'Data demo disimpan di localStorage karena aplikasi berjalan tanpa backend.'
     ],
-    role: 'Frontend Developer. Mengembangkan komponen antarmuka dashboard, menyusun tabel data responsif dengan Tailwind CSS, serta mengatur logika interaksi sidebar di JavaScript.',
-    challenge: 'Menyajikan tabel data staf yang memiliki banyak kolom pada perangkat smartphone tanpa menyebabkan horizontal scrolling yang canggung.',
-    solution: 'Menerapkan wadah tabel dengan overflow terkontrol serta mode kartu ringkas (*card layout*) pada ukuran layar seluler.'
-  },
-  {
-    id: 'canva-design',
-    title: 'Canva Design',
-    category: 'graphic',
-    categoryLabel: 'Graphic Design',
-    badgeColor: 'purple',
-    description: 'Simple yet attractive graphic designs created with Canva for various needs.',
-    image: '/image6.png',
-    technologies: ['Canva', 'Graphic Design', 'Visual Identity', 'Typography'],
-    featured: false,
-    githubUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh link repository / design assets
-    liveDemoUrl: '', // [TANDAI UNTUK DIISI NANTI]: Contoh link Canva Presentation / Design Preview
-    overview: 'Koleksi materi desain grafis dan publikasi visual yang dibuat menggunakan Canva untuk kebutuhan identitas promosi, poster media sosial, dan materi presentasi.',
-    purpose: 'Menyampaikan pesan informasi dan promosi kepada audiens secara visual dengan komposisi tipografi yang tegas, warna yang harmonis, dan daya tarik tinggi.',
-    features: [
-      'Kumpulan poster dan banner promosi media sosial dengan format resolusi optimal.',
-      'Penyelarasan tipografi modern yang mudah dibaca dalam sekilas pandang.',
-      'Komposisi ruang negatif dan penempatan hierarki visual yang seimbang.',
-      'Kesesuaian palet warna dengan pesan dan target audiens yang dituju.'
-    ],
-    role: 'Graphic Designer. Bertanggung jawab atas penciptaan konsep visual, pemilihan skema warna, penataan tipografi, dan penyusunan komposisi visual di Canva.',
-    challenge: 'Membuat desain yang terlihat profesional dan unik dengan menggunakan alat desain berbasis templat.',
-    solution: 'Membangun komposisi dari kanvas kosong (*blank canvas*) menggunakan aturan grid kustom, modifikasi tipografi unik, dan palet warna kontras yang khas.'
+    role: 'Frontend Developer. Membangun dashboard, form peminjaman, monitoring deadline, dan penyimpanan data lokal.',
+    challenge: 'Membuat alur peminjaman lab yang cepat dipakai admin tanpa backend, sambil tetap memberi peringatan keterlambatan.',
+    solution: 'Autocomplete mengisi data siswa dan laptop otomatis, deadline dipantau berkala, dan data disimpan di localStorage.'
   }
 ];
