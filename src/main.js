@@ -303,6 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return `
         <article class="project-card" data-category="${project.category}" style="--delay: ${index * 60}ms">
           <div class="project-media">
+            <span class="project-number">${String(index + 1).padStart(2, '0')}</span>
             <img src="${project.image}" alt="${project.title}" loading="lazy" decoding="async" width="600" height="375">
             <span class="project-category">${project.categoryLabel}</span>
           </div>
