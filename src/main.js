@@ -1,5 +1,7 @@
 import './style.css';
-import { projects, projectCategories } from './data/projects.js';
+import { projects, portfolioTabs } from './data/projects.js';
+import { certificates } from './data/certificates.js';
+import { techStacks } from './data/techstacks.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -200,84 +202,91 @@ document.addEventListener('DOMContentLoaded', () => {
     skillObserver.observe(skillsSection);
   }
 
-  // --- Dynamic Project Showcase Logic ---
+  // --- Tech Icon SVG Helper ---
+  function getTechIconSvg(id) {
+    switch (id) {
+      case 'golang':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>`;
+      case 'laravel':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`;
+      case 'nodejs':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7v10l10 5 10-5V7L12 2z"/><path d="m12 12 8.5-4.5"/><path d="M12 12v9.5"/><path d="M12 12 3.5 7.5"/></svg>`;
+      case 'python-flask':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/></svg>`;
+      case 'react':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="10" ry="4.5"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>`;
+      case 'javascript':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="4"/><path d="M8 15v1a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V9"/><path d="M16 9h-2a2 2 0 0 0-2 2v0a2 2 0 0 0 2 2h0a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2"/></svg>`;
+      case 'tailwind':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>`;
+      case 'mysql':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>`;
+      case 'git-github':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>`;
+      case 'figma':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>`;
+      case 'canva':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>`;
+      case 'public-speaking':
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>`;
+      default:
+        return `<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>`;
+    }
+  }
+
+  // --- Dynamic Portfolio Showcase Logic (3 Categories: Projects, Certificates, Tech Stacks) ---
   const filtersContainer = document.getElementById('portfolio-filters');
   const gridContainer = document.getElementById('portfolio-grid');
   const loadMoreBtn = document.getElementById('btn-load-more');
   const loadMoreWrapper = document.getElementById('load-more-wrapper');
 
-  let activeFilter = 'all';
+  let activeTab = 'projects';
   let isExpanded = false;
 
-  // Render Category Filter Buttons
+  // Render Top 3 Portfolio Category Buttons
   function renderFilterButtons() {
     if (!filtersContainer) return;
-    filtersContainer.innerHTML = projectCategories.map(cat => `
+    filtersContainer.innerHTML = portfolioTabs.map(tab => `
       <button
         type="button"
-        class="filter-btn ${cat.id === activeFilter ? 'active' : ''}"
-        data-filter="${cat.id}">
-        ${cat.label}
+        class="filter-btn ${tab.id === activeTab ? 'active' : ''}"
+        data-tab="${tab.id}">
+        ${tab.label}
       </button>
     `).join('');
 
     const buttons = filtersContainer.querySelectorAll('.filter-btn');
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const filter = btn.getAttribute('data-filter');
-        if (activeFilter === filter) return;
-        activeFilter = filter;
+        const tab = btn.getAttribute('data-tab');
+        if (activeTab === tab) return;
+        activeTab = tab;
         
         buttons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         
-        renderProjectCards();
+        renderPortfolioContent();
       });
     });
   }
 
-  // Render Project Cards
+  // Master Portfolio Content Dispatcher
+  function renderPortfolioContent() {
+    if (activeTab === 'projects') {
+      renderProjectCards();
+    } else if (activeTab === 'certificates') {
+      renderCertificateCards();
+    } else if (activeTab === 'techstacks') {
+      renderTechStackCards();
+    }
+  }
+
+  // 1. Render Project Cards (Display all projects in full masonry gallery)
   function renderProjectCards() {
     if (!gridContainer) return;
+    if (loadMoreWrapper) loadMoreWrapper.classList.add('hidden');
 
-    // Filter projects according to active tab
-    const filteredProjects = activeFilter === 'all'
-      ? projects
-      : projects.filter(p => p.category === activeFilter);
-
-    // Empty state if category has no projects yet
-    if (filteredProjects.length === 0) {
-      gridContainer.innerHTML = `
-        <div class="project-empty">
-          <h4>No projects in this category</h4>
-          <p>Projects under this category are currently in development or being documented. Check back soon.</p>
-        </div>
-      `;
-      if (loadMoreWrapper) loadMoreWrapper.classList.add('hidden');
-      return;
-    }
-
-    // Determine how many projects to display
-    const defaultLimit = 3;
-    const shouldLimit = activeFilter === 'all' && !isExpanded && filteredProjects.length > defaultLimit;
-    const displayedProjects = shouldLimit ? filteredProjects.slice(0, defaultLimit) : filteredProjects;
-
-    // Toggle Load More button
-    if (loadMoreWrapper) {
-      if (activeFilter === 'all' && filteredProjects.length > defaultLimit) {
-        loadMoreWrapper.classList.remove('hidden');
-        if (loadMoreBtn) {
-          loadMoreBtn.innerHTML = isExpanded
-            ? `<span>Show less</span><svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>`
-            : `<span>See more projects</span><svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>`;
-        }
-      } else {
-        loadMoreWrapper.classList.add('hidden');
-      }
-    }
-
-    // Render cards markup
-    gridContainer.innerHTML = displayedProjects.map((project, index) => {
+    gridContainer.innerHTML = projects.map((project, index) => {
       const techTags = project.technologies.map(tech => `
         <span class="tech-tag">${tech}</span>
       `).join('');
@@ -333,7 +342,6 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }).join('');
 
-    // Attach click listeners to "View Details" buttons
     const detailButtons = gridContainer.querySelectorAll('.view-details-btn');
     detailButtons.forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -342,6 +350,195 @@ document.addEventListener('DOMContentLoaded', () => {
         openProjectModal(projId);
       });
     });
+  }
+
+  // 2. Render Certificate Cards
+  function renderCertificateCards() {
+    if (!gridContainer) return;
+    if (loadMoreWrapper) loadMoreWrapper.classList.add('hidden');
+
+    gridContainer.innerHTML = certificates.map((cert, index) => {
+      const skillsHtml = cert.skills.map(s => `<span class="tech-tag">${s}</span>`).join('');
+      const certIndexFormatted = String(index + 1).padStart(2, '0');
+
+      return `
+        <article class="project-card cert-card" style="--delay: ${index * 60}ms">
+          <div class="project-media cert-media">
+            <span class="project-number">${certIndexFormatted}</span>
+            <img src="${cert.image}" alt="${cert.title}" loading="lazy" decoding="async" width="600" height="400">
+            <span class="project-category">${cert.category}</span>
+          </div>
+
+          <div class="project-body">
+            <div class="cert-meta-row">
+              <span class="cert-issuer">
+                <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                ${cert.issuer}
+              </span>
+              <span class="cert-date">${cert.date}</span>
+            </div>
+            <h3 class="project-title">${cert.title}</h3>
+            <p class="project-desc">${cert.description}</p>
+            <div class="project-tech">
+              ${skillsHtml}
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <div class="project-links" style="width: 100%;">
+              <a href="${cert.pdfUrl}" target="_blank" rel="noopener noreferrer" class="project-link" style="width: 100%; justify-content: center; padding: 10px 14px; background: rgba(125, 211, 252, 0.08); border: 1px solid rgba(125, 211, 252, 0.22); border-radius: 8px; color: var(--accent); font-weight: 600; font-size: 13px;" aria-label="Open ${cert.title}">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                <span>${cert.isImage ? 'Lihat Dokumen / Kredensial' : 'Buka Sertifikat PDF'}</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
+
+  // 3. Render Tech Stack Cards
+  function renderTechStackCards() {
+    if (!gridContainer) return;
+    if (loadMoreWrapper) loadMoreWrapper.classList.add('hidden');
+
+    gridContainer.innerHTML = techStacks.map((tech, index) => {
+      const usedInHtml = tech.usedIn.map(u => `<span class="tech-tag">${u}</span>`).join('');
+      const techIndexFormatted = String(index + 1).padStart(2, '0');
+      const iconSvg = getTechIconSvg(tech.id);
+
+      return `
+        <article class="project-card tech-card" style="--delay: ${index * 45}ms">
+          <div class="tech-card-header">
+            <div class="tech-icon-wrap" aria-hidden="true">
+              ${iconSvg}
+            </div>
+            <div class="tech-badge-group">
+              <span class="project-category">${tech.categoryLabel}</span>
+              <span class="tech-level-badge">${tech.level}</span>
+            </div>
+          </div>
+
+          <div class="project-body">
+            <h3 class="project-title tech-title">
+              <span class="tech-num">${techIndexFormatted}.</span> ${tech.name}
+            </h3>
+            <p class="tech-exp-label">${tech.experience}</p>
+            <div class="tech-progress-bar" title="Proficiency: ${tech.proficiency}%">
+              <div class="tech-progress-fill" style="width: ${tech.proficiency}%"></div>
+            </div>
+            <p class="project-desc">${tech.description}</p>
+            <div class="tech-used-section">
+              <span class="tech-used-label">Applied in:</span>
+              <div class="project-tech">
+                ${usedInHtml}
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
+
+  // --- Certificate Detail Modal Implementation ---
+  function openCertificateModal(certId) {
+    const cert = certificates.find(c => c.id === certId);
+    if (!cert || !projectModal || !modalContainer) return;
+
+    const skillsHtml = cert.skills.map(s => `<span class="tech-tag">${s}</span>`).join('');
+
+    modalContainer.innerHTML = `
+      <div class="modal-topbar">
+        <button type="button" id="modal-back-btn" class="modal-back">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          <span>Back</span>
+        </button>
+
+        <div class="modal-top-actions">
+          <span class="project-category">${cert.category}</span>
+          <button type="button" id="modal-close-btn" class="modal-close" aria-label="Close certificate details">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-scroll">
+        <div class="modal-cover">
+          <img src="${cert.image}" alt="${cert.title}" loading="lazy" decoding="async" width="1200" height="700">
+        </div>
+
+        <div class="modal-head">
+          <div>
+            <h2 id="modal-project-title" class="modal-title">${cert.title}</h2>
+            <p class="modal-subtitle">${cert.issuer} • ${cert.date}</p>
+          </div>
+
+          <div class="modal-actions">
+            <a href="${cert.pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>${cert.isImage ? 'Open Full Credential' : 'Open PDF Certificate'}</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="modal-grid">
+          <div class="modal-panel">
+            <h4>Issuer / Authority</h4>
+            <p>${cert.issuer}</p>
+          </div>
+          <div class="modal-panel">
+            <h4>Credential ID</h4>
+            <p style="font-family: monospace; color: var(--accent);">${cert.credentialId}</p>
+          </div>
+        </div>
+
+        <div class="modal-panel">
+          <h4>Certificate Overview</h4>
+          <p>${cert.description}</p>
+        </div>
+
+        <div class="modal-panel">
+          <h4>Verified Skills &amp; Competencies</h4>
+          <div class="tech-row">
+            ${skillsHtml}
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="modal-bottom-back-btn" class="btn btn--ghost btn--sm">
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            <span>Back to portfolio</span>
+          </button>
+
+          <div class="modal-actions">
+            <a href="${cert.pdfUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>${cert.isImage ? 'View Document' : 'View PDF'}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const backBtn = document.getElementById('modal-back-btn');
+    const bottomBackBtn = document.getElementById('modal-bottom-back-btn');
+    const closeBtn = document.getElementById('modal-close-btn');
+
+    const closeModal = () => {
+      projectModal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      projectModal.setAttribute('aria-hidden', 'true');
+    };
+
+    if (backBtn) backBtn.addEventListener('click', closeModal);
+    if (bottomBackBtn) bottomBackBtn.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    projectModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    projectModal.setAttribute('aria-hidden', 'false');
   }
 
   // --- Project Detail Modal Implementation ---
@@ -533,9 +730,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initialize Portfolio Showcase
+  // Initialize Portfolio Showcase (3 Tabs: Projects, Certificates, Tech Stacks)
   renderFilterButtons();
-  renderProjectCards();
+  renderPortfolioContent();
 
   // Support direct URL deep linking to project modal (e.g. #project-foodloop-id)
   function checkUrlHashForProject() {

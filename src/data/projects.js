@@ -11,6 +11,12 @@
  * - Cover memakai GitHub social preview dari repository asli di public/projects/.
  */
 
+export const portfolioTabs = [
+  { id: 'projects', label: 'Projects' },
+  { id: 'certificates', label: 'Certificates' },
+  { id: 'techstacks', label: 'Tech Stacks' }
+];
+
 export const projectCategories = [
   { id: 'all', label: 'All' },
   { id: 'web', label: 'Web Development' },
@@ -147,28 +153,147 @@ export const projects = [
   },
   {
     id: 'admin-lab-booking',
-    title: 'Admin Lab Booking',
+    title: 'Website Admin — Manajemen Lab & Peminjaman',
     category: 'web',
     categoryLabel: 'Web Development',
     badgeColor: 'cyan',
-    description: 'Lab administration dashboard for laptop permits, equipment loans, and overdue monitoring.',
-    image: '/projects/admin-lab-booking.png',
+    description: 'Dashboard administrasi lab sekolah untuk izin peminjaman laptop, monitoring peminjaman aktif, dan pelanggaran deadline.',
+    image: '/image5.png',
     technologies: ['HTML5', 'JavaScript', 'Tailwind CSS', 'localStorage'],
     featured: false,
     githubUrl: 'https://github.com/luqman-Engginer/My-project-Admin',
     liveDemoUrl: '',
-    overview: 'Dashboard admin untuk mencatat izin peminjaman laptop, peminjaman alat, laporan kunci lemari, dan pelanggaran keterlambatan di laboratorium sekolah.',
-    purpose: 'Membantu admin lab mencatat peminjaman dan memantau barang yang melewati deadline dari satu dashboard.',
+    overview: 'Dashboard admin sekolah untuk mencatat perizinan laptop santri, peminjaman alat guru, laporan inventaris lemari, dan pemantauan pelanggaran deadline secara langsung.',
+    purpose: 'Membantu staf lab mengelola alur peminjaman perangkat dan memantau barang yang terlambat dikembalikan dalam satu antarmuka terpusat.',
     features: [
-      'Login gate dengan whitelist email admin dan guru.',
-      'Pencatatan izin laptop dengan autocomplete siswa, kelas, dan nomor laptop.',
-      'Pencatatan peminjaman alat untuk guru atau staf dengan deadline.',
-      'Laporan kunci lemari berupa checklist dan unggah foto bukti.',
-      'Daftar pelanggaran otomatis untuk peminjaman yang melewati deadline.',
-      'Data demo disimpan di localStorage karena aplikasi berjalan tanpa backend.'
+      'Form izin laptop dengan autocomplete nama santri, kelas, dan nomor laptop.',
+      'Tabel monitoring peminjaman aktif dengan status otomatis (Selesai / Telat).',
+      'Peringatan visual banner untuk pelanggaran aktif yang melewati deadline.',
+      'Checklist inventaris kunci lemari dan form peminjaman alat guru.',
+      'Penyimpanan state data lokal yang cepat dan responsif tanpa backend.'
     ],
-    role: 'Frontend Developer. Membangun dashboard, form peminjaman, monitoring deadline, dan penyimpanan data lokal.',
-    challenge: 'Membuat alur peminjaman lab yang cepat dipakai admin tanpa backend, sambil tetap memberi peringatan keterlambatan.',
-    solution: 'Autocomplete mengisi data siswa dan laptop otomatis, deadline dipantau berkala, dan data disimpan di localStorage.'
+    role: 'Frontend Developer. Membangun antarmuka dashboard, sistem input perizinan, dan logika peringatan deadline.',
+    challenge: 'Membuat sistem administrasi lab yang praktis digunakan staf sekolah secara real-time langsung di browser.',
+    solution: 'Menyusun layout bersih berbasis Tailwind CSS dengan komponen modular dan manajemen state lokal yang handal.'
+  },
+  {
+    id: 'gantthers-barbershop',
+    title: 'Gantthers — Barbershop & Grooming Platform',
+    category: 'web',
+    categoryLabel: 'Web Development',
+    badgeColor: 'teal',
+    description: 'Website layanan barbershop modern untuk reservasi online, katalog gaya rambut, dan jadwal layanan grooming.',
+    image: '/image2.png',
+    technologies: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Responsive Web'],
+    featured: false,
+    githubUrl: 'https://github.com/luqman-Engginer',
+    liveDemoUrl: '',
+    overview: 'Website Gantthers Barbershop dirancang untuk menghadirkan pengalaman grooming profesional secara online, mempermudah reservasi janji temu dan menampilkan portofolio cukur rambut.',
+    purpose: 'Menyediakan kemudahan booking online bagi pelanggan barbershop agar tidak perlu mengantre secara konvensional.',
+    features: [
+      'Hero banner modern dengan tagline "We Can Change You To Be Different Look".',
+      'Tombol call-to-action "Book Appointment" terintegrasi.',
+      'Navigasi menu Home, About, Store, Pricing, dan Contact.',
+      'Desain bertema gelap elegan yang merepresentasikan nuansa premium barbershop.'
+    ],
+    role: 'Frontend Developer. Merancang antarmuka web, tipografi tegas, dan layout responsif untuk kenyamanan pengguna.',
+    challenge: 'Menciptakan kesan visual maskulin yang berkelas namun tetap ringan dan cepat diakses pelanggan di smartphone.',
+    solution: 'Menggunakan fotografi atmospheric bernuansa monokromatik dengan aksen merah kontras pada tombol aksi.'
+  },
+  {
+    id: 'furniture-website',
+    title: 'Doranz — Minimalist Furniture & Interior',
+    category: 'web',
+    categoryLabel: 'Web Development',
+    badgeColor: 'amber',
+    description: 'Platform etalase furnitur modern dengan katalog perabot rumah tangga bernuansa minimalis nan estetik.',
+    image: '/image4.png',
+    technologies: ['HTML5', 'Tailwind CSS', 'JavaScript', 'UI Components'],
+    featured: false,
+    githubUrl: 'https://github.com/luqman-Engginer',
+    liveDemoUrl: '',
+    overview: 'Website Doranz membantu pengguna menemukan furnitur minimalis modern untuk interior ruangan dengan kemudahan pencarian produk yang elegan.',
+    purpose: 'Memudahkan institusi dan pelanggan dalam menjelajahi serta memesan perabot rumah tangga berkualitas tinggi.',
+    features: [
+      'Hero showcase "Make your interior more minimalistic & modern".',
+      'Fitur pencarian instan furnitur dengan search bar terintegrasi.',
+      'Menu navigasi terstruktur: Furniture, Shop, About Us, Contact, dan Shopping Cart.',
+      'Tampilan visual perabot 3D photorealistic dengan palet warna hangat.'
+    ],
+    role: 'Frontend Developer. Membangun tata letak halaman produk, styling utilitas Tailwind, dan integrasi elemen katalog.',
+    challenge: 'Menyajikan perabot rumah dalam konteks ruangan nyata tanpa mengurangi fokus pengguna pada detail produk.',
+    solution: 'Menata komposisi hero section yang seimbang antara interior photography dengan elemen tipografi yang bersih.'
+  },
+  {
+    id: 'ecommerce-ui-design',
+    title: 'QuirkQube — Wireless Audio Store UI',
+    category: 'web',
+    categoryLabel: 'UI/UX Design',
+    badgeColor: 'blue',
+    description: 'Desain antarmuka toko online audio nirkabel dengan presentasi produk interaktif dan tata letak belanja modern.',
+    image: '/image3.png',
+    technologies: ['Figma', 'UI/UX', 'Design System', 'Prototyping'],
+    featured: false,
+    githubUrl: 'https://github.com/luqman-Engginer',
+    liveDemoUrl: '',
+    overview: 'QuirkQube merupakan rancangan antarmuka e-commerce khusus perangkat audio nirkabel yang mengedepankan visual headphone bergradien segar dan alur belanja intuitif.',
+    purpose: 'Menciptakan pengalaman belanja headphone yang menarik secara visual, informatif, dan memicu rasa ingin membeli.',
+    features: [
+      'Hero section produk unggulan "Best Product Wireless Headphone".',
+      'Tombol aksi "Shop By Category" dan autentikasi Masuk/Daftar.',
+      'Kartu deskripsi spesifikasi produk dengan layout minimalis.',
+      'Skema warna hijau gradien modern yang dinamis dan ramah mata.'
+    ],
+    role: 'UI/UX Designer. Melakukan riset antarmuka, pembuatan design system di Figma, dan penataan tata letak visual.',
+    challenge: 'Menonjolkan detail fisik produk headphone nirkabel di atas background kanvas digital yang memikat.',
+    solution: 'Menggunakan sudut pandang hero angle melayang dengan tipografi latar besar dan kontras kartu yang kuat.'
+  },
+  {
+    id: 'figma-landing-page',
+    title: 'ReelUp — Modern Video Landing Page',
+    category: 'web',
+    categoryLabel: 'UI/UX Design',
+    badgeColor: 'indigo',
+    description: 'Eksplorasi landing page SaaS platform video teknologi tinggi dengan navigasi presisi dan struktur modular.',
+    image: '/image1.png',
+    technologies: ['Figma', 'Prototyping', 'Estetika & Layout', 'Typography'],
+    featured: false,
+    githubUrl: 'https://github.com/luqman-Engginer',
+    liveDemoUrl: '',
+    overview: 'Perancangan antarmuka ReelUp ("Most Powerful Way To Connect Every Audience") yang menonjolkan kekuatan video engagement digital untuk bisnis modern.',
+    purpose: 'Menghadirkan landing page kredibel dengan konversi tinggi bagi calon pengguna SaaS platform video.',
+    features: [
+      'Hero headline berani dengan tombol "Get Started - For Free!" dan "Book A Demo".',
+      'Navigasi lengkap: Products, Customer Stories, Resources, dan Pricing.',
+      'Galeri preview multi-format visual dan media engagement.',
+      'Komponen tipografi terstruktur dengan jarak whitespace yang lega.'
+    ],
+    role: 'UI Designer. Mengembangkan visual layout, hierarki teks, pemilihan palet warna monokrom modern, dan wireframing Figma.',
+    challenge: 'Menyampaikan proposisi nilai platform teknologi video yang kompleks secara ringkas dan ramah dipahami pengunjung baru.',
+    solution: 'Menggabungkan judul berukuran besar, copy ringkas, dan pratinjau kartu konten interaktif di bagian bawah.'
+  },
+  {
+    id: 'canva-brand-design',
+    title: 'Branding & CV Bahasa Arab (لقمان)',
+    category: 'web',
+    categoryLabel: 'Creative Design',
+    badgeColor: 'purple',
+    description: 'Perancangan identitas visual dan ringkasan resume profesional dalam Bahasa Arab untuk profil siswa RPL SMK Madinatul Qur\'an.',
+    image: '/image6.png',
+    technologies: ['Canva', 'Graphic Design', 'Branding', 'Typography'],
+    featured: false,
+    githubUrl: 'https://github.com/luqman-Engginer',
+    liveDemoUrl: '',
+    overview: 'Karya desain grafis personal branding dan ringkasan portofolio profesional dalam Bahasa Arab (لقمان - هندسة البرمجيات) untuk profil siswa kejuruan software engineering.',
+    purpose: 'Mempromosikan kemampuan multilingual (Bahasa Arab, Inggris, Indonesia) dan keahlian rekayasa perangkat lunak.',
+    features: [
+      'Tipografi kaligrafi modern Bahasa Arab "لقمان - هندسة البرمجيات".',
+      'Kartu profil dengan layout minimalis dan tone warna navy-cream yang harmonis.',
+      'Informasi pendidikan resmi di SMK Madinatul Qur\'an (2025-2027).',
+      'Komposisi layout ramah cetak maupun media sosial.'
+    ],
+    role: 'Graphic Designer. Merancang konsep visual, tata letak kartu identitas, dan tipografi teks Bahasa Arab.',
+    challenge: 'Menyesuaikan layout tata letak tulisan Arab (kanan-ke-kiri / RTL) dengan estetika desain grafis modern.',
+    solution: 'Mengatur hierarki heading, avatar berbingkai lingkaran, dan tombol aksi terstruktur yang proporsional.'
   }
 ];
