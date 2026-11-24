@@ -423,10 +423,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderPortfolioContent() {
     renderProjectSubfilters();
     if (activeTab === 'projects') {
+      if (gridContainer) gridContainer.className = 'project-grid';
       renderProjectCards();
     } else if (activeTab === 'certificates') {
+      if (gridContainer) gridContainer.className = 'project-grid cert-grid';
       renderCertificateCards();
     } else if (activeTab === 'techstacks') {
+      if (gridContainer) gridContainer.className = 'tech-hub-wrap';
       renderTechStackCards();
     }
   }
