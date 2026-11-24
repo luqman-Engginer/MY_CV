@@ -340,6 +340,18 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeProjectFilter = 'all'; // 'all' | 'fullstack' | 'backend' | 'web'
 
   // Render Master 3-Tab Buttons (Projects | Certificates | Tech Stack)
+    // Connect data-tab-link shortcuts (from hero index bar, etc.)
+  document.querySelectorAll('[data-tab-link]').forEach(link => {
+    link.addEventListener('click', () => {
+      const targetTab = link.getAttribute('data-tab-link');
+      if (targetTab && activeTab !== targetTab) {
+        activeTab = targetTab;
+        renderMasterTabs();
+        renderPortfolioContent();
+      }
+    });
+  });
+
   function renderMasterTabs() {
     if (!filtersContainer) return;
 

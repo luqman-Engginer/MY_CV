@@ -126,13 +126,19 @@
   </header>
 
   <main id="main-content">
-    <!-- 1. Hero / Above-The-Fold (Editorial Software Engineering Aesthetic) -->
+        <!-- 1. Hero / Above-The-Fold (Editorial Software Engineering Poster - Image 2 Composition) -->
     <section id="hero" class="hero">
+      <!-- Background Oversized Display Typography -->
+      <div class="hero__bg-display" aria-hidden="true">
+        <span>SOFTWARE</span>
+        <span>PORTFOLIO</span>
+      </div>
+
       <div class="container">
         <div class="hero__grid">
-          <!-- Left Column: Editorial Typography & Actions -->
+          <!-- Left Column: Foreground Identity Block & Index -->
           <div class="hero__copy" data-aos="fade-up" data-aos-duration="900">
-            <!-- Availability & Role Pills -->
+            <!-- Availability & Role Status Pills -->
             <div class="hero__status-group">
               <div class="hero__status">
                 <span class="status-dot" aria-hidden="true"></span>
@@ -152,12 +158,6 @@
               <span id="typed-text" class="typed-text"></span>
               <span class="typed-caret" aria-hidden="true"></span>
             </div>
-
-            <!-- Engineering Quote / Tagline -->
-            <blockquote class="hero__quote">
-              <span class="hero__quote-mark">“</span>
-              <p>Crafting scalable backend architectures, clean modular code, and human-centered interfaces with meticulous attention to detail.</p>
-            </blockquote>
 
             <!-- Role & Leadership Badges Stack -->
             <div class="hero__badge-stack">
@@ -195,76 +195,49 @@
               </a>
             </div>
 
-            <!-- Social Connect Links -->
-            <div class="hero__socials">
-              <span class="hero__socials-label">Connect</span>
-              <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Profile" title="GitHub: luqman-Engginer">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-              <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp Direct" title="WhatsApp: +62 813-1716-1076">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/maherr_0610/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram Profile" title="Instagram: @maherr_0610">
-                <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </a>
-              <a href="mailto:luqmanmunggi@gmail.com" class="icon-link" aria-label="Email" title="Email: luqmanmunggi@gmail.com">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              </a>
-            </div>
+            <!-- Horizontal Section Index Bar (Hero Shortcuts) -->
+            <nav class="hero__index-bar" aria-label="Quick section navigation">
+              <span class="hero__index-label">Index //</span>
+              <a href="#about" class="hero__index-link">About</a>
+              <span class="hero__index-sep">/</span>
+              <a href="#portfolio" class="hero__index-link" data-tab-link="projects">Projects</a>
+              <span class="hero__index-sep">/</span>
+              <a href="#portfolio" class="hero__index-link" data-tab-link="certificates">Certificates</a>
+              <span class="hero__index-sep">/</span>
+              <a href="#portfolio" class="hero__index-link" data-tab-link="techstacks">Tech Stack</a>
+              <span class="hero__index-sep">/</span>
+              <a href="#contact" class="hero__index-link">Contact</a>
+            </nav>
           </div>
 
-          <!-- Right Column: Engineering Profile / ID Card -->
+          <!-- Right Column: Editorial Portrait Framing & Side Quote Card -->
           <div class="hero__visual" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-            <div class="dev-id-card">
-              <!-- Card Top Tech Bar -->
-              <div class="dev-id-card__topbar">
-                <div class="dev-id-chip">
-                  <span class="dev-id-chip__dot"></span>
-                  <span class="dev-id-chip__text">DEV ID // LQMN-2026-ENG</span>
+            <div class="hero__poster-frame">
+              <div class="hero__poster-topbar">
+                <div class="hero__poster-chip">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  <span class="mono">DEV // LQMN-2026-ENG</span>
                 </div>
-                <span class="dev-status-pill">ONLINE</span>
+                <span class="hero__poster-status">ONLINE</span>
               </div>
-
-              <!-- Portrait Media Frame -->
-              <figure class="dev-id-card__media">
-                <img src="/image.jpeg" alt="Luqman - Software Engineering Student" width="440" height="480" loading="eager" fetchpriority="high" decoding="async">
-                <div class="dev-id-card__overlay-tag">
-                  <span>SMK MADINATUL QUR'AN</span>
-                  <span class="mono">RPL • 2025-2027</span>
+              <figure class="hero__poster-media">
+                <img src="/image.jpeg" alt="Luqman Hakim - Junior Software Engineer" class="hero__poster-img" width="460" height="580" loading="eager" fetchpriority="high" decoding="async">
+                <div class="hero__poster-badge">
+                  <span class="badge-school">SMK MADINATUL QUR'AN</span>
+                  <span class="badge-rpl mono">RPL // CLASS OF '27</span>
                 </div>
               </figure>
-
-              <!-- Card Body Info -->
-              <div class="dev-id-card__info">
-                <div class="dev-id-card__title-row">
-                  <div>
-                    <h3 class="dev-name">Luqman Hakim</h3>
-                    <p class="dev-role">Junior Software Engineer</p>
-                  </div>
-                  <span class="dev-spec-badge">Class of '27</span>
-                </div>
-
-                <div class="dev-id-card__stack-pills">
-                  <span class="stack-pill">Golang</span>
-                  <span class="stack-pill">TypeScript</span>
-                  <span class="stack-pill">React</span>
-                  <span class="stack-pill">Python</span>
-                  <span class="stack-pill">Laravel</span>
-                  <span class="stack-pill">Tailwind</span>
-                </div>
-
-                <div class="dev-id-card__footer">
-                  <div class="dev-location">
-                    <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    <span>Bekasi, Indonesia</span>
-                  </div>
-                  <a href="#portfolio" class="dev-card-link">
-                    <span>Explore Hub</span>
-                    <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                  </a>
-                </div>
-              </div>
             </div>
+
+            <!-- Concise Engineering Quote Card (Side / Bottom-Right) -->
+            <blockquote class="hero__quote-card">
+              <div class="quote-header">
+                <svg class="quote-icon" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                <span class="quote-label">ENGINEERING PHILOSOPHY</span>
+              </div>
+              <p>“Crafting scalable backend architectures, clean modular code, and human-centered interfaces with meticulous attention to detail.”</p>
+              <cite class="quote-author mono">— Luqman Hakim</cite>
+            </blockquote>
           </div>
         </div>
 
@@ -290,119 +263,119 @@
       </div>
     </section>
 
-    <!-- 2. About Section -->
+    <!-- 2. About Section (Balanced 2-Column Layout - Image 3 Layout) -->
     <section id="about" class="section section--alt">
       <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">About me</span>
-          <h2 class="section-title">Character, engineering logic &amp; <span class="text-accent">purpose.</span></h2>
-          <p class="section-lead">
-            Bridging technical software architecture and empathetic communication to build dependable digital products.
-          </p>
-        </div>
+        <div class="about-two-col">
+          <!-- Left Column: Biography, Core Tech Pills, Actions & Socials -->
+          <div class="about-col-left" data-aos="fade-up">
+            <span class="eyebrow">About me</span>
+            <h2 class="about-headline">Engineering dependable systems with <span class="text-accent">discipline &amp; purpose.</span></h2>
 
-        <div class="about-grid">
-          <!-- Story Panel -->
-          <div class="panel story" data-aos="fade-up" data-aos-delay="100">
-            <div>
-              <span class="eyebrow">Vision &amp; Background</span>
-              <h3>Technology driven by character, discipline, and purpose.</h3>
+            <div class="about-bio">
               <p>
-                I'm <strong>Luqman</strong>, an 11th-grade Software Engineering student at
-                <strong>SMK Madinatul Qur'an</strong> and
-                <strong>Ma'had Tahfidz Al-Yusro</strong> in Bogor. I believe software engineering is most
-                impactful when rigorous technical architecture is paired with high ethical standards and thoughtful usability.
+                I'm <strong>Luqman</strong>, an 11th-grade Software Engineering student at <strong>SMK Madinatul Qur'an</strong> and <strong>Ma'had Tahfidz Al-Yusro</strong> in Bogor. I specialize in backend architecture, modular full-stack development, and clean user experience.
               </p>
               <p>
-                Through intensive practical coursework and competitive leadership, I build full-stack web platforms,
-                modular backend services, and clean interface systems that solve genuine real-world problems.
+                Beyond code, my experience representing Canada at the <strong>7th Grand General Assembly of UI MUN Club</strong> (ECOFIN Committee) and competitive speech have shaped my ability to think on my feet, articulate complex ideas persuasively, and negotiate with empathy.
               </p>
             </div>
-            <div class="story__footer">
-              <span class="story__note">Available for PKL &amp; Internship opportunities</span>
-              <a href="#contact" class="btn btn--ghost btn--sm">Start a conversation</a>
+
+            <!-- Core Technologies Pill Badges -->
+            <div class="about-tech-stack">
+              <span class="tech-stack-label">Core Technologies</span>
+              <div class="tech-pills">
+                <span class="pill pill--accent">Golang</span>
+                <span class="pill pill--accent">TypeScript</span>
+                <span class="pill pill--accent">JavaScript</span>
+                <span class="pill">Tailwind CSS</span>
+                <span class="pill">Laravel</span>
+                <span class="pill">Python</span>
+              </div>
+            </div>
+
+            <!-- Action CTAs & Social Links -->
+            <div class="about-actions-row">
+              <div class="about-btns">
+                <a href="#portfolio" class="btn btn--primary">
+                  <span>Explore Projects</span>
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <a href="#contact" class="btn btn--ghost">
+                  <span>Get in Touch</span>
+                </a>
+              </div>
+
+              <div class="about-socials">
+                <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Profile" title="GitHub: luqman-Engginer">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp Direct" title="WhatsApp: +62 813-1716-1076">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/maherr_0610/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram Profile" title="Instagram: @maherr_0610">
+                  <svg fill="currentColor" viewBox="0 0 24 24" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="mailto:luqmanmunggi@gmail.com" class="icon-link" aria-label="Email" title="Email: luqmanmunggi@gmail.com">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- Side Panels: Communication & Quick Facts -->
-          <div class="about-side">
-            <div class="panel panel--compact" data-aos="fade-up" data-aos-delay="150">
-              <div class="panel-head">
-                <span class="panel-label">Communication</span>
-                <span class="panel-badge">3 Languages</span>
+          <!-- Right Column: Developer System / Console Preview Card -->
+          <div class="about-col-right" data-aos="fade-up" data-aos-delay="150">
+            <div class="dev-console">
+              <div class="dev-console__header">
+                <div class="dev-console__dots">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
+                </div>
+                <div class="dev-console__title mono">runtime.terminal // v2.6.0</div>
+                <span class="dev-console__status"><span class="status-dot"></span> SYSTEM ONLINE</span>
               </div>
-              <div class="language-list">
-                <div class="language-row">
-                  <strong>Indonesian</strong>
-                  <span>Native fluency</span>
-                </div>
-                <div class="language-row">
-                  <strong>English</strong>
-                  <span>Professional &amp; MUN debate resolutions</span>
-                </div>
-                <div class="language-row">
-                  <strong>Arabic</strong>
-                  <span>Ma'had Tahfidz studies &amp; National competitions</span>
-                </div>
-              </div>
-            </div>
 
-            <div class="panel panel--compact" data-aos="fade-up" data-aos-delay="200">
-              <div class="panel-head">
-                <span class="panel-label">At a glance</span>
-                <span class="panel-badge">Profile facts</span>
-              </div>
-              <div class="fact-grid">
-                <div class="fact">
-                  <span class="fact__label">School</span>
-                  <span class="fact__value">SMK Madinatul Qur'an</span>
+              <div class="dev-console__body mono">
+                <div class="console-line"><span class="prompt">guest@luqman-cv:~$</span> <span class="cmd">inspect --developer</span></div>
+                <div class="console-output">
+                  <div class="console-row"><span class="c-key">Name:</span> <span class="c-val">Luqman Hakim</span></div>
+                  <div class="console-row"><span class="c-key">Role:</span> <span class="c-val text-accent">Junior Software Engineer &amp; Systems Builder</span></div>
+                  <div class="console-row"><span class="c-key">Education:</span> <span class="c-val">SMK Madinatul Qur'an (RPL, Class of '27)</span></div>
+                  <div class="console-row"><span class="c-key">Foundation:</span> <span class="c-val">Ma'had Tahfidz Al-Yusro, Bogor</span></div>
+                  <div class="console-row"><span class="c-key">Status:</span> <span class="c-val text-green">Available for PKL / Internship &amp; Projects</span></div>
                 </div>
-                <div class="fact">
-                  <span class="fact__label">Location</span>
-                  <span class="fact__value">Bekasi, Indonesia</span>
-                </div>
-                <div class="fact">
-                  <span class="fact__label">Grade</span>
-                  <span class="fact__value">11 (Eleven) RPL</span>
-                </div>
-                <div class="fact">
-                  <span class="fact__label">Email</span>
-                  <span class="fact__value">luqmanmunggi@gmail.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="about-bottom">
-          <div class="panel leadership" data-aos="fade-up" data-aos-delay="250">
-            <span class="icon-tile" aria-hidden="true">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" /></svg>
-            </span>
-            <div>
-              <h4>Public speaking &amp; MUN leadership</h4>
-              <p>
-                Representing Canada at the 7th Grand General Assembly of UI MUN Club (ECOFIN Committee) and competitive speech have shaped my ability to think on my feet, articulate complex ideas persuasively, and negotiate with empathy.
-              </p>
-            </div>
-          </div>
+                <div class="console-line"><span class="prompt">guest@luqman-cv:~$</span> <span class="cmd">cat stacks.config</span></div>
+                <div class="console-output">
+                  <div class="console-row"><span class="c-key">Languages:</span> <span class="c-val">Golang, TypeScript, JavaScript, Python, PHP</span></div>
+                  <div class="console-row"><span class="c-key">Frameworks:</span> <span class="c-val">React, Node.js, Laravel, Tailwind CSS</span></div>
+                  <div class="console-row"><span class="c-key">Tools:</span> <span class="c-val">Git, Docker, REST APIs, Postman, Figma</span></div>
+                </div>
 
-          <div class="panel metrics" data-aos="fade-up" data-aos-delay="300">
-            <div>
-              <span class="metric__value counter" data-target="100">0</span>
-              <span class="metric__label">Commitment Index</span>
-            </div>
-            <div class="metrics__divider" aria-hidden="true"></div>
-            <div>
-              <span class="metric__value">3</span>
-              <span class="metric__label">Fluent Languages</span>
+                <div class="console-line"><span class="prompt">guest@luqman-cv:~$</span> <span class="cmd">fetch --credentials</span></div>
+                <div class="console-output">
+                  <div class="console-row"><span class="c-key">Certificates:</span> <span class="c-val">8 Official Credentials (ITB, MUN, C2C)</span></div>
+                  <div class="console-row"><span class="c-key">Leadership:</span> <span class="c-val">ECOFIN Delegate of Canada (UI MUN Club 7th GGA)</span></div>
+                  <div class="console-row"><span class="c-key">Languages:</span> <span class="c-val">Indonesian (Native), English (MUN), Arabic (Tahfidz)</span></div>
+                </div>
+
+                <div class="console-line console-line--cursor">
+                  <span class="prompt">guest@luqman-cv:~$</span> <span class="cursor-block">_</span>
+                </div>
+              </div>
+
+              <div class="dev-console__footer mono">
+                <span class="mono-meta">PORT: 443 // PROTOCOL: HTTPS</span>
+                <span class="mono-meta">BEKASI, INDONESIA</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. Focus Areas Section -->
+    <!-- 3. Focus Areas Section (Disciplines) -->
     <section id="focus" class="section">
       <div class="container">
         <div class="section-head section-head--center" data-aos="fade-up">
