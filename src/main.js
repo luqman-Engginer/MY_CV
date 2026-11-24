@@ -196,47 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ==========================================
-  // 4. Hero Dynamic Typing Effect
-  // ==========================================
-  const typedTextEl = document.getElementById('typed-text');
-  if (typedTextEl) {
-    const phrases = [
-      'Scalable Backend Systems',
-      'High-Performance Web Apps',
-      'Clean Modular Code',
-      'Thoughtful UI/UX Products'
-    ];
-    let phraseIdx = 0;
-    let charIdx = 0;
-    let isDeleting = false;
-
-    function typeEffect() {
-      const current = phrases[phraseIdx];
-      if (isDeleting) {
-        typedTextEl.textContent = current.substring(0, charIdx - 1);
-        charIdx--;
-      } else {
-        typedTextEl.textContent = current.substring(0, charIdx + 1);
-        charIdx++;
-      }
-
-      let speed = isDeleting ? 40 : 85;
-
-      if (!isDeleting && charIdx === current.length) {
-        speed = 2200;
-        isDeleting = true;
-      } else if (isDeleting && charIdx === 0) {
-        isDeleting = false;
-        phraseIdx = (phraseIdx + 1) % phrases.length;
-        speed = 400;
-      }
-
-      setTimeout(typeEffect, speed);
-    }
-
-    typeEffect();
-  }
+  // 4. Hero Static Headline (Typing effect removed to avoid text cutoff and layout shifts)
 
 
   // ==========================================
