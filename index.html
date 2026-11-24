@@ -1,56 +1,71 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#070a11" />
-  <title>Luqman | Software Engineering &amp; Graphic Design</title>
-  <meta name="description" content="Portfolio Luqman â€” 11th Grade Software Engineering student at SMK Madinatul Qur'an. Specializing in Golang backend, modern web development, UI/UX design, and public speaking. Open for internship and job opportunities." />
-  <meta name="keywords" content="Luqman, Software Engineer, Frontend Developer, Backend Golang, UI UX Designer, SMK Madinatul Qur'an, Portfolio, Web Developer Bekasi" />
+  <title>Luqman | Junior Software Engineer &amp; UI/UX Craftsperson</title>
+  <meta name="description" content="Portfolio Luqman — 11th Grade Software Engineering student at SMK Madinatul Qur'an. Specializing in Golang backend, modern web systems, UI/UX design, and public speaking." />
+  <meta name="keywords" content="Luqman, Software Engineer, Golang Backend, Web Developer, Fullstack, UI UX Designer, SMK Madinatul Qur'an, Portfolio, Jakarta, Bekasi" />
   <meta name="author" content="Luqman" />
   <link rel="canonical" href="https://www.luqman-cv.my.id/" />
 
+  <!-- Open Graph / Meta -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.luqman-cv.my.id/" />
-  <meta property="og:title" content="Luqman | Software Engineering &amp; Graphic Design" />
-  <meta property="og:description" content="Portfolio Luqman â€” 11th Grade Software Engineering student at SMK Madinatul Qur'an. Open for internship and job opportunities." />
+  <meta property="og:title" content="Luqman | Junior Software Engineer" />
+  <meta property="og:description" content="Portfolio Luqman — Software Engineering student at SMK Madinatul Qur'an. Explore projects, verified certificates, and tech stacks." />
   <meta property="og:image" content="https://www.luqman-cv.my.id/image.jpeg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://www.luqman-cv.my.id/" />
-  <meta name="twitter:title" content="Luqman | Software Engineering &amp; Graphic Design" />
-  <meta name="twitter:description" content="Portfolio Luqman â€” 11th Grade Software Engineering student at SMK Madinatul Qur'an. Open for internship and job opportunities." />
+  <meta name="twitter:title" content="Luqman | Junior Software Engineer" />
+  <meta name="twitter:description" content="Portfolio Luqman — Software Engineering student at SMK Madinatul Qur'an. Explore projects, verified certificates, and tech stacks." />
   <meta name="twitter:image" content="https://www.luqman-cv.my.id/image.jpeg" />
 
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <!-- Top Navigation Header -->
   <header id="main-header" class="site-header">
     <div id="capsule-nav" class="nav-shell">
       <a href="#hero" class="brand" aria-label="Luqman portfolio home">
         <span class="brand__mark">L</span>
-        <span>LUQMAN<span class="brand__dot">.</span></span>
+        <span class="brand__text">LUQMAN<span class="brand__dot">.</span></span>
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
         <a href="#focus" class="nav-link">Focus</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#portfolio" class="nav-link">Portfolio Hub</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn--primary btn--sm nav-cta">Let's talk</a>
-        <button id="mobile-menu-btn" type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch theme mode" title="Switch theme mode">
+          <svg class="theme-icon-sun" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke-width="2"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg class="theme-icon-moon hidden" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn--primary btn--sm nav-cta">Let's Talk</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -59,151 +74,275 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="mobile-menu hidden">
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#skills" class="mobile-link">Skills</a>
-      <a href="#focus" class="mobile-link">Focus</a>
-      <a href="#portfolio" class="mobile-link">Portfolio</a>
-      <a href="#contact" class="mobile-link">Contact</a>
-      <a href="#contact" class="mobile-link mobile-link--cta">Let's talk</a>
+    <!-- Mobile Drawer Overlay & Menu -->
+    <div id="mobile-drawer" class="mobile-drawer hidden" aria-hidden="true">
+      <div class="mobile-drawer__backdrop" id="mobile-drawer-backdrop"></div>
+      <div class="mobile-drawer__panel">
+        <div class="mobile-drawer__head">
+          <div class="brand">
+            <span class="brand__mark">L</span>
+            <span class="brand__text">LUQMAN<span class="brand__dot">.</span></span>
+          </div>
+          <button id="mobile-drawer-close" type="button" class="mobile-drawer__close" aria-label="Close menu">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <nav class="mobile-drawer__nav">
+          <a href="#about" class="mobile-link">
+            <span>About</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#focus" class="mobile-link">
+            <span>Focus Areas</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#portfolio" class="mobile-link">
+            <span>Portfolio Hub</span>
+            <span class="mobile-link__badge">3-Tab</span>
+          </a>
+          <a href="#contact" class="mobile-link">
+            <span>Contact</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </nav>
+
+        <div class="mobile-drawer__controls">
+          <div class="mobile-theme-row">
+            <span class="mobile-theme-label">Theme Mode</span>
+            <button id="theme-toggle-mobile" type="button" class="theme-toggle theme-toggle--inline" aria-label="Toggle theme">
+              <span class="theme-toggle__text">Switch Theme</span>
+              <svg class="theme-icon-sun" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+              <svg class="theme-icon-moon hidden" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+          </div>
+          <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--block">
+            <span>Chat via WhatsApp</span>
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
+    <!-- 1. Hero / Above-The-Fold (Editorial Software Engineering Aesthetic) -->
     <section id="hero" class="hero">
       <div class="container">
         <div class="hero__grid">
+          <!-- Left Column: Editorial Typography & Actions -->
           <div class="hero__copy" data-aos="fade-up" data-aos-duration="900">
-            <div class="hero__status">
-              <span class="status-dot" aria-hidden="true"></span>
-              <span>Open for internship &amp; job opportunities</span>
+            <!-- Availability & Role Pills -->
+            <div class="hero__status-group">
+              <div class="hero__status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>Open for PKL / Internship &amp; Full-Stack Roles</span>
+              </div>
+              <span class="hero__rpl-pill">RPL // SMK Madinatul Qur'an</span>
             </div>
 
-            <p class="hero__eyebrow">Software engineering &amp; design</p>
-            <h1 class="hero__title">Luqman<span>.</span></h1>
+            <p class="hero__eyebrow">Junior Software Engineer &amp; Systems Builder</p>
+
+            <h1 class="hero__title">
+              Luqman<span class="text-accent">.</span>
+            </h1>
 
             <div class="hero__role">
-              <span>I'm a</span>
+              <span>I engineer</span>
               <span id="typed-text" class="typed-text"></span>
               <span class="typed-caret" aria-hidden="true"></span>
             </div>
 
-            <p class="hero__bio">
-              An 11th-grade student at <strong>SMK Madinatul Qur'an</strong>, focused on
-              <strong>software engineering</strong>, <strong>graphic design</strong>, and
-              <strong>public speaking</strong>. I build practical digital products with
-              <span class="text-accent">clean code and thoughtful design</span>.
-            </p>
+            <!-- Engineering Quote / Tagline -->
+            <blockquote class="hero__quote">
+              <span class="hero__quote-mark">“</span>
+              <p>Crafting scalable backend architectures, clean modular code, and human-centered interfaces with meticulous attention to detail.</p>
+            </blockquote>
 
+            <!-- Role & Leadership Badges Stack -->
+            <div class="hero__badge-stack">
+              <span class="badge-item badge-item--accent">
+                <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                Software Engineering
+              </span>
+              <span class="badge-item">
+                <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                Backend &amp; Web Systems
+              </span>
+              <span class="badge-item">
+                <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/></svg>
+                Delegate of Canada (UI MUN)
+              </span>
+              <span class="badge-item">
+                <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                SBM ITB Bootcamp Graduate
+              </span>
+            </div>
+
+            <!-- Primary CTAs -->
             <div class="hero__actions">
               <a href="#portfolio" class="btn btn--primary">
-                <span>View my work</span>
+                <span>Explore Portfolio Hub</span>
                 <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
-              <a href="#contact" class="btn btn--ghost">Contact me</a>
+              <a href="#contact" class="btn btn--ghost">
+                <span>Get in Touch</span>
+                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+              </a>
             </div>
 
+            <!-- Social Connect Links -->
             <div class="hero__socials">
               <span class="hero__socials-label">Connect</span>
-              <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
+              <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Profile" title="GitHub: luqman-Engginer">
                 <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               </a>
-              <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp">
+              <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp Direct" title="WhatsApp: +62 813-1716-1076">
                 <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
               </a>
-              <a href="https://www.instagram.com/maherr_0610/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram">
+              <a href="https://www.instagram.com/maherr_0610/" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Instagram Profile" title="Instagram: @maherr_0610">
                 <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="mailto:luqmanmunggi@gmail.com" class="icon-link" aria-label="Email" title="Email: luqmanmunggi@gmail.com">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               </a>
             </div>
           </div>
 
+          <!-- Right Column: Engineering Profile / ID Card -->
           <div class="hero__visual" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-            <figure class="portrait">
-              <img src="/image.jpeg" alt="Luqman, software engineering and graphic design student" width="400" height="500" loading="eager" fetchpriority="high" decoding="async">
-              <figcaption class="portrait__footer">
-                <div>
-                  <span class="portrait__name">Luqman</span>
-                  <span class="portrait__meta">Software engineering student</span>
+            <div class="dev-id-card">
+              <!-- Card Top Tech Bar -->
+              <div class="dev-id-card__topbar">
+                <div class="dev-id-chip">
+                  <span class="dev-id-chip__dot"></span>
+                  <span class="dev-id-chip__text">DEV ID // LQMN-2026-ENG</span>
                 </div>
-                <span class="portrait__badge">Open to work</span>
-              </figcaption>
-            </figure>
-            <p class="portrait-note">Based in Bekasi, Indonesia</p>
+                <span class="dev-status-pill">ONLINE</span>
+              </div>
+
+              <!-- Portrait Media Frame -->
+              <figure class="dev-id-card__media">
+                <img src="/image.jpeg" alt="Luqman - Software Engineering Student" width="440" height="480" loading="eager" fetchpriority="high" decoding="async">
+                <div class="dev-id-card__overlay-tag">
+                  <span>SMK MADINATUL QUR'AN</span>
+                  <span class="mono">RPL • 2025-2027</span>
+                </div>
+              </figure>
+
+              <!-- Card Body Info -->
+              <div class="dev-id-card__info">
+                <div class="dev-id-card__title-row">
+                  <div>
+                    <h3 class="dev-name">Luqman</h3>
+                    <p class="dev-role">Junior Software Engineer</p>
+                  </div>
+                  <span class="dev-spec-badge">Class of '27</span>
+                </div>
+
+                <div class="dev-id-card__stack-pills">
+                  <span class="stack-pill">Golang</span>
+                  <span class="stack-pill">TypeScript</span>
+                  <span class="stack-pill">React</span>
+                  <span class="stack-pill">Python</span>
+                  <span class="stack-pill">Laravel</span>
+                  <span class="stack-pill">Tailwind</span>
+                </div>
+
+                <div class="dev-id-card__footer">
+                  <div class="dev-location">
+                    <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <span>Bekasi, Indonesia</span>
+                  </div>
+                  <a href="#portfolio" class="dev-card-link">
+                    <span>Explore Hub</span>
+                    <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Quick Engineering Metrics Strip -->
         <div class="hero__stats" data-aos="fade-up" data-aos-delay="200">
           <div class="hero-stat">
             <span class="hero-stat__value">11th Grade</span>
-            <span class="hero-stat__label">SMK Madinatul Qur'an</span>
+            <span class="hero-stat__label">RPL SMK Madinatul Qur'an</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat__value">11+ Projects</span>
+            <span class="hero-stat__label">Web Apps &amp; Production Systems</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat__value">8 Certificates</span>
+            <span class="hero-stat__label">SBM ITB, Competitions &amp; MUN</span>
           </div>
           <div class="hero-stat">
             <span class="hero-stat__value">3 Languages</span>
-            <span class="hero-stat__label">Indonesian, English, Arabic</span>
-          </div>
-          <div class="hero-stat">
-            <span class="hero-stat__value">6 Projects</span>
-            <span class="hero-stat__label">Web apps &amp; product design</span>
+            <span class="hero-stat__label">Indonesian, English &amp; Arabic</span>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 2. About Section -->
     <section id="about" class="section section--alt">
       <div class="container">
         <div class="section-head" data-aos="fade-up">
           <span class="eyebrow">About me</span>
-          <h2 class="section-title">Crafting digital <span class="text-accent">experiences.</span></h2>
+          <h2 class="section-title">Character, engineering logic &amp; <span class="text-accent">purpose.</span></h2>
           <p class="section-lead">
-            I combine engineering logic with visual design to build products that are clear,
-            useful, and dependable.
+            Bridging technical software architecture and empathetic communication to build dependable digital products.
           </p>
         </div>
 
         <div class="about-grid">
+          <!-- Story Panel -->
           <div class="panel story" data-aos="fade-up" data-aos-delay="100">
             <div>
-              <span class="eyebrow">Vision &amp; background</span>
-              <h3>Technology driven by character and purpose.</h3>
+              <span class="eyebrow">Vision &amp; Background</span>
+              <h3>Technology driven by character, discipline, and purpose.</h3>
               <p>
-                I'm <strong>Luqman</strong>, an 11th-grade student at
+                I'm <strong>Luqman</strong>, an 11th-grade Software Engineering student at
                 <strong>SMK Madinatul Qur'an</strong> and
-                <strong>Ma'had Tahfidz Al-Yusro</strong> in Bogor. I believe software is most
-                impactful when technical rigor is paired with strong ethical values and
-                empathetic design.
+                <strong>Ma'had Tahfidz Al-Yusro</strong> in Bogor. I believe software engineering is most
+                impactful when rigorous technical architecture is paired with high ethical standards and thoughtful usability.
               </p>
               <p>
-                Through coursework and extracurricular activities, I bridge engineering logic
-                and human connection, building intuitive digital solutions that solve practical
-                problems.
+                Through intensive practical coursework and competitive leadership, I build full-stack web platforms,
+                modular backend services, and clean interface systems that solve genuine real-world problems.
               </p>
             </div>
             <div class="story__footer">
-              <span class="story__note">Available for PKL &amp; internships</span>
+              <span class="story__note">Available for PKL &amp; Internship opportunities</span>
               <a href="#contact" class="btn btn--ghost btn--sm">Start a conversation</a>
             </div>
           </div>
 
+          <!-- Side Panels: Communication & Quick Facts -->
           <div class="about-side">
             <div class="panel panel--compact" data-aos="fade-up" data-aos-delay="150">
               <div class="panel-head">
                 <span class="panel-label">Communication</span>
-                <span class="panel-badge">3 languages</span>
+                <span class="panel-badge">3 Languages</span>
               </div>
               <div class="language-list">
                 <div class="language-row">
                   <strong>Indonesian</strong>
-                  <span>Native</span>
+                  <span>Native fluency</span>
                 </div>
                 <div class="language-row">
                   <strong>English</strong>
-                  <span>Professional &amp; MUN debates</span>
+                  <span>Professional &amp; MUN debate resolutions</span>
                 </div>
                 <div class="language-row">
                   <strong>Arabic</strong>
-                  <span>Ma'had Tahfidz studies</span>
+                  <span>Ma'had Tahfidz studies &amp; National competitions</span>
                 </div>
               </div>
             </div>
@@ -211,7 +350,7 @@
             <div class="panel panel--compact" data-aos="fade-up" data-aos-delay="200">
               <div class="panel-head">
                 <span class="panel-label">At a glance</span>
-                <span class="panel-badge">Quick facts</span>
+                <span class="panel-badge">Profile facts</span>
               </div>
               <div class="fact-grid">
                 <div class="fact">
@@ -224,7 +363,7 @@
                 </div>
                 <div class="fact">
                   <span class="fact__label">Grade</span>
-                  <span class="fact__value">11 (Eleven) SMK</span>
+                  <span class="fact__value">11 (Eleven) RPL</span>
                 </div>
                 <div class="fact">
                   <span class="fact__label">Email</span>
@@ -243,128 +382,34 @@
             <div>
               <h4>Public speaking &amp; MUN leadership</h4>
               <p>
-                Model United Nations and competitive speech sharpen my ability to think on my
-                feet, structure technical ideas persuasively, and communicate with empathy.
+                Representing Canada at the 7th Grand General Assembly of UI MUN Club (ECOFIN Committee) and competitive speech have shaped my ability to think on my feet, articulate complex ideas persuasively, and negotiate with empathy.
               </p>
             </div>
           </div>
 
           <div class="panel metrics" data-aos="fade-up" data-aos-delay="300">
             <div>
-              <span class="metric__value counter" data-target="89">0</span>
-              <span class="metric__label">Mastery index</span>
+              <span class="metric__value counter" data-target="100">0</span>
+              <span class="metric__label">Commitment Index</span>
             </div>
             <div class="metrics__divider" aria-hidden="true"></div>
             <div>
               <span class="metric__value">3</span>
-              <span class="metric__label">Languages</span>
+              <span class="metric__label">Fluent Languages</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
+    <!-- 3. Focus Areas Section -->
+    <section id="focus" class="section">
       <div class="container">
         <div class="section-head section-head--center" data-aos="fade-up">
-          <span class="eyebrow">My skills</span>
-          <h2 class="section-title">What I <span class="text-accent">bring</span> to the table.</h2>
+          <span class="eyebrow">Disciplines</span>
+          <h2 class="section-title">Where I <span class="text-accent">focus &amp; excel.</span></h2>
           <p class="section-lead">
-            A practical mix of engineering fundamentals, interface design, and communication.
-          </p>
-        </div>
-
-        <div class="skills-grid">
-          <article class="panel skill-card" data-aos="fade-up" data-aos-delay="100">
-            <div>
-              <div class="skill-card__head">
-                <div class="skill-card__title">
-                  <span class="icon-tile" aria-hidden="true">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                  </span>
-                  <h3>Software Engineering</h3>
-                </div>
-                <span class="skill-card__badge">Backend &amp; web</span>
-              </div>
-
-              <div class="skill-rows">
-                <div>
-                  <div class="skill-meta"><span>Golang</span><span>75%</span></div>
-                  <div class="skill-track"><div class="skill-bar-fill" data-width="75" style="width: 0%"></div></div>
-                </div>
-                <div>
-                  <div class="skill-meta"><span>TypeScript</span><span>70%</span></div>
-                  <div class="skill-track"><div class="skill-bar-fill" data-width="70" style="width: 0%"></div></div>
-                </div>
-                <div>
-                  <div class="skill-meta"><span>JavaScript</span><span>65%</span></div>
-                  <div class="skill-track"><div class="skill-bar-fill skill-bar-fill--teal" data-width="65" style="width: 0%"></div></div>
-                </div>
-                <div>
-                  <div class="skill-meta"><span>Tailwind CSS</span><span>85%</span></div>
-                  <div class="skill-track"><div class="skill-bar-fill" data-width="85" style="width: 0%"></div></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="chip-row">
-              <span class="chip">Clean code</span>
-              <span class="chip">REST APIs</span>
-              <span class="chip">Git / GitHub</span>
-              <span class="chip">Responsive systems</span>
-            </div>
-          </article>
-
-          <article class="panel skill-card" data-aos="fade-up" data-aos-delay="200">
-            <div>
-              <div class="skill-card__head">
-                <div class="skill-card__title">
-                  <span class="icon-tile" aria-hidden="true">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
-                  </span>
-                  <h3>Design &amp; Other</h3>
-                </div>
-                <span class="skill-card__badge">UI/UX &amp; soft skills</span>
-              </div>
-
-              <div class="skill-rows">
-                <div>
-                  <div class="skill-meta"><span>Figma / UI design</span><span>80%</span></div>
-                  <div class="skill-track"><div class="skill-bar-fill skill-bar-fill--violet" data-width="80" style="width: 0%"></div></div>
-                </div>
-                <div>
-                  <div class="skill-meta"><span>Canva / Graphic design</span><span>85%</span></div>
-                  <div class="skill-track"><div class="skill-bar-fill skill-bar-fill--violet" data-width="85" style="width: 0%"></div></div>
-                </div>
-                <div>
-                  <div class="skill-meta"><span>Public speaking</span><span>75%</span></div>
-                  <div class="skill-track"><div class="skill-bar-fill skill-bar-fill--teal" data-width="75" style="width: 0%"></div></div>
-                </div>
-                <div>
-                  <div class="skill-meta"><span>HTML / CSS</span><span>90%</span></div>
-                  <div class="skill-track"><div class="skill-bar-fill" data-width="90" style="width: 0%"></div></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="chip-row">
-              <span class="chip">Wireframing</span>
-              <span class="chip">Prototyping</span>
-              <span class="chip">Debate &amp; MUN</span>
-              <span class="chip">User flow</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="focus" class="section section--alt">
-      <div class="container">
-        <div class="section-head section-head--center" data-aos="fade-up">
-          <span class="eyebrow">Focus areas</span>
-          <h2 class="section-title">Where I <span class="text-accent">excel.</span></h2>
-          <p class="section-lead">
-            Three disciplines that shape how I approach products, people, and problems.
+            Three foundational pillars that define my approach to software products and leadership.
           </p>
         </div>
 
@@ -376,8 +421,7 @@
             </span>
             <h3>Software Engineering</h3>
             <p>
-              Designing and building software architecture that is logical, efficient, and
-              user-friendly.
+              Designing and building backend microservices, clean relational databases, secure authentication systems, and production-ready web platforms with high efficiency.
             </p>
           </article>
 
@@ -386,10 +430,9 @@
             <span class="icon-tile" aria-hidden="true">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
             </span>
-            <h3>Graphic Design</h3>
+            <h3>UI/UX &amp; Design Systems</h3>
             <p>
-              Creating visually consistent identities with attention to color, typography, and
-              layout.
+              Creating design token architectures, auto-layout component libraries in Figma, and crafting responsive interfaces with seamless dark/light contrast.
             </p>
           </article>
 
@@ -398,41 +441,55 @@
             <span class="icon-tile" aria-hidden="true">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" /></svg>
             </span>
-            <h3>Public Speaking</h3>
+            <h3>Communication &amp; Leadership</h3>
             <p>
-              Communicating ideas persuasively and structuring arguments effectively through MUN
-              experience.
+              Articulating architectural decisions clearly, international debate in Model United Nations, and cross-border collaborative education programs.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="portfolio" class="section">
+    <!-- 4. 3-Tab Portfolio Hub (Projects | Certificates | Tech Stack) -->
+    <section id="portfolio" class="section section--alt">
+      <div id="skills" class="anchor-offset" aria-hidden="true"></div>
       <div class="container">
         <div class="section-head section-head--center" data-aos="fade-up">
-          <span class="eyebrow">Portfolio</span>
-          <h2 class="section-title">Selected <span class="text-accent">work &amp; credentials.</span></h2>
+          <span class="eyebrow">Portfolio Hub</span>
+          <h2 class="section-title">Work, credentials &amp; <span class="text-accent">technical mastery.</span></h2>
           <p class="section-lead">
-            Explore my featured projects, verified certificates, and mastered technical stacks.
+            Switch between production software projects, verified official certificates, and structured technology stacks.
           </p>
         </div>
 
-        <div id="portfolio-filters" class="project-filters" data-aos="fade-up"></div>
+        <!-- Master 3-Tab Segmented Switcher -->
+        <div class="hub-switcher-wrap" data-aos="fade-up">
+          <div id="portfolio-filters" class="hub-tabs" role="tablist" aria-label="Portfolio Switcher">
+            <!-- Dynamic 3 Buttons rendered by main.js: Projects | Certificates | Tech Stack -->
+          </div>
+        </div>
 
-        <div class="project-grid" id="portfolio-grid"></div>
+        <!-- Dynamic Sub-filters (Visible when Projects tab is active) -->
+        <div id="projects-subfilters" class="subfilters-wrap hidden" data-aos="fade-up">
+          <!-- Rendered dynamically by main.js -->
+        </div>
+
+        <!-- Unified Content Grid (Projects, Certificates, or Tech Stack cards) -->
+        <div class="project-grid" id="portfolio-grid" data-aos="fade-up">
+          <!-- Dynamic Content Rendered Here -->
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section section--alt">
+    <!-- 5. Contact Section -->
+    <section id="contact" class="section">
       <div class="container">
         <div class="contact-grid">
           <div class="contact-copy" data-aos="fade-up" data-aos-duration="900">
-            <span class="eyebrow">Contact</span>
-            <h2 class="section-title">Let's build something <span class="text-accent">useful.</span></h2>
+            <span class="eyebrow">Get in touch</span>
+            <h2 class="section-title">Let's build something <span class="text-accent">exceptional.</span></h2>
             <p class="section-lead">
-              I'm actively seeking internship and entry-level opportunities. Tell me what you're
-              working on and let's find a way to contribute.
+              I am actively seeking internship (PKL) and entry-level opportunities in software engineering, backend systems, and modern web development.
             </p>
 
             <div class="contact-list">
@@ -452,7 +509,7 @@
                 </span>
                 <div>
                   <span class="contact-label">Location</span>
-                  <span class="contact-value">Bekasi, Indonesia</span>
+                  <span class="contact-value">Bekasi, West Java, Indonesia</span>
                 </div>
               </div>
 
@@ -468,107 +525,109 @@
             </div>
 
             <div class="availability">
-              <h4>Open for opportunities</h4>
+              <h4>Open for Internship &amp; Engineering Roles</h4>
               <p>
-                Currently looking for PKL (internship) and entry-level roles in software
-                engineering and design. Let's connect.
+                Currently preparing for PKL internship and open to collaborating on high-impact software systems. Reach out via email or WhatsApp.
               </p>
             </div>
           </div>
 
+          <!-- Interactive Contact Form -->
           <form id="whatsapp-form" class="panel contact-form" data-aos="fade-up" data-aos-duration="900">
-            <h3>Send me a message</h3>
-            <p>I'll respond via WhatsApp as soon as possible.</p>
+            <h3>Send a Message</h3>
+            <p>Direct message to my WhatsApp. I will respond as soon as possible.</p>
 
             <div class="form-grid">
               <div class="field">
-                <label for="name">Full name <span>*</span></label>
+                <label for="name">Full Name <span>*</span></label>
                 <input type="text" id="name" name="name" autocomplete="name" required placeholder="John Doe">
               </div>
               <div class="field">
                 <label for="email">Email <span>*</span></label>
-                <input type="email" id="email" name="email" autocomplete="email" required placeholder="john@gmail.com">
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="john@example.com">
               </div>
               <div class="field field--full">
                 <label for="message">Message <span>*</span></label>
-                <textarea id="message" name="message" rows="5" required placeholder="Hi Luqman, I'd like to discuss an opportunity for..."></textarea>
+                <textarea id="message" name="message" rows="5" required placeholder="Hi Luqman, I'd like to discuss an opportunity regarding..."></textarea>
               </div>
             </div>
 
             <button type="submit" class="btn btn--primary form-submit">
               <span>Send via WhatsApp</span>
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-              </svg>
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             </button>
-            <p class="form-note">This opens WhatsApp with your message prefilled.</p>
           </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <a href="#hero" class="footer-brand">
+        <div class="footer-brand">
+          <div class="brand">
             <span class="brand__mark">L</span>
-            <span>LUQMAN.</span>
-          </a>
-          <p class="footer-desc">
-            Software engineering student focused on practical web products, clean interfaces,
-            and clear communication. Open for internship and work opportunities.
+            <span class="brand__text">LUQMAN<span class="brand__dot">.</span></span>
+          </div>
+          <p class="footer-tagline">
+            Junior Software Engineer building scalable backend systems, responsive web platforms, and human-centered interfaces.
           </p>
         </div>
+
         <div>
-          <h4 class="footer-title">Quick links</h4>
+          <h4 class="footer-title">Navigation</h4>
           <div class="footer-links">
+            <a href="#hero">Home</a>
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#focus">Focus</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#focus">Focus Areas</a>
+            <a href="#portfolio">Portfolio Hub</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
+
         <div>
-          <h4 class="footer-title">Core focus</h4>
+          <h4 class="footer-title">Core Competencies</h4>
           <div class="footer-links">
-            <span>Software Engineering</span>
-            <span>UI/UX Design</span>
-            <span>Graphic Design</span>
-            <span>Public Speaking &amp; MUN</span>
+            <span>Backend Engineering (Golang, Laravel)</span>
+            <span>Web Architecture (React, Node.js)</span>
+            <span>UI/UX Design &amp; Design Systems</span>
+            <span>Public Speaking &amp; MUN Diplomacy</span>
           </div>
         </div>
+
         <div>
           <h4 class="footer-title">Connect</h4>
           <div class="footer-socials">
-            <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
-              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/luqman-Engginer" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Profile">
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
             <a href="mailto:luqmanmunggi@gmail.com" class="icon-link" aria-label="Email">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </a>
             <a href="https://wa.me/6281317161076" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="WhatsApp">
-              <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             </a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="year">2026</span> Luqman. All rights reserved.</p>
-        <p>Open for internships &amp; job opportunities</p>
+        <p>&copy; <span id="year">2026</span> Luqman. Built with Software Engineering craft.</p>
+        <p>Available for PKL / Internship &amp; Full-Stack Developer opportunities.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
   <button id="back-to-top" type="button" class="back-to-top" aria-label="Back to top">
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
     </svg>
   </button>
 
+  <!-- Interactive Modal Container -->
   <div id="project-detail-modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
     <div id="modal-container"></div>
   </div>
